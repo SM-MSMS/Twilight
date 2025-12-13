@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع عن حب ♥ - سلسلة أفلام Twilight</title>
+    <title>موقع عن حب أسطوري - سلسلة Twilight الخالدة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700;800&family=Alex+Brush&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,10 +14,10 @@
         }
         
         body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #0c0c1e 0%, #1a0a2e 50%, #2d0b3e 100%);
+            font-family: 'Scheherazade New', serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #150528 50%, #28083a 100%);
             color: #f8f0fc;
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
@@ -31,9 +31,10 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.15) 0%, transparent 20%),
-                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.1) 0%, transparent 20%);
+                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.2) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 60% 20%, rgba(199, 21, 133, 0.1) 0%, transparent 20%);
             z-index: -1;
         }
         
@@ -48,127 +49,170 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Alex Brush', cursive;
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             color: white;
             z-index: 1000;
-            box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.4);
             animation: logoGlow 3s infinite alternate;
             cursor: pointer;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
         }
         
         @keyframes logoGlow {
-            0% { box-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
-            100% { box-shadow: 0 0 25px rgba(255, 20, 147, 0.9), 0 0 40px rgba(255, 105, 180, 0.6); }
+            0% { 
+                box-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 105, 180, 0.5);
+                transform: scale(1);
+            }
+            100% { 
+                box-shadow: 0 0 30px rgba(255, 20, 147, 1), 0 0 60px rgba(255, 105, 180, 0.8);
+                transform: scale(1.05);
+            }
         }
         
         /* Header Styles */
         header {
             text-align: center;
-            padding: 30px 0 20px;
+            padding: 30px 0 15px;
             position: relative;
             overflow: hidden;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .header-frame {
-            border: 2px solid rgba(255, 105, 180, 0.4);
-            border-radius: 20px;
-            padding: 25px;
-            background: rgba(30, 5, 50, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 20, 147, 0.1);
+            border: 3px solid transparent;
+            border-radius: 25px;
+            padding: 25px 30px;
+            background: linear-gradient(rgba(40, 5, 70, 0.85), rgba(25, 5, 45, 0.9)) padding-box,
+                        linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493) border-box;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 
+                        inset 0 0 30px rgba(255, 20, 147, 0.15),
+                        0 0 50px rgba(255, 20, 147, 0.1);
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
         }
         
         .header-frame::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
             background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
-            border-radius: 22px;
+            border-radius: 35px;
             z-index: -1;
-            opacity: 0.5;
+            opacity: 0.3;
+            filter: blur(15px);
         }
         
         .site-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.2rem;
+            font-family: 'Lateef', serif;
+            font-size: 3.5rem;
             color: #ff69b4;
-            text-shadow: 0 0 15px rgba(255, 20, 147, 0.7), 0 0 30px rgba(255, 20, 147, 0.5);
-            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.9), 
+                         0 0 40px rgba(255, 20, 147, 0.5),
+                         0 0 60px rgba(255, 105, 180, 0.3);
+            margin-bottom: 10px;
             position: relative;
             display: inline-block;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
         
-        .site-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 180px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+        .title-heart {
+            color: #ff1493;
+            animation: heartbeat 1.5s infinite;
+            margin: 0 10px;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #e6b0ff;
             margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
-            font-weight: 600;
+            text-shadow: 0 0 15px rgba(230, 176, 255, 0.7);
+            font-weight: 700;
         }
         
         .tagline {
             font-style: italic;
-            color: #d8bfd8;
-            font-size: 1.1rem;
+            color: #f0d9ff;
+            font-size: 1.15rem;
             max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            padding: 10px;
-            border-top: 1px dashed rgba(255, 105, 180, 0.3);
-            border-bottom: 1px dashed rgba(255, 105, 180, 0.3);
+            margin: 15px auto;
+            line-height: 1.9;
+            padding: 15px;
+            border-top: 1px dashed rgba(255, 105, 180, 0.4);
+            border-bottom: 1px dashed rgba(255, 105, 180, 0.4);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            text-shadow: 0 0 10px rgba(240, 217, 255, 0.3);
         }
         
         /* Movie Poster Section */
         .movie-poster-section {
-            padding: 15px 0 30px;
+            padding: 15px 0 35px;
             text-align: center;
+            position: relative;
         }
         
         .poster-title {
-            font-size: 1.8rem;
+            font-family: 'Lateef', serif;
+            font-size: 2rem;
             color: #e6b0ff;
-            margin-bottom: 20px;
-            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(230, 176, 255, 0.7);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .poster-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #da70d6, transparent);
+        }
+        
+        .poster-container {
+            position: relative;
+            max-width: 650px;
+            margin: 0 auto;
         }
         
         .poster-frame {
-            border: 3px solid rgba(255, 105, 180, 0.5);
-            border-radius: 15px;
+            border: 4px solid transparent;
+            border-radius: 20px;
             overflow: hidden;
-            max-width: 700px;
-            margin: 0 auto;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+                        inset 0 0 40px rgba(255, 20, 147, 0.2);
+            background: linear-gradient(rgba(50, 10, 80, 0.9), rgba(30, 5, 55, 0.9)) padding-box,
+                        linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493) border-box;
             position: relative;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
+            padding: 10px;
         }
         
         .poster-frame:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px) scale(1.02);
         }
         
         .poster-frame::before {
@@ -178,30 +222,93 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, rgba(148, 0, 211, 0.1), rgba(255, 20, 147, 0.05));
-            z-index: 1;
+            background: linear-gradient(135deg, 
+                        rgba(255, 20, 147, 0.1) 0%, 
+                        transparent 30%,
+                        transparent 70%,
+                        rgba(138, 43, 226, 0.1) 100%);
+            z-index: 2;
             pointer-events: none;
+        }
+        
+        .frame-decoration {
+            position: absolute;
+            z-index: 3;
+            color: rgba(255, 105, 180, 0.7);
+            font-size: 1.5rem;
+        }
+        
+        .decoration-1 { top: 15px; left: 15px; }
+        .decoration-2 { top: 15px; right: 15px; }
+        .decoration-3 { bottom: 15px; left: 15px; }
+        .decoration-4 { bottom: 15px; right: 15px; }
+        
+        .sm-heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.5rem;
+            color: rgba(255, 20, 147, 0.8);
+            z-index: 3;
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.9);
+            animation: smGlow 3s infinite alternate;
+        }
+        
+        @keyframes smGlow {
+            0% { opacity: 0.5; text-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
+            100% { opacity: 1; text-shadow: 0 0 25px rgba(255, 20, 147, 1), 0 0 40px rgba(255, 105, 180, 0.7); }
         }
         
         .movie-poster {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .flickering-light {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 30% 40%, 
+                      rgba(255, 255, 255, 0.15) 0%, 
+                      transparent 50%);
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 4s infinite alternate;
+            opacity: 0;
+            border-radius: 15px;
+        }
+        
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 0.3;
+            }
+            20%, 24%, 55% {
+                opacity: 0.8;
+            }
         }
         
         /* Movie Cards */
         .movies-section {
-            padding: 30px 0 40px;
+            padding: 35px 0 50px;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-family: 'Lateef', serif;
+            font-size: 2.5rem;
             color: #d8bfd8;
-            margin-bottom: 35px;
-            text-shadow: 0 0 10px rgba(216, 191, 216, 0.5);
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(216, 191, 216, 0.7);
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
         
         .section-title::after {
@@ -210,27 +317,31 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
+            width: 200px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #da70d6, transparent);
+            background: linear-gradient(90deg, transparent, #da70d6, #9370db, transparent);
         }
         
         .movie-card {
-            background: rgba(40, 10, 60, 0.7);
-            border-radius: 12px;
+            background: linear-gradient(145deg, rgba(50, 15, 80, 0.85), rgba(35, 10, 60, 0.9));
+            border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 35px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 105, 180, 0.2);
-            transition: all 0.3s ease;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+                        inset 0 0 25px rgba(255, 20, 147, 0.1);
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-wrap: wrap;
             position: relative;
+            backdrop-filter: blur(5px);
         }
         
         .movie-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(255, 20, 147, 0.25);
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 25px 50px rgba(255, 20, 147, 0.3),
+                        inset 0 0 30px rgba(255, 20, 147, 0.2);
+            border-color: rgba(255, 105, 180, 0.6);
         }
         
         .movie-card::before {
@@ -239,119 +350,182 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
+            height: 5px;
+            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db, #ff1493);
+            z-index: 2;
         }
         
         .movie-number {
             position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(255, 20, 147, 0.8);
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(45deg, #ff1493, #da70d6);
             color: white;
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.1rem;
-            z-index: 2;
-            box-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+            font-size: 1.3rem;
+            z-index: 3;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-family: 'Lateef', serif;
         }
         
         .movie-image {
             flex: 1;
             min-width: 280px;
-            height: 260px;
+            height: 280px;
             background-size: cover;
             background-position: center;
             position: relative;
         }
         
+        .movie-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(50, 15, 80, 0.8), transparent 50%);
+        }
+        
         .movie-content {
             flex: 2;
             min-width: 280px;
-            padding: 25px;
+            padding: 30px;
             position: relative;
         }
         
         .movie-title {
-            font-size: 1.9rem;
+            font-family: 'Lateef', serif;
+            font-size: 2.2rem;
             color: #ff69b4;
-            margin-bottom: 8px;
-            text-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .movie-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #ff69b4, transparent);
         }
         
         .movie-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #e6b0ff;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
         }
         
         .romantic-name {
             display: inline-block;
-            background: rgba(255, 105, 180, 0.15);
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            border-left: 3px solid #ff69b4;
+            background: linear-gradient(45deg, rgba(255, 105, 180, 0.2), rgba(138, 43, 226, 0.2));
+            padding: 8px 18px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff69b4;
+            border-right: 4px solid #9370db;
             font-style: italic;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
+            color: #f8f0fc;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .movie-description {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #f0d9ff;
-            line-height: 1.7;
-            font-size: 0.95rem;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            text-shadow: 0 0 10px rgba(240, 217, 255, 0.2);
         }
         
         .download-btn {
             display: inline-block;
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 12px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Scheherazade New', serif;
+        }
+        
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
         }
         
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
-            background: linear-gradient(45deg, #ff0066, #d870ff);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.7);
+            background: linear-gradient(45deg, #ff0066, #d870ff, #8a63d2);
+        }
+        
+        .download-btn:hover::before {
+            left: 100%;
         }
         
         .download-btn i {
-            margin-left: 6px;
+            margin-left: 8px;
         }
         
         /* Footer */
         footer {
-            background: rgba(20, 5, 35, 0.9);
-            padding: 25px 0;
+            background: linear-gradient(to top, rgba(20, 5, 35, 0.95), rgba(30, 10, 50, 0.9));
+            padding: 30px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 105, 180, 0.2);
-            margin-top: 40px;
+            border-top: 2px solid rgba(255, 105, 180, 0.3);
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
         }
         
         .copyright {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: #d8bfd8;
             letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(216, 191, 216, 0.5);
         }
         
         .copyright span {
             color: #ff69b4;
             font-weight: bold;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
         }
         
         /* S Celebration Modal */
@@ -361,14 +535,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 5, 20, 0.95);
+            background: radial-gradient(circle at center, rgba(10, 5, 20, 0.98), rgba(5, 2, 15, 0.97));
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            transition: opacity 0.7s ease, visibility 0.7s ease;
         }
         
         .celebration-modal.active {
@@ -377,64 +551,79 @@
         }
         
         .celebration-content {
-            background: linear-gradient(135deg, rgba(60, 15, 90, 0.9), rgba(30, 5, 50, 0.9));
-            border-radius: 20px;
-            padding: 40px;
+            background: linear-gradient(135deg, rgba(70, 20, 100, 0.95), rgba(40, 10, 70, 0.95));
+            border-radius: 30px;
+            padding: 50px;
             text-align: center;
-            max-width: 500px;
+            max-width: 550px;
             width: 90%;
-            box-shadow: 0 0 50px rgba(255, 20, 147, 0.5);
-            border: 2px solid rgba(255, 105, 180, 0.5);
+            box-shadow: 0 0 80px rgba(255, 20, 147, 0.7),
+                        inset 0 0 40px rgba(255, 20, 147, 0.3);
+            border: 3px solid rgba(255, 105, 180, 0.6);
             position: relative;
-            transform: scale(0.8);
-            transition: transform 0.5s ease;
+            transform: scale(0.8) rotate(-5deg);
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
         }
         
         .celebration-modal.active .celebration-content {
-            transform: scale(1);
+            transform: scale(1) rotate(0deg);
         }
         
         .celebration-s {
             font-family: 'Alex Brush', cursive;
-            font-size: 8rem;
+            font-size: 10rem;
             color: #ff69b4;
-            text-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
-            margin-bottom: 20px;
-            animation: sPulse 2s infinite alternate;
+            text-shadow: 0 0 50px rgba(255, 20, 147, 1),
+                         0 0 100px rgba(255, 105, 180, 0.8);
+            margin-bottom: 25px;
+            animation: sCelebration 3s infinite alternate;
+            position: relative;
         }
         
-        @keyframes sPulse {
-            0% { transform: scale(1); text-shadow: 0 0 30px rgba(255, 20, 147, 0.8); }
-            100% { transform: scale(1.1); text-shadow: 0 0 50px rgba(255, 20, 147, 1); }
+        @keyframes sCelebration {
+            0% { transform: scale(1) rotate(0deg); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
+            50% { transform: scale(1.1) rotate(5deg); text-shadow: 0 0 60px rgba(255, 20, 147, 1), 0 0 100px rgba(255, 105, 180, 0.9); }
+            100% { transform: scale(1) rotate(0deg); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
         }
         
         .celebration-text {
-            font-size: 1.4rem;
+            font-family: 'Lateef', serif;
+            font-size: 1.8rem;
             color: #e6b0ff;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(230, 176, 255, 0.8);
+            line-height: 1.6;
         }
         
         .celebration-subtext {
-            color: #d8bfd8;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            color: #f0d9ff;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            line-height: 1.8;
+            text-shadow: 0 0 15px rgba(240, 217, 255, 0.5);
         }
         
         .close-celebration {
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1.1rem;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
+            font-family: 'Scheherazade New', serif;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
         }
         
         .close-celebration:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.7);
+            background: linear-gradient(45deg, #ff0066, #d870ff, #8a63d2);
         }
         
         /* Floating Hearts */
@@ -450,9 +639,10 @@
         
         .heart {
             position: absolute;
-            color: rgba(255, 20, 147, 0.3);
-            font-size: 18px;
-            animation: float 15s infinite linear;
+            color: rgba(255, 20, 147, 0.4);
+            font-size: 20px;
+            animation: float 20s infinite linear;
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
         }
         
         @keyframes float {
@@ -461,10 +651,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.7;
+                opacity: 0.8;
             }
             90% {
-                opacity: 0.7;
+                opacity: 0.8;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg);
@@ -475,11 +665,11 @@
         /* Responsive */
         @media (max-width: 768px) {
             .site-title {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
             }
             
             .subtitle {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .movie-card {
@@ -487,33 +677,41 @@
             }
             
             .movie-image {
-                height: 220px;
+                height: 240px;
             }
             
             .movie-title {
-                font-size: 1.6rem;
+                font-size: 1.9rem;
             }
             
             .s-logo {
-                width: 50px;
-                height: 50px;
-                font-size: 2.2rem;
+                width: 55px;
+                height: 55px;
+                font-size: 2.7rem;
                 top: 15px;
                 right: 15px;
             }
             
             .celebration-s {
-                font-size: 6rem;
+                font-size: 7rem;
+            }
+            
+            .celebration-text {
+                font-size: 1.5rem;
+            }
+            
+            .poster-frame {
+                padding: 8px;
             }
         }
         
         /* Glow Effects */
         .glow-text {
-            text-shadow: 0 0 10px currentColor;
+            text-shadow: 0 0 15px currentColor;
         }
         
         .glow-box {
-            box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
         }
     </style>
 </head>
@@ -524,10 +722,10 @@
     <!-- S Celebration Modal -->
     <div class="celebration-modal" id="celebrationModal">
         <div class="celebration-content">
-            <div class="celebration-s">S</div>
-            <h2 class="celebration-text">مرحباً بك في عالم Twilight الرومانسي</h2>
-            <p class="celebration-subtext">موقعنا يجمع بين الحب الخالد والسحر الرائع لسلسلة Twilight الأسطورية</p>
-            <button class="close-celebration" id="closeCelebration">استكشف الموقع</button>
+            <div class="celebration-s">S ♥ M</div>
+            <h2 class="celebration-text">مرحباً بك في عالم Twilight الأسطوري</h2>
+            <p class="celebration-subtext">في هذا الفضاء الرومانسي، حيث تتلاقى الأنفس لتشكيل قصة حب تتحدى الزمن والمصير. هنا، في عالم Twilight الساحر، تبدأ رحلة عاطفية لا مثيل لها، حيث يتجسد الحب بأجمل صوره وأكثرها سحراً وإثارة.</p>
+            <button class="close-celebration" id="closeCelebration">ابدأ الرحلة الرومانسية</button>
         </div>
     </div>
     
@@ -539,10 +737,10 @@
         <div class="container">
             <div class="header-frame">
                 <h1 class="site-title">
-                    موقع عن حب لتنزيل فلم Twilight (S♥M)
+                    موقع عن <span class="title-heart">♥</span> حب أسطوري <span class="title-heart">♥</span>
                 </h1>
-                <p class="subtitle">استكشف عالم الحب والرومانسية في سلسلة Twilight الأسطورية</p>
-                <p class="tagline">في هذا الموقع، نقدم لكم رحلة عاطفية لا تُنسى عبر أجزاء Twilight الخمسة، حيث يلتقي الحب بمصير يتحدى الطبيعة. كل قصة حب تحمل في طياتها ألم الفراق، فرحة اللقاء، وتحدي المصير. استمتع بتجربة مشاهدة فريدة مليئة بالمشاعر الجياشة.</p>
+                <p class="subtitle">لتنزيل فلم Twilight (S ♥ M) - قصة حب تتحدى المصير والزمن</p>
+                <p class="tagline">في هذا الملاذ الرومانسي، حيث تتشابك الأقدار وتتلاقى القلوب، نقدم لكم ملحمة حب خالدة عبر أجزاء Twilight الخمسة. كل جزء يحمل في طياته أسراراً عاطفية، معاناة الفراق، فرحة اللقاء، وتحديات مصيرية تختبر قوة الحب الحقيقي. هنا، حيث يلتقي النور بالظل، والإنسان بالأسطورة، لتولد قصة حب أسطورية لا تنسى.</p>
             </div>
         </div>
     </header>
@@ -551,8 +749,16 @@
     <section class="movie-poster-section">
         <div class="container">
             <h3 class="poster-title">استكشف عالم Twilight الساحر</h3>
-            <div class="poster-frame">
-                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
+            <div class="poster-container">
+                <div class="poster-frame">
+                    <div class="frame-decoration decoration-1">❦</div>
+                    <div class="frame-decoration decoration-2">✢</div>
+                    <div class="frame-decoration decoration-3">♡</div>
+                    <div class="frame-decoration decoration-4">✦</div>
+                    <div class="sm-heart">S ♥ M</div>
+                    <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
+                    <div class="flickering-light"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -560,21 +766,21 @@
     <!-- Movies Section -->
     <section class="movies-section">
         <div class="container">
-            <h2 class="section-title">أجزاء السلسلة الرومانسية</h2>
+            <h2 class="section-title">ملحمة الحب الأسطورية عبر الأجزاء</h2>
             
             <!-- Movie 1 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">1</div>
                 <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
                 </div>
                 <div class="movie-content">
                     <h3 class="movie-title">Twilight – 2008</h3>
-                    <h4 class="movie-subtitle">الجزء الأول: لقاء القدر</h4>
-                    <div class="romantic-name">"بداية حب أبدي"</div>
-                    <p class="movie-description">قصة حب خارقة للطبيعة بين بيلا سوان البشريّة وإدوارد كولين المصّاص دماء. في بلدة فوركس الممطرة، يلتقيان لتبدأ رحلة حب مليئة بالمخاطر والعاطفة الجارفة، حيث يقرر إدوارد حماية بيلا من عالمه المظلم.</p>
+                    <h4 class="movie-subtitle">الجزء الأول: لقاء القدر الأسطوري</h4>
+                    <div class="romantic-name">"بداية أسطورة حب تتحدى الطبيعة"</div>
+                    <p class="movie-description">في بلدة فوركس الممطرة، حيث يلتقي النور بالظلال، تبدأ أسطورة حب خارقة للطبيعة بين بيلا سوان، الفتاة البشرية ذات الروح التواقة، وإدوارد كولين، المصّاص الدماء الذي يحمل قروناً من الوحدة والألم. لقاء القدر هذا يفتح بوابة لعالم من المشاعر الجياشة، التحديات المصيرية، وحماية تحيط بها المخاطر من كل جانب.</p>
                     <a href="https://www.mediafire.com/file/i53gy1x7nbh58nj/Twilight.2008.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> تحميل الجزء الأول
+                        <i class="fas fa-download"></i> حمل أسطورة البداية
                     </a>
                 </div>
             </div>
@@ -583,15 +789,15 @@
             <div class="movie-card glow-box">
                 <div class="movie-number">2</div>
                 <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
                 </div>
                 <div class="movie-content">
                     <h3 class="movie-title">New Moon – 2009</h3>
-                    <h4 class="movie-subtitle">الجزء الثاني: فراق موجع</h4>
-                    <div class="romantic-name">"ألم الفراق وأمل اللقاء"</div>
-                    <p class="movie-description">بعد حادثة عيد ميلاد بيلا، يغادر إدوارد ظنًا منه أنه يحميها. تدخل بيلا في حالة اكتئاب وتجد العزاء في صديقها جاكوب بلاك، لتكتشف أنه مستذئب. رحلة بحث عن الحب المفقود ومواجهة مع عالم الظلام.</p>
+                    <h4 class="movie-subtitle">الجزء الثاني: فراق يهز الأعماق</h4>
+                    <div class="romantic-name">"ألم الفراق الذي يولد القوة الحقيقية"</div>
+                    <p class="movie-description">بعد حادثة عيد الميلاد المؤلمة، يغادر إدوارد ظنًا منه أنه يحمي حبيبته من عالمه المظلم، تاركًا بيلا في دوامة من الألم واليأس. في ظل هذا الفراق المدمر، تكتشف بيلا قوة جديدة في صداقتها مع جاكوب بلاك، لتتعرف على عالم المستذئبين الأسطوري. رحلة بحث عن الحب المفقود ومواجهة مصيرية مع قوى الظلام التي تهدد وجودها.</p>
                     <a href="https://www.mediafire.com/file/c67e3s5uo3lni12/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> تحميل الجزء الثاني
+                        <i class="fas fa-download"></i> حمل ملحمة الفراق
                     </a>
                 </div>
             </div>
@@ -600,15 +806,15 @@
             <div class="movie-card glow-box">
                 <div class="movie-number">3</div>
                 <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
                 </div>
                 <div class="movie-content">
                     <h3 class="movie-title">Eclipse – 2010</h3>
-                    <h4 class="movie-subtitle">الجزء الثالث: صراع المشاعر</h4>
-                    <div class="romantic-name">"قلب بين نارين"</div>
-                    <p class="movie-description">بيلا مضطرة للاختيار بين حبها لإدوارد وصديقتها لجاكوب، بينما تهدد قوة شريرة مدينة سياتل. تحالف تاريخي بين المصّاصين والمستذئبين لحماية بيلا، في وقت تتخذ فيه قرارًا مصيريًا يغير حياتها للأبد.</p>
+                    <h4 class="movie-subtitle">الجزء الثالث: صراع المشاعر الجياشة</h4>
+                    <div class="romantic-name">"قلب يتأرجح بين نارين عاطفيتين"</div>
+                    <p class="movie-description">بيلا تقف على مفترق طرق مصيري، مضطرة للاختيار بين حبها الأبدي لإدوارد وصداقتها العميقة لجاكوب، بينما تهدد قوة شريرة غامضة مدينة سياتل. في هذا الجزء، يشهد العالم تحالفاً تاريخياً غير مسبوق بين عالمي مصاصي الدماء والمستذئبين لحماية بيلا، في وقت تتخذ فيه قراراً مصيرياً يغير مسار حياتها للأبد.</p>
                     <a href="https://www.mediafire.com/file/uca74ca824fnv4k/The.Twilight.Saga.Eclipse.2010.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> تحميل الجزء الثالث
+                        <i class="fas fa-download"></i> حمل معركة المشاعر
                     </a>
                 </div>
             </div>
@@ -617,15 +823,15 @@
             <div class="movie-card glow-box">
                 <div class="movie-number">4</div>
                 <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1533630757306-cbadb934bcb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
                 </div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 1 – 2011</h3>
                     <h4 class="movie-subtitle">الجزء الرابع: زواج وحمل غامض</h4>
-                    <div class="romantic-name">"اتحاد الأرواح وتحدي القدر"</div>
-                    <p class="movie-description">أخيرًا يتزوج إدوارد وبيلا في حلم تحقق، ويقضيان شهر عسل في جزيرة نائية. لكن فرحتهما تتحول إلى كابوس عندما تصبح بيلا حاملًا بطفل نصف مصّاص دماء، مما يهدد حياتها ويغضب عشيرة المستذئبين.</p>
+                    <div class="romantic-name">"اتحاد أرواح في مواجهة قدر مجهول"</div>
+                    <p class="movie-description">أخيراً، يتحقق الحلم ويتزوج إدوارد وبيلا في حفل أسطوري، ليقضيا شهر عسل في جزيرة نائية تحيط بها الأسرار. لكن الفرحة تتحول إلى كابوس عندما تصبح بيلا حاملاً بطفل نصف مصّاص دماء، مما يهدد حياتها ويغضب عشيرة المستذئبين. هنا تبدأ معركة جديدة لحماية هذا الحب الاستثنائي من أخطار لم تكن في الحسبان.</p>
                     <a href="https://www.mediafire.com/file/re2jmh2p0fpgmqb/The.Twilight.Saga.Breaking.Dawn.Part.1.2011.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> تحميل الجزء الرابع
+                        <i class="fas fa-download"></i> حمل قصة الاتحاد
                     </a>
                 </div>
             </div>
@@ -634,15 +840,15 @@
             <div class="movie-card glow-box">
                 <div class="movie-number">5</div>
                 <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1493305594059-f8bb5b2b0e36?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
                 </div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 2 – 2012</h3>
-                    <h4 class="movie-subtitle">الجزء الخامس: الذروة والخلود</h4>
-                    <div class="romantic-name">"نهاية البداية، بداية الخلود"</div>
-                    <p class="movie-description">بعد تحول بيلا إلى مصّاصة دماء لحماية طفلتها رينيسمي، يجب على آل كولين وحلفائهم الدفاع عن الطفلة ضد الفولتوري، أقدم وأقوى عشائر المصّاصين. معركة مصيرية تقرر مصير عائلة كولين والحب الذي تحدى كل الصعاب.</p>
+                    <h4 class="movie-subtitle">الجزء الخامس: الخلود والنهاية الأسطورية</h4>
+                    <div class="romantic-name">"نهاية البداية، بداية الخلود الأبدي"</div>
+                    <p class="movie-description">بعد تحول بيلا إلى مصّاصة دماء لحماية طفلتها رينيسمي، يجب على آل كولين وحلفائهم الدفاع عن الطفلة ضد الفولتوري، أقدم وأقوى عشائر المصّاصين. معركة مصيرية أسطورية تقرر مصير عائلة كولين والحب الذي تحدى كل الصعاب، لتختتم بهذه الملحمة الخالدة التي تثبت أن الحب الحقيقي أقوى من أي قوة في الكون.</p>
                     <a href="https://www.mediafire.com/file/qlybiy84x55t3yb/The.Twilight.Saga.Breaking.Dawn.Part.2.2012.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> تحميل الجزء الخامس
+                        <i class="fas fa-download"></i> حمل الخاتمة الأسطورية
                     </a>
                 </div>
             </div>
@@ -652,7 +858,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>Mohammed Abu Al-Saud & Sama</span></p>
+            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>Mohammed Abu Al-Saud & Sama</span> - قصة حب خالدة في ذاكرة الزمن</p>
         </div>
     </footer>
     
@@ -667,7 +873,10 @@
             setTimeout(() => {
                 celebrationModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-            }, 1000);
+                // Play romantic sound if needed
+                // const audio = new Audio('romantic-sound.mp3');
+                // audio.play();
+            }, 800);
         });
         
         // Close celebration modal
@@ -677,56 +886,70 @@
             
             // Create celebration hearts
             createCelebrationHearts();
+            
+            // Add romantic effect to title
+            const title = document.querySelector('.site-title');
+            title.style.animation = 'pulse 1s 3';
+            
+            setTimeout(() => {
+                title.style.animation = '';
+            }, 3000);
         });
         
         // S Logo click effect
         sLogo.addEventListener('click', function() {
-            this.style.transform = 'scale(1.3)';
-            this.style.boxShadow = '0 0 30px rgba(255, 20, 147, 1)';
-            
-            setTimeout(() => {
-                this.style.transform = '';
-                this.style.boxShadow = '';
-            }, 300);
+            // Add pulse effect
+            this.style.animation = 'logoGlow 0.5s 3';
             
             // Show celebration modal again
-            celebrationModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                celebrationModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                this.style.animation = '';
+            }, 300);
         });
         
         // Create floating hearts
         const heartsContainer = document.getElementById('heartsContainer');
-        const heartIcons = ['♥', '❤', '💖', '💕', '💗', '💓', '💞'];
+        const heartIcons = ['♥', '❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
         
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 25; i++) {
+            createHeart(i);
+        }
+        
+        function createHeart(index) {
             const heart = document.createElement('div');
             heart.className = 'heart';
             heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
             
             // Random position and size
             const left = Math.random() * 100;
-            const size = Math.random() * 15 + 12;
-            const delay = Math.random() * 15;
+            const size = Math.random() * 20 + 15;
+            const delay = Math.random() * 20;
+            const duration = Math.random() * 15 + 15;
+            const color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, ${Math.random() * 0.5 + 0.3})`;
             
             heart.style.left = `${left}%`;
             heart.style.fontSize = `${size}px`;
             heart.style.animationDelay = `${delay}s`;
+            heart.style.animationDuration = `${duration}s`;
+            heart.style.color = color;
             
             heartsContainer.appendChild(heart);
         }
         
         // Create celebration hearts
         function createCelebrationHearts() {
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 40; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
                 heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
-                heart.style.color = 'rgba(255, 20, 147, 0.7)';
+                heart.style.color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.8)`;
                 heart.style.zIndex = '1999';
-                heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+                heart.style.fontSize = `${Math.random() * 25 + 20}px`;
                 heart.style.left = `${Math.random() * 100}%`;
-                heart.style.animationDelay = `${Math.random() * 2}s`;
-                heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                heart.style.animationDelay = `${Math.random() * 3}s`;
+                heart.style.animationDuration = `${Math.random() * 6 + 4}s`;
                 
                 document.body.appendChild(heart);
                 
@@ -735,7 +958,7 @@
                     if (heart.parentNode) {
                         heart.parentNode.removeChild(heart);
                     }
-                }, 8000);
+                }, 10000);
             }
         }
         
@@ -743,13 +966,25 @@
         const movieCards = document.querySelectorAll('.movie-card');
         movieCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-                this.style.boxShadow = '0 15px 35px rgba(255, 20, 147, 0.3)';
+                this.style.transform = 'translateY(-12px) scale(1.01)';
+                this.style.boxShadow = '0 25px 50px rgba(255, 20, 147, 0.3), inset 0 0 30px rgba(255, 20, 147, 0.2)';
+                
+                // Add subtle glow to number
+                const number = this.querySelector('.movie-number');
+                if (number) {
+                    number.style.boxShadow = '0 0 30px rgba(255, 20, 147, 1)';
+                }
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5)';
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(255, 20, 147, 0.1)';
+                
+                // Reset number glow
+                const number = this.querySelector('.movie-number');
+                if (number) {
+                    number.style.boxShadow = '0 0 20px rgba(255, 20, 147, 0.8)';
+                }
             });
         });
         
@@ -762,47 +997,64 @@
                 
                 // Create a visual effect
                 this.style.transform = 'scale(0.95)';
-                this.style.boxShadow = '0 2px 10px rgba(255, 20, 147, 0.6)';
                 
-                // Create a small heart animation
-                const heart = document.createElement('div');
-                heart.innerHTML = '❤';
-                heart.style.position = 'fixed';
-                heart.style.color = '#ff1493';
-                heart.style.fontSize = '20px';
-                heart.style.zIndex = '9999';
-                heart.style.pointerEvents = 'none';
-                heart.style.left = `${e.clientX}px`;
-                heart.style.top = `${e.clientY}px`;
-                heart.style.animation = 'floatUp 1s forwards';
-                
-                document.body.appendChild(heart);
-                
-                // Style for float up animation
-                const style = document.createElement('style');
-                style.innerHTML = `
-                    @keyframes floatUp {
-                        0% { transform: translateY(0) scale(1); opacity: 1; }
-                        100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
-                    }
-                `;
-                document.head.appendChild(style);
+                // Create multiple hearts animation
+                for (let i = 0; i < 8; i++) {
+                    createClickHeart(e.clientX, e.clientY);
+                }
                 
                 setTimeout(() => {
                     this.style.transform = '';
-                    this.style.boxShadow = '';
                     window.open(url, '_blank');
-                    
-                    // Remove heart after animation
-                    if (heart.parentNode) {
-                        heart.parentNode.removeChild(heart);
-                    }
-                    if (style.parentNode) {
-                        style.parentNode.removeChild(style);
-                    }
                 }, 300);
             });
         });
+        
+        function createClickHeart(x, y) {
+            const heart = document.createElement('div');
+            heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+            heart.style.position = 'fixed';
+            heart.style.color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.9)`;
+            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+            heart.style.zIndex = '9999';
+            heart.style.pointerEvents = 'none';
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            heart.style.animation = `floatUp ${Math.random() * 1 + 1}s forwards`;
+            
+            document.body.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, 1500);
+        }
+        
+        // Add style for float up animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes floatUp {
+                0% { 
+                    transform: translate(0, 0) rotate(0deg) scale(1); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translate(${Math.random() * 100 - 50}px, -150px) rotate(${Math.random() * 360}deg) scale(0); 
+                    opacity: 0; 
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Add flickering effect to the "S ♥ M" in the poster
+        const smHeart = document.querySelector('.sm-heart');
+        if (smHeart) {
+            setInterval(() => {
+                smHeart.style.opacity = Math.random() > 0.5 ? '0.7' : '1';
+            }, 3000);
+        }
     </script>
 </body>
-</html>
+    </html>
