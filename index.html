@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع عن حب ♥ - سلسلة أفلام Twilight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0c0c1e 0%, #1a0a2e 50%, #2d0b3e 100%);
+            color: #f8f0fc;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.1) 0%, transparent 20%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* S Logo */
+        .s-logo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff1493, #da70d6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.8rem;
+            color: white;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: logoGlow 3s infinite alternate;
+            cursor: pointer;
+        }
+        
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
+            100% { box-shadow: 0 0 25px rgba(255, 20, 147, 0.9), 0 0 40px rgba(255, 105, 180, 0.6); }
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 30px 0 20px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .header-frame {
+            border: 2px solid rgba(255, 105, 180, 0.4);
+            border-radius: 20px;
+            padding: 25px;
+            background: rgba(30, 5, 50, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 20, 147, 0.1);
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .header-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .site-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            color: #ff69b4;
+            text-shadow: 0 0 15px rgba(255, 20, 147, 0.7), 0 0 30px rgba(255, 20, 147, 0.5);
+            margin-bottom: 8px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .site-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: #e6b0ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #d8bfd8;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            padding: 10px;
+            border-top: 1px dashed rgba(255, 105, 180, 0.3);
+            border-bottom: 1px dashed rgba(255, 105, 180, 0.3);
+        }
+        
+        /* Movie Poster Section */
+        .movie-poster-section {
+            padding: 15px 0 30px;
+            text-align: center;
+        }
+        
+        .poster-title {
+            font-size: 1.8rem;
+            color: #e6b0ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
+        }
+        
+        .poster-frame {
+            border: 3px solid rgba(255, 105, 180, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+        
+        .poster-frame:hover {
+            transform: scale(1.02);
+        }
+        
+        .poster-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(148, 0, 211, 0.1), rgba(255, 20, 147, 0.05));
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .movie-poster {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Movie Cards */
+        .movies-section {
+            padding: 30px 0 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #d8bfd8;
+            margin-bottom: 35px;
+            text-shadow: 0 0 10px rgba(216, 191, 216, 0.5);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #da70d6, transparent);
+        }
+        
+        .movie-card {
+            background: rgba(40, 10, 60, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 105, 180, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255, 20, 147, 0.25);
+        }
+        
+        .movie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
+        }
+        
+        .movie-number {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 20, 147, 0.8);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+        }
+        
+        .movie-image {
+            flex: 1;
+            min-width: 280px;
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .movie-content {
+            flex: 2;
+            min-width: 280px;
+            padding: 25px;
+            position: relative;
+        }
+        
+        .movie-title {
+            font-size: 1.9rem;
+            color: #ff69b4;
+            margin-bottom: 8px;
+            text-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+        }
+        
+        .movie-subtitle {
+            font-size: 1.2rem;
+            color: #e6b0ff;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .romantic-name {
+            display: inline-block;
+            background: rgba(255, 105, 180, 0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border-left: 3px solid #ff69b4;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .movie-description {
+            margin-bottom: 20px;
+            color: #f0d9ff;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff1493, #da70d6);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+            background: linear-gradient(45deg, #ff0066, #d870ff);
+        }
+        
+        .download-btn i {
+            margin-left: 6px;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(20, 5, 35, 0.9);
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 105, 180, 0.2);
+            margin-top: 40px;
+        }
+        
+        .copyright {
+            font-size: 0.95rem;
+            color: #d8bfd8;
+            letter-spacing: 1px;
+        }
+        
+        .copyright span {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        
+        /* S Celebration Modal */
+        .celebration-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 5, 20, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .celebration-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .celebration-content {
+            background: linear-gradient(135deg, rgba(60, 15, 90, 0.9), rgba(30, 5, 50, 0.9));
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 50px rgba(255, 20, 147, 0.5);
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.5s ease;
+        }
+        
+        .celebration-modal.active .celebration-content {
+            transform: scale(1);
+        }
+        
+        .celebration-s {
+            font-family: 'Alex Brush', cursive;
+            font-size: 8rem;
+            color: #ff69b4;
+            text-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+            margin-bottom: 20px;
+            animation: sPulse 2s infinite alternate;
+        }
+        
+        @keyframes sPulse {
+            0% { transform: scale(1); text-shadow: 0 0 30px rgba(255, 20, 147, 0.8); }
+            100% { transform: scale(1.1); text-shadow: 0 0 50px rgba(255, 20, 147, 1); }
+        }
+        
+        .celebration-text {
+            font-size: 1.4rem;
+            color: #e6b0ff;
+            margin-bottom: 25px;
+        }
+        
+        .celebration-subtext {
+            color: #d8bfd8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .close-celebration {
+            background: linear-gradient(45deg, #ff1493, #da70d6);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+        }
+        
+        .close-celebration:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+        }
+        
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(255, 20, 147, 0.3);
+            font-size: 18px;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .movie-card {
+                flex-direction: column;
+            }
+            
+            .movie-image {
+                height: 220px;
+            }
+            
+            .movie-title {
+                font-size: 1.6rem;
+            }
+            
+            .s-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 2.2rem;
+                top: 15px;
+                right: 15px;
+            }
+            
+            .celebration-s {
+                font-size: 6rem;
+            }
+        }
+        
+        /* Glow Effects */
+        .glow-text {
+            text-shadow: 0 0 10px currentColor;
+        }
+        
+        .glow-box {
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- S Logo -->
+    <div class="s-logo" id="sLogo">S</div>
+    
+    <!-- S Celebration Modal -->
+    <div class="celebration-modal" id="celebrationModal">
+        <div class="celebration-content">
+            <div class="celebration-s">S</div>
+            <h2 class="celebration-text">مرحباً بك في عالم Twilight الرومانسي</h2>
+            <p class="celebration-subtext">موقعنا يجمع بين الحب الخالد والسحر الرائع لسلسلة Twilight الأسطورية</p>
+            <button class="close-celebration" id="closeCelebration">استكشف الموقع</button>
+        </div>
+    </div>
+    
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="heartsContainer"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-frame">
+                <h1 class="site-title">
+                    موقع عن حب لتنزيل فلم Twilight (S♥M)
+                </h1>
+                <p class="subtitle">استكشف عالم الحب والرومانسية في سلسلة Twilight الأسطورية</p>
+                <p class="tagline">في هذا الموقع، نقدم لكم رحلة عاطفية لا تُنسى عبر أجزاء Twilight الخمسة، حيث يلتقي الحب بمصير يتحدى الطبيعة. كل قصة حب تحمل في طياتها ألم الفراق، فرحة اللقاء، وتحدي المصير. استمتع بتجربة مشاهدة فريدة مليئة بالمشاعر الجياشة.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Movie Poster Section -->
+    <section class="movie-poster-section">
+        <div class="container">
+            <h3 class="poster-title">استكشف عالم Twilight الساحر</h3>
+            <div class="poster-frame">
+                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Movies Section -->
+    <section class="movies-section">
+        <div class="container">
+            <h2 class="section-title">أجزاء السلسلة الرومانسية</h2>
+            
+            <!-- Movie 1 -->
+            <div class="movie-card glow-box">
+                <div class="movie-number">1</div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                </div>
+                <div class="movie-content">
+                    <h3 class="movie-title">Twilight – 2008</h3>
+                    <h4 class="movie-subtitle">الجزء الأول: لقاء القدر</h4>
+                    <div class="romantic-name">"بداية حب أبدي"</div>
+                    <p class="movie-description">قصة حب خارقة للطبيعة بين بيلا سوان البشريّة وإدوارد كولين المصّاص دماء. في بلدة فوركس الممطرة، يلتقيان لتبدأ رحلة حب مليئة بالمخاطر والعاطفة الجارفة، حيث يقرر إدوارد حماية بيلا من عالمه المظلم.</p>
+                    <a href="https://www.mediafire.com/file/i53gy1x7nbh58nj/Twilight.2008.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> تحميل الجزء الأول
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Movie 2 -->
+            <div class="movie-card glow-box">
+                <div class="movie-number">2</div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                </div>
+                <div class="movie-content">
+                    <h3 class="movie-title">New Moon – 2009</h3>
+                    <h4 class="movie-subtitle">الجزء الثاني: فراق موجع</h4>
+                    <div class="romantic-name">"ألم الفراق وأمل اللقاء"</div>
+                    <p class="movie-description">بعد حادثة عيد ميلاد بيلا، يغادر إدوارد ظنًا منه أنه يحميها. تدخل بيلا في حالة اكتئاب وتجد العزاء في صديقها جاكوب بلاك، لتكتشف أنه مستذئب. رحلة بحث عن الحب المفقود ومواجهة مع عالم الظلام.</p>
+                    <a href="https://www.mediafire.com/file/c67e3s5uo3lni12/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> تحميل الجزء الثاني
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Movie 3 -->
+            <div class="movie-card glow-box">
+                <div class="movie-number">3</div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                </div>
+                <div class="movie-content">
+                    <h3 class="movie-title">Eclipse – 2010</h3>
+                    <h4 class="movie-subtitle">الجزء الثالث: صراع المشاعر</h4>
+                    <div class="romantic-name">"قلب بين نارين"</div>
+                    <p class="movie-description">بيلا مضطرة للاختيار بين حبها لإدوارد وصديقتها لجاكوب، بينما تهدد قوة شريرة مدينة سياتل. تحالف تاريخي بين المصّاصين والمستذئبين لحماية بيلا، في وقت تتخذ فيه قرارًا مصيريًا يغير حياتها للأبد.</p>
+                    <a href="https://www.mediafire.com/file/uca74ca824fnv4k/The.Twilight.Saga.Eclipse.2010.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> تحميل الجزء الثالث
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Movie 4 -->
+            <div class="movie-card glow-box">
+                <div class="movie-number">4</div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1533630757306-cbadb934bcb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                </div>
+                <div class="movie-content">
+                    <h3 class="movie-title">Breaking Dawn – Part 1 – 2011</h3>
+                    <h4 class="movie-subtitle">الجزء الرابع: زواج وحمل غامض</h4>
+                    <div class="romantic-name">"اتحاد الأرواح وتحدي القدر"</div>
+                    <p class="movie-description">أخيرًا يتزوج إدوارد وبيلا في حلم تحقق، ويقضيان شهر عسل في جزيرة نائية. لكن فرحتهما تتحول إلى كابوس عندما تصبح بيلا حاملًا بطفل نصف مصّاص دماء، مما يهدد حياتها ويغضب عشيرة المستذئبين.</p>
+                    <a href="https://www.mediafire.com/file/re2jmh2p0fpgmqb/The.Twilight.Saga.Breaking.Dawn.Part.1.2011.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> تحميل الجزء الرابع
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Movie 5 -->
+            <div class="movie-card glow-box">
+                <div class="movie-number">5</div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1493305594059-f8bb5b2b0e36?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(40,10,60,0.7), transparent);"></div>
+                </div>
+                <div class="movie-content">
+                    <h3 class="movie-title">Breaking Dawn – Part 2 – 2012</h3>
+                    <h4 class="movie-subtitle">الجزء الخامس: الذروة والخلود</h4>
+                    <div class="romantic-name">"نهاية البداية، بداية الخلود"</div>
+                    <p class="movie-description">بعد تحول بيلا إلى مصّاصة دماء لحماية طفلتها رينيسمي، يجب على آل كولين وحلفائهم الدفاع عن الطفلة ضد الفولتوري، أقدم وأقوى عشائر المصّاصين. معركة مصيرية تقرر مصير عائلة كولين والحب الذي تحدى كل الصعاب.</p>
+                    <a href="https://www.mediafire.com/file/qlybiy84x55t3yb/The.Twilight.Saga.Breaking.Dawn.Part.2.2012.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> تحميل الجزء الخامس
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>Mohammed Abu Al-Saud & Sama</span></p>
+        </div>
+    </footer>
+    
+    <script>
+        // S Celebration Modal
+        const celebrationModal = document.getElementById('celebrationModal');
+        const closeCelebrationBtn = document.getElementById('closeCelebration');
+        const sLogo = document.getElementById('sLogo');
+        
+        // Show celebration modal on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                celebrationModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }, 1000);
+        });
+        
+        // Close celebration modal
+        closeCelebrationBtn.addEventListener('click', function() {
+            celebrationModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Create celebration hearts
+            createCelebrationHearts();
+        });
+        
+        // S Logo click effect
+        sLogo.addEventListener('click', function() {
+            this.style.transform = 'scale(1.3)';
+            this.style.boxShadow = '0 0 30px rgba(255, 20, 147, 1)';
+            
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            }, 300);
+            
+            // Show celebration modal again
+            celebrationModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Create floating hearts
+        const heartsContainer = document.getElementById('heartsContainer');
+        const heartIcons = ['♥', '❤', '💖', '💕', '💗', '💓', '💞'];
+        
+        for (let i = 0; i < 20; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+            
+            // Random position and size
+            const left = Math.random() * 100;
+            const size = Math.random() * 15 + 12;
+            const delay = Math.random() * 15;
+            
+            heart.style.left = `${left}%`;
+            heart.style.fontSize = `${size}px`;
+            heart.style.animationDelay = `${delay}s`;
+            
+            heartsContainer.appendChild(heart);
+        }
+        
+        // Create celebration hearts
+        function createCelebrationHearts() {
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.color = 'rgba(255, 20, 147, 0.7)';
+                heart.style.zIndex = '1999';
+                heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 2}s`;
+                heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                
+                document.body.appendChild(heart);
+                
+                // Remove heart after animation
+                setTimeout(() => {
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                }, 8000);
+            }
+        }
+        
+        // Add hover effect to movie cards
+        const movieCards = document.querySelectorAll('.movie-card');
+        movieCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 15px 35px rgba(255, 20, 147, 0.3)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5)';
+            });
+        });
+        
+        // Add click effect to download buttons
+        const downloadBtns = document.querySelectorAll('.download-btn');
+        downloadBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = this.getAttribute('href');
+                
+                // Create a visual effect
+                this.style.transform = 'scale(0.95)';
+                this.style.boxShadow = '0 2px 10px rgba(255, 20, 147, 0.6)';
+                
+                // Create a small heart animation
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤';
+                heart.style.position = 'fixed';
+                heart.style.color = '#ff1493';
+                heart.style.fontSize = '20px';
+                heart.style.zIndex = '9999';
+                heart.style.pointerEvents = 'none';
+                heart.style.left = `${e.clientX}px`;
+                heart.style.top = `${e.clientY}px`;
+                heart.style.animation = 'floatUp 1s forwards';
+                
+                document.body.appendChild(heart);
+                
+                // Style for float up animation
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    @keyframes floatUp {
+                        0% { transform: translateY(0) scale(1); opacity: 1; }
+                        100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                    window.open(url, '_blank');
+                    
+                    // Remove heart after animation
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                    if (style.parentNode) {
+                        style.parentNode.removeChild(style);
+                    }
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
