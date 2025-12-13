@@ -31,73 +31,73 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(147, 112, 219, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 40% 60%, rgba(255, 182, 193, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 70% 20%, rgba(221, 160, 221, 0.08) 0%, transparent 25%);
+                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.06) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(147, 112, 219, 0.06) 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, rgba(255, 182, 193, 0.06) 0%, transparent 25%),
+                radial-gradient(circle at 70% 20%, rgba(221, 160, 221, 0.06) 0%, transparent 25%);
             z-index: -1;
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
-        /* S Logo - تم تخفيف التأثير */
+        /* S Logo - أصغر حجماً */
         .s-logo {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 65px;
-            height: 65px;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(45deg, #ff69b4, #d870ff);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Alex Brush', cursive;
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: white;
             z-index: 1000;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             animation: logoGlow 4s infinite alternate;
             cursor: pointer;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
         
         .s-logo:hover {
             transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 0 30px rgba(255, 105, 180, 0.9);
+            box-shadow: 0 0 18px rgba(255, 105, 180, 0.7);
         }
         
         @keyframes logoGlow {
-            0% { box-shadow: 0 0 15px rgba(255, 105, 180, 0.5); }
-            100% { box-shadow: 0 0 25px rgba(255, 105, 180, 0.8); }
+            0% { box-shadow: 0 0 8px rgba(255, 105, 180, 0.4); }
+            100% { box-shadow: 0 0 16px rgba(255, 105, 180, 0.6); }
         }
         
-        /* Header Styles */
+        /* Header Styles - أحجام أصغر */
         header {
             text-align: center;
-            padding: 50px 0 40px;
+            padding: 30px 0 25px;
             position: relative;
             overflow: hidden;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         
         .header-frame {
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            border-radius: 25px;
-            padding: 40px 30px;
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            border-radius: 20px;
+            padding: 25px 20px;
             background: rgba(30, 10, 50, 0.6);
             box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.5), 
-                inset 0 0 40px rgba(255, 105, 180, 0.1),
-                0 0 50px rgba(255, 182, 193, 0.2);
+                0 10px 25px rgba(0, 0, 0, 0.4), 
+                inset 0 0 25px rgba(255, 105, 180, 0.08),
+                0 0 30px rgba(255, 182, 193, 0.15);
             position: relative;
-            margin-bottom: 50px;
-            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            backdrop-filter: blur(8px);
         }
         
         .header-frame::before {
@@ -108,92 +108,92 @@
             right: -2px;
             bottom: -2px;
             background: linear-gradient(45deg, #ffb6c1, #ff69b4, #d870ff, #ffb6c1);
-            border-radius: 27px;
+            border-radius: 22px;
             z-index: -1;
             opacity: 0.4;
         }
         
         .site-title {
             font-family: 'Marck Script', cursive;
-            font-size: 3.8rem;
+            font-size: 2.8rem;
             color: #ffb6c1;
             text-shadow: 
-                0 0 20px rgba(255, 182, 193, 0.8),
-                0 0 40px rgba(255, 182, 193, 0.4);
-            margin-bottom: 20px;
+                0 0 15px rgba(255, 182, 193, 0.7),
+                0 0 30px rgba(255, 182, 193, 0.3);
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         
         .site-title span {
             color: #d870ff;
-            text-shadow: 0 0 15px rgba(216, 112, 255, 0.7);
+            text-shadow: 0 0 10px rgba(216, 112, 255, 0.6);
         }
         
         .site-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            height: 3px;
+            width: 200px;
+            height: 2px;
             background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
         }
         
         .subtitle {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: #e6b0ff;
-            margin-bottom: 25px;
-            text-shadow: 0 0 10px rgba(230, 176, 255, 0.6);
+            margin-bottom: 18px;
+            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
             font-weight: 600;
             font-family: 'Dancing Script', cursive;
         }
         
-        /* تأثير النص المتوهج */
+        /* تأثير النص المتوهج - خفيف */
         .tagline {
             font-style: italic;
             color: #fff0f5;
-            font-size: 1.3rem;
-            max-width: 900px;
+            font-size: 1.1rem;
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.9;
-            padding: 25px;
-            border-top: 1px solid rgba(255, 182, 193, 0.3);
-            border-bottom: 1px solid rgba(255, 182, 193, 0.3);
-            background: rgba(255, 182, 193, 0.05);
-            border-radius: 15px;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-            animation: textGlow 6s infinite alternate;
+            line-height: 1.7;
+            padding: 18px;
+            border-top: 1px solid rgba(255, 182, 193, 0.25);
+            border-bottom: 1px solid rgba(255, 182, 193, 0.25);
+            background: rgba(255, 182, 193, 0.04);
+            border-radius: 12px;
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+            animation: textGlow 8s infinite alternate;
             position: relative;
             overflow: hidden;
         }
         
         @keyframes textGlow {
-            0%, 30% { 
+            0%, 40% { 
                 color: #fff0f5;
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-                box-shadow: inset 0 0 20px rgba(255, 182, 193, 0.05);
+                text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+                box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.03);
             }
             70%, 100% { 
                 color: #ffebf3;
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 182, 193, 0.3);
-                box-shadow: inset 0 0 30px rgba(255, 182, 193, 0.1);
+                text-shadow: 0 0 6px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 182, 193, 0.2);
+                box-shadow: inset 0 0 20px rgba(255, 182, 193, 0.07);
             }
         }
         
-        /* Movie Poster Section - إطار رومانسي جداً */
+        /* Movie Poster Section - أصغر حجماً */
         .movie-poster-section {
-            padding: 30px 0 50px;
+            padding: 20px 0 30px;
             text-align: center;
         }
         
         .poster-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: #ffb6c1;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
             position: relative;
             display: inline-block;
             font-family: 'Marck Script', cursive;
@@ -202,7 +202,7 @@
         .poster-title::before, .poster-title::after {
             content: '♥';
             position: absolute;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #ff69b4;
             top: 50%;
             transform: translateY(-50%);
@@ -210,48 +210,48 @@
         }
         
         .poster-title::before {
-            right: -50px;
+            right: -40px;
         }
         
         .poster-title::after {
-            left: -50px;
+            left: -40px;
         }
         
         @keyframes heartbeat {
             0%, 100% { transform: translateY(-50%) scale(1); }
-            50% { transform: translateY(-50%) scale(1.3); }
+            50% { transform: translateY(-50%) scale(1.2); }
         }
         
         .poster-frame {
             border: none;
-            border-radius: 25px;
+            border-radius: 18px;
             overflow: hidden;
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 0 auto 20px;
             position: relative;
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.7),
-                0 0 80px rgba(255, 182, 193, 0.3),
-                0 0 120px rgba(216, 112, 255, 0.2);
-            transition: transform 0.6s ease;
+                0 15px 35px rgba(0, 0, 0, 0.6),
+                0 0 50px rgba(255, 182, 193, 0.2),
+                0 0 80px rgba(216, 112, 255, 0.15);
+            transition: transform 0.5s ease;
         }
         
         .poster-frame::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
             background: linear-gradient(45deg, 
                 #ffb6c1, #ff69b4, #d870ff, #9370db, 
                 #ffb6c1, #ff69b4, #d870ff);
-            border-radius: 30px;
+            border-radius: 22px;
             z-index: -1;
-            opacity: 0.6;
-            filter: blur(10px);
-            animation: borderGlow 8s linear infinite;
-            background-size: 400% 400%;
+            opacity: 0.5;
+            filter: blur(6px);
+            animation: borderGlow 10s linear infinite;
+            background-size: 300% 300%;
         }
         
         @keyframes borderGlow {
@@ -268,15 +268,15 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg, 
-                rgba(255, 182, 193, 0.15) 0%, 
-                rgba(255, 105, 180, 0.1) 50%, 
-                rgba(216, 112, 255, 0.05) 100%);
+                rgba(255, 182, 193, 0.12) 0%, 
+                rgba(255, 105, 180, 0.08) 50%, 
+                rgba(216, 112, 255, 0.04) 100%);
             pointer-events: none;
             z-index: 1;
         }
         
         .poster-frame:hover {
-            transform: scale(1.02) translateY(-5px);
+            transform: scale(1.015) translateY(-3px);
         }
         
         .movie-poster {
@@ -285,22 +285,63 @@
             display: block;
             position: relative;
             z-index: 0;
-            border-radius: 20px;
+            border-radius: 15px;
         }
         
-        /* Movie Cards - بدون صور */
+        /* الصورة الثانية تحت البوابة */
+        .second-image-section {
+            padding: 10px 0 30px;
+            text-align: center;
+        }
+        
+        .second-image-frame {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(255, 182, 193, 0.15);
+            transition: transform 0.5s ease;
+        }
+        
+        .second-image-frame::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, 
+                #ffb6c1, #ff69b4, #d870ff);
+            border-radius: 18px;
+            z-index: -1;
+            opacity: 0.4;
+            filter: blur(4px);
+        }
+        
+        .second-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+        
+        /* Movie Cards - أحجام أصغر */
         .movies-section {
-            padding: 50px 0 70px;
+            padding: 30px 0 50px;
         }
         
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: #ffb6c1;
-            margin-bottom: 50px;
-            text-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
+            margin-bottom: 35px;
+            text-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
             position: relative;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             font-family: 'Marck Script', cursive;
         }
         
@@ -310,32 +351,32 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            height: 4px;
+            width: 200px;
+            height: 3px;
             background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
         }
         
         .movie-card {
-            background: rgba(40, 15, 65, 0.7);
-            border-radius: 20px;
+            background: rgba(40, 15, 65, 0.65);
+            border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(255, 182, 193, 0.2);
-            border: 1px solid rgba(255, 182, 193, 0.2);
-            transition: all 0.4s ease;
+                0 10px 25px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 182, 193, 0.15);
+            border: 1px solid rgba(255, 182, 193, 0.15);
+            transition: all 0.3s ease;
             position: relative;
             backdrop-filter: blur(5px);
-            padding: 30px;
+            padding: 25px;
         }
         
         .movie-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 
-                0 25px 50px rgba(255, 182, 193, 0.2),
-                0 0 60px rgba(216, 112, 255, 0.15);
-            background: rgba(50, 20, 75, 0.8);
+                0 18px 35px rgba(255, 182, 193, 0.15),
+                0 0 45px rgba(216, 112, 255, 0.1);
+            background: rgba(50, 20, 75, 0.75);
         }
         
         .movie-card::before {
@@ -344,100 +385,98 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 4px;
             background: linear-gradient(90deg, 
-                #ffb6c1, #ff69b4, #d870ff, #9370db, 
-                #ffb6c1);
+                #ffb6c1, #ff69b4, #d870ff);
         }
         
         .movie-number {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 15px;
+            left: 15px;
             background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             z-index: 2;
-            box-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
+            box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
             border: 2px solid white;
             font-family: 'Cairo', sans-serif;
             transition: all 0.3s ease;
         }
         
         .movie-card:hover .movie-number {
-            transform: scale(1.1) rotate(15deg);
-            box-shadow: 0 0 25px rgba(255, 182, 193, 0.9);
+            transform: scale(1.08) rotate(12deg);
+            box-shadow: 0 0 18px rgba(255, 182, 193, 0.8);
         }
         
         .movie-content {
             position: relative;
-            padding-right: 20px;
+            padding-right: 15px;
         }
         
         .movie-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: #ffb6c1;
-            margin-bottom: 15px;
-            text-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
             font-family: 'Marck Script', cursive;
             position: relative;
             display: inline-block;
-            padding-right: 70px;
+            padding-right: 55px;
         }
         
         .movie-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #e6b0ff;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 600;
-            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            text-shadow: 0 0 8px rgba(230, 176, 255, 0.4);
             font-family: 'Dancing Script', cursive;
         }
         
         .romantic-name {
             display: inline-block;
-            background: rgba(255, 182, 193, 0.2);
-            padding: 10px 25px;
-            border-radius: 30px;
-            margin-bottom: 25px;
-            border-right: 4px solid #ffb6c1;
+            background: rgba(255, 182, 193, 0.15);
+            padding: 8px 18px;
+            border-radius: 25px;
+            margin-bottom: 18px;
+            border-right: 3px solid #ffb6c1;
             font-style: italic;
-            font-size: 1.2rem;
-            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
-            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
             color: #fff0f5;
             font-family: 'Dancing Script', cursive;
         }
         
         .movie-description {
-            margin-bottom: 30px;
+            margin-bottom: 22px;
             color: #f5e6ff;
-            line-height: 1.9;
-            font-size: 1.15rem;
+            line-height: 1.7;
+            font-size: 1rem;
             text-align: justify;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            padding-left: 15px;
-            border-left: 3px solid rgba(255, 182, 193, 0.3);
+            padding-left: 12px;
+            border-left: 2px solid rgba(255, 182, 193, 0.25);
         }
         
         .download-btn {
             display: inline-block;
             background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
-            padding: 14px 35px;
-            border-radius: 35px;
+            padding: 10px 25px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(255, 182, 193, 0.3);
             border: none;
             cursor: pointer;
             position: relative;
@@ -456,12 +495,12 @@
             background: linear-gradient(45deg, #ff69b4, #9370db);
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
         }
         
         .download-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(255, 182, 193, 0.6);
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(255, 182, 193, 0.5);
         }
         
         .download-btn:hover::before {
@@ -469,22 +508,22 @@
         }
         
         .download-btn i {
-            margin-left: 10px;
+            margin-left: 8px;
             animation: bounce 2s infinite;
         }
         
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            50% { transform: translateY(-4px); }
         }
         
         /* Footer */
         footer {
-            background: rgba(20, 10, 40, 0.9);
-            padding: 40px 0;
+            background: rgba(20, 10, 40, 0.85);
+            padding: 25px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 182, 193, 0.3);
-            margin-top: 80px;
+            border-top: 1px solid rgba(255, 182, 193, 0.25);
+            margin-top: 50px;
             position: relative;
             overflow: hidden;
         }
@@ -495,48 +534,48 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 2px;
             background: linear-gradient(90deg, #ffb6c1, #d870ff, #9370db);
         }
         
         .copyright {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #e6b0ff;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 8px rgba(230, 176, 255, 0.4);
             font-family: 'Dancing Script', cursive;
         }
         
         .copyright span {
             color: #ffb6c1;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
+            text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
             position: relative;
-            padding: 0 5px;
+            padding: 0 4px;
         }
         
         .copyright span::before, .copyright span::after {
             content: '♥';
-            font-size: 1.3rem;
-            margin: 0 5px;
+            font-size: 1.1rem;
+            margin: 0 4px;
             animation: heartbeat 1.5s infinite;
         }
         
-        /* S Celebration Modal */
+        /* S Celebration Modal - أصغر وأخف */
         .celebration-modal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 5, 25, 0.97);
+            background: rgba(10, 5, 25, 0.96);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
         
         .celebration-modal.active {
@@ -545,20 +584,20 @@
         }
         
         .celebration-content {
-            background: linear-gradient(135deg, rgba(70, 25, 100, 0.95), rgba(40, 15, 65, 0.95));
-            border-radius: 30px;
-            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(70, 25, 100, 0.92), rgba(40, 15, 65, 0.92));
+            border-radius: 22px;
+            padding: 40px 30px;
             text-align: center;
-            max-width: 650px;
-            width: 90%;
+            max-width: 550px;
+            width: 85%;
             box-shadow: 
-                0 0 70px rgba(255, 182, 193, 0.5),
-                0 0 120px rgba(216, 112, 255, 0.3),
-                inset 0 0 40px rgba(255, 255, 255, 0.1);
-            border: 3px solid rgba(255, 182, 193, 0.5);
+                0 0 50px rgba(255, 182, 193, 0.4),
+                0 0 90px rgba(216, 112, 255, 0.25),
+                inset 0 0 25px rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 182, 193, 0.4);
             position: relative;
             transform: scale(0.8) rotateY(90deg);
-            transition: transform 0.8s ease;
+            transition: transform 0.6s ease;
         }
         
         .celebration-modal.active .celebration-content {
@@ -567,12 +606,12 @@
         
         .celebration-s {
             font-family: 'Alex Brush', cursive;
-            font-size: 9rem;
+            font-size: 7rem;
             color: #ffb6c1;
             text-shadow: 
-                0 0 40px rgba(255, 182, 193, 0.9),
-                0 0 80px rgba(255, 182, 193, 0.6);
-            margin-bottom: 30px;
+                0 0 30px rgba(255, 182, 193, 0.8),
+                0 0 60px rgba(255, 182, 193, 0.5);
+            margin-bottom: 20px;
             animation: sPulse 3s infinite alternate;
             position: relative;
         }
@@ -580,51 +619,55 @@
         .celebration-s::after {
             content: '♥';
             position: absolute;
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: #d870ff;
-            top: 20px;
-            right: -40px;
-            animation: rotate 5s linear infinite;
+            top: 15px;
+            right: -30px;
+            animation: rotate 6s linear infinite;
         }
         
         @keyframes sPulse {
-            0% { transform: scale(1); text-shadow: 0 0 40px rgba(255, 182, 193, 0.9); }
-            100% { transform: scale(1.08); text-shadow: 0 0 60px rgba(255, 182, 193, 1); }
+            0% { transform: scale(1); text-shadow: 0 0 30px rgba(255, 182, 193, 0.8); }
+            100% { transform: scale(1.05); text-shadow: 0 0 45px rgba(255, 182, 193, 0.9); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .celebration-text {
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: #fff0f5;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(255, 240, 245, 0.8);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 240, 245, 0.7);
             font-family: 'Marck Script', cursive;
-            line-height: 1.5;
-            animation: textFade 4s infinite alternate;
+            line-height: 1.4;
+            animation: textFade 5s infinite alternate;
         }
         
         @keyframes textFade {
-            0%, 40% { opacity: 0.9; text-shadow: 0 0 10px rgba(255, 240, 245, 0.8); }
-            70%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 240, 245, 1), 0 0 30px rgba(255, 182, 193, 0.5); }
+            0%, 40% { opacity: 0.9; text-shadow: 0 0 8px rgba(255, 240, 245, 0.7); }
+            70%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(255, 240, 245, 0.9), 0 0 22px rgba(255, 182, 193, 0.4); }
         }
         
         .celebration-subtext {
             color: #f0d9ff;
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            line-height: 1.8;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
         
         .close-celebration {
             background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
             border: none;
-            padding: 16px 45px;
-            border-radius: 35px;
-            font-size: 1.3rem;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(255, 182, 193, 0.4);
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -641,19 +684,19 @@
             background: linear-gradient(45deg, #ff69b4, #9370db);
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
         }
         
         .close-celebration:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(255, 182, 193, 0.7);
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(255, 182, 193, 0.6);
         }
         
         .close-celebration:hover::before {
             opacity: 1;
         }
         
-        /* Floating Hearts - مخففة */
+        /* Floating Hearts - نظامي وخفيف */
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -666,10 +709,10 @@
         
         .heart {
             position: absolute;
-            color: rgba(255, 182, 193, 0.3);
-            font-size: 18px;
-            animation: float 25s infinite linear;
-            opacity: 0.5;
+            color: rgba(255, 182, 193, 0.2);
+            font-size: 16px;
+            animation: float 30s infinite linear;
+            opacity: 0.4;
         }
         
         @keyframes float {
@@ -678,10 +721,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.5;
+                opacity: 0.4;
             }
             90% {
-                opacity: 0.5;
+                opacity: 0.4;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg) scale(1);
@@ -692,57 +735,69 @@
         /* Responsive */
         @media (max-width: 768px) {
             .site-title {
-                font-size: 2.8rem;
+                font-size: 2.2rem;
             }
             
             .subtitle {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
             
             .tagline {
-                font-size: 1.1rem;
-                padding: 20px;
+                font-size: 1rem;
+                padding: 15px;
             }
             
             .movie-title {
-                font-size: 2rem;
-                padding-right: 60px;
+                font-size: 1.5rem;
+                padding-right: 45px;
             }
             
             .s-logo {
-                width: 55px;
-                height: 55px;
-                font-size: 2.5rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.8rem;
+                top: 10px;
+                right: 10px;
             }
             
             .celebration-s {
-                font-size: 7rem;
+                font-size: 5.5rem;
             }
             
             .celebration-text {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
             
             .section-title {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
             
-            .poster-frame {
+            .poster-frame, .second-image-frame {
                 max-width: 90%;
             }
             
             .poster-title::before, .poster-title::after {
                 display: none;
             }
+            
+            .movie-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1.1rem;
+            }
+            
+            .movie-card {
+                padding: 20px;
+            }
         }
         
         @media (max-width: 480px) {
             .header-frame {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
             
             .site-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
             
             .movie-content {
@@ -750,29 +805,33 @@
             }
             
             .movie-title {
-                font-size: 1.8rem;
-                padding-right: 50px;
+                font-size: 1.4rem;
+                padding-right: 40px;
             }
             
             .movie-number {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
             }
             
             .celebration-content {
-                padding: 40px 20px;
+                padding: 30px 20px;
             }
             
             .download-btn {
-                padding: 12px 25px;
-                font-size: 1.1rem;
+                padding: 9px 20px;
+                font-size: 0.95rem;
+            }
+            
+            .container {
+                padding: 0 10px;
             }
         }
         
         /* Scrollbar Styling */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
         }
         
         ::-webkit-scrollbar-track {
@@ -781,7 +840,7 @@
         
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(to bottom, #ffb6c1, #d870ff);
-            border-radius: 5px;
+            border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
@@ -790,16 +849,11 @@
         
         /* Selection Color */
         ::selection {
-            background-color: rgba(255, 182, 193, 0.5);
+            background-color: rgba(255, 182, 193, 0.4);
             color: white;
         }
         
-        /* Glow Effects */
-        .glow-text {
-            text-shadow: 0 0 15px currentColor;
-        }
-        
-        /* Background Stars */
+        /* Background Stars - نظامي */
         .stars {
             position: fixed;
             top: 0;
@@ -812,14 +866,14 @@
         
         .star {
             position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
-            animation: twinkle 3s infinite alternate;
+            animation: twinkle 4s infinite alternate;
         }
         
         @keyframes twinkle {
             0% { opacity: 0.2; }
-            100% { opacity: 0.8; }
+            100% { opacity: 0.6; }
         }
     </style>
 </head>
@@ -831,9 +885,9 @@
     <div class="celebration-modal" id="celebrationModal">
         <div class="celebration-content">
             <div class="celebration-s">S</div>
-            <h2 class="celebration-text">مرحباً بك في ملحمة Twilight الأسطورية ♥</h2>
-            <p class="celebration-subtext">أين يلتقي مصير الحبيبين تحت سماءٍ أبدية، وتنصهر القلوب في بوتقة من المشاعر الخالدة. هنا في عالم الرومانسية الساحر، تبدأ رحلة لا تُنسى بين الحب والمصير.</p>
-            <button class="close-celebration" id="closeCelebration">أبدأ رحلة المشاعر</button>
+            <h2 class="celebration-text">أهلاً بك في ملحمة Twilight ♥</h2>
+            <p class="celebration-subtext">حيث يلتقي الحب الأبدي مع مصير يتحدى قوانين الطبيعة، وتبدأ رحلة لا تُنسى بين المشاعر الخالدة والأقدار المتشابكة.</p>
+            <button class="close-celebration" id="closeCelebration">دخول إلى عالم المشاعر</button>
         </div>
     </div>
     
@@ -850,7 +904,7 @@
                 <h1 class="site-title">
                     عالم <span>Twilight</span> الرومانسي
                 </h1>
-                <p class="subtitle">حيث يعانق الحبُ الأبديُ أفقَ المستحيل</p>
+                <p class="subtitle">حيث يعانق الحبُ أفقَ المستحيل</p>
                 <p class="tagline">في هذا الملاذ العاطفي، نعبر معكم بوابة المشاعر إلى عالم Twilight الساحر، حيث كل نبضة قلب تكتب أسطورة، وكل نظرة تحمل ألف معنى. هنا، حيث يتشابك مصير إدوارد وبيلا في رقصة أبدية بين النور والظلام، نقدم لكم جوهرة المشاعر الخالدة عبر خمسة أجزاء أسطورية. استعدوا لرحلة عاطفية تغمر الروح وتلامس شغاف القلب.</p>
             </div>
         </div>
@@ -861,7 +915,16 @@
         <div class="container">
             <h3 class="poster-title">بوابة المشاعر الساحرة</h3>
             <div class="poster-frame">
-                <img src="https://www.mediafire.com/file/fft9gdpylv0mx7k/Twilight.Saga.the.2009.mp4/file" alt="Twilight Movie" class="movie-poster">
+                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Second Image Section -->
+    <section class="second-image-section">
+        <div class="container">
+            <div class="second-image-frame">
+                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Scene" class="second-image">
             </div>
         </div>
     </section>
@@ -893,7 +956,7 @@
                     <h4 class="movie-subtitle">فراق يشقّ الروح</h4>
                     <div class="romantic-name">"ألمٌ يولد من رحم الغياب"</div>
                     <p class="movie-description">بعد حادثة عيد الميلاد المصيرية، يغادر إدوارد ظاناً أنه يحمي بيلا من مصيره المظلم. تهوي بيلا في هاوية من الحزن حيث تتحول أيامها إلى شهور من الفراغ العاطفي. في ظلام فراقها، يظهر جاكوب بلاك كشمس دافئة، ليكتشفا معاً أن الحب قد يتخذ أشكالاً متعددة. رحلة بحث عن الذات وعن الحبيب المفقود في متاهة المشاعر المتضاربة.</p>
-                    <a href="https://www.mediafire.com/file/hmacx5vp9gi7cyx/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
+                    <a href="https://www.mediafire.com/file/fft9gdpylv0mx7k/Twilight.Saga.the.2009.mp4/file" class="download-btn" target="_blank">
                         <i class="fas fa-download"></i> حمل ملحمة الفراق
                     </a>
                 </div>
@@ -946,7 +1009,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="copyright">قصة حب تخلد في كل قلب &copy; 2023 <span>محمد أبو السعود & سما</span></p>
+            <p class="copyright">قصة حب تخلد في كل قلب &copy; 2025 <span>محمد أبو السعود & سما</span></p>
         </div>
     </footer>
     
@@ -961,7 +1024,7 @@
             setTimeout(() => {
                 celebrationModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-            }, 1000);
+            }, 800);
         });
         
         // Close celebration modal
@@ -969,7 +1032,7 @@
             celebrationModal.classList.remove('active');
             document.body.style.overflow = 'auto';
             
-            // Create subtle celebration effect
+            // Create subtle celebration effect - قلوب نظامية
             createCelebrationEffect();
             
             // Scroll to content smoothly
@@ -982,40 +1045,52 @@
         // S Logo click effect
         sLogo.addEventListener('click', function() {
             // Add subtle click animation
-            this.style.transform = 'scale(1.2) rotate(15deg)';
-            this.style.boxShadow = '0 0 30px rgba(255, 182, 193, 0.9)';
+            this.style.transform = 'scale(1.15) rotate(12deg)';
+            this.style.boxShadow = '0 0 20px rgba(255, 182, 193, 0.8)';
             
             setTimeout(() => {
                 this.style.transform = '';
                 this.style.boxShadow = '';
-            }, 500);
+            }, 400);
             
             // Show celebration modal again
             celebrationModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
         
-        // Create floating hearts - مخففة
+        // Create floating hearts - نظامية وخفيفة
         const heartsContainer = document.getElementById('heartsContainer');
         const heartIcons = ['♥', '❤', '💖'];
         
         function createFloatingHearts() {
-            // عدد أقل من القلوب
-            for (let i = 0; i < 15; i++) {
+            // عدد قليل من القلوب نظامي
+            const heartCount = 10;
+            const positions = [
+                {left: 10, delay: 0},
+                {left: 25, delay: 5},
+                {left: 40, delay: 10},
+                {left: 60, delay: 15},
+                {left: 75, delay: 20},
+                {left: 90, delay: 25},
+                {left: 15, delay: 3},
+                {left: 50, delay: 8},
+                {left: 85, delay: 13},
+                {left: 30, delay: 18}
+            ];
+            
+            for (let i = 0; i < heartCount; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
-                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.innerHTML = heartIcons[i % 3];
                 
-                // إعدادات مخففة
-                const left = Math.random() * 100;
-                const size = Math.random() * 15 + 12;
-                const delay = Math.random() * 30;
-                const duration = Math.random() * 15 + 20;
-                const color = `rgba(255, ${Math.floor(Math.random() * 80 + 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.4)`;
+                const pos = positions[i];
+                const size = 14 + Math.random() * 6;
+                const duration = 25 + Math.random() * 10;
+                const color = `rgba(255, ${Math.floor(Math.random() * 60 + 140)}, ${Math.floor(Math.random() * 80 + 175)}, 0.3)`;
                 
-                heart.style.left = `${left}%`;
+                heart.style.left = `${pos.left}%`;
                 heart.style.fontSize = `${size}px`;
-                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDelay = `${pos.delay}s`;
                 heart.style.animationDuration = `${duration}s`;
                 heart.style.color = color;
                 
@@ -1029,15 +1104,17 @@
         // Create stars background
         function createStars() {
             const starsContainer = document.getElementById('starsContainer');
-            for (let i = 0; i < 50; i++) {
+            // عدد معتدل من النجوم
+            for (let i = 0; i < 40; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 
-                const size = Math.random() * 3 + 1;
+                const size = Math.random() * 2 + 1;
                 const left = Math.random() * 100;
                 const top = Math.random() * 100;
-                const opacity = Math.random() * 0.5 + 0.3;
-                const delay = Math.random() * 5;
+                const opacity = Math.random() * 0.4 + 0.2;
+                const delay = Math.random() * 4;
+                const duration = 3 + Math.random() * 3;
                 
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
@@ -1045,6 +1122,7 @@
                 star.style.top = `${top}%`;
                 star.style.opacity = opacity;
                 star.style.animationDelay = `${delay}s`;
+                star.style.animationDuration = `${duration}s`;
                 
                 starsContainer.appendChild(star);
             }
@@ -1053,18 +1131,29 @@
         // Initialize stars
         createStars();
         
-        // Create subtle celebration effect
+        // Create subtle celebration effect - قلوب نظامية عند إغلاق الترحيب
         function createCelebrationEffect() {
-            for (let i = 0; i < 20; i++) {
+            const celebrationHeartsCount = 15;
+            const positions = [];
+            
+            // إنشاء مواقع نظامية للقلوب
+            for (let i = 0; i < celebrationHeartsCount; i++) {
+                positions.push({
+                    left: Math.random() * 90 + 5,
+                    top: Math.random() * 80 + 10
+                });
+            }
+            
+            for (let i = 0; i < celebrationHeartsCount; i++) {
                 const heart = document.createElement('div');
-                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.innerHTML = heartIcons[i % 3];
                 heart.style.position = 'fixed';
-                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.7)`;
+                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 80 + 120)}, ${Math.floor(Math.random() * 80 + 175)}, 0.7)`;
                 heart.style.zIndex = '1999';
-                heart.style.fontSize = `${Math.random() * 20 + 15}px`;
-                heart.style.left = `${Math.random() * 100}%`;
-                heart.style.top = `${Math.random() * 100}%`;
-                heart.style.animation = `floatUp 2s forwards`;
+                heart.style.fontSize = `${Math.random() * 16 + 12}px`;
+                heart.style.left = `${positions[i].left}%`;
+                heart.style.top = `${positions[i].top}%`;
+                heart.style.animation = `floatUp 2.5s forwards`;
                 
                 document.body.appendChild(heart);
                 
@@ -1073,7 +1162,7 @@
                     if (heart.parentNode) {
                         heart.parentNode.removeChild(heart);
                     }
-                }, 2000);
+                }, 2500);
             }
         }
         
@@ -1081,13 +1170,13 @@
         const movieCards = document.querySelectorAll('.movie-card');
         movieCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-                this.style.boxShadow = '0 25px 50px rgba(255, 182, 193, 0.2), 0 0 60px rgba(216, 112, 255, 0.15)';
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 18px 35px rgba(255, 182, 193, 0.15), 0 0 45px rgba(216, 112, 255, 0.1)';
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 182, 193, 0.2)';
+                this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 182, 193, 0.15)';
             });
         });
         
@@ -1107,12 +1196,12 @@
                 heart.innerHTML = '❤';
                 heart.style.position = 'fixed';
                 heart.style.color = '#ffb6c1';
-                heart.style.fontSize = '25px';
+                heart.style.fontSize = '20px';
                 heart.style.zIndex = '9999';
                 heart.style.pointerEvents = 'none';
                 heart.style.left = `${rect.left + rect.width/2}px`;
                 heart.style.top = `${rect.top + rect.height/2}px`;
-                heart.style.animation = 'floatUp 1.5s forwards';
+                heart.style.animation = 'floatUp 1.2s forwards';
                 
                 document.body.appendChild(heart);
                 
@@ -1125,7 +1214,7 @@
                             opacity: 1; 
                         }
                         100% { 
-                            transform: translate(-50%, -100px) scale(0.3) rotate(180deg); 
+                            transform: translate(-50%, -80px) scale(0.3) rotate(180deg); 
                             opacity: 0; 
                         }
                     }
@@ -1143,19 +1232,26 @@
                     if (style.parentNode) {
                         style.parentNode.removeChild(style);
                     }
-                }, 300);
+                }, 250);
             });
         });
         
         // Add scroll effect to header
+        let lastScroll = 0;
         window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
+            const currentScroll = window.pageYOffset;
             const headerFrame = document.querySelector('.header-frame');
             
-            if (scrolled > 100) {
-                headerFrame.style.transform = `translateY(${scrolled * 0.05}px)`;
-                headerFrame.style.opacity = 1 - (scrolled * 0.001);
+            if (currentScroll > 100) {
+                const move = (currentScroll - 100) * 0.03;
+                headerFrame.style.transform = `translateY(${move}px)`;
+                headerFrame.style.opacity = 1 - (currentScroll * 0.0008);
+            } else {
+                headerFrame.style.transform = 'translateY(0)';
+                headerFrame.style.opacity = 1;
             }
+            
+            lastScroll = currentScroll;
         });
         
         // Add glow effect to tagline text periodically
@@ -1163,9 +1259,23 @@
             const tagline = document.querySelector('.tagline');
             tagline.style.animation = 'none';
             setTimeout(() => {
-                tagline.style.animation = 'textGlow 6s infinite alternate';
+                tagline.style.animation = 'textGlow 8s infinite alternate';
             }, 10);
-        }, 6000);
+        }, 8000);
+        
+        // Initialize floating hearts every minute (لتجديد القلوب)
+        setInterval(() => {
+            // إزالة القلوب القديمة
+            const hearts = document.querySelectorAll('.floating-hearts .heart');
+            hearts.forEach(heart => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            });
+            
+            // إنشاء قلوب جديدة
+            createFloatingHearts();
+        }, 60000);
     </script>
 </body>
-        </html>
+    </html>
