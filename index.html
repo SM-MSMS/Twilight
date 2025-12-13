@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع Twilight الرومانسي الساحر ♥ (S♥M)</title>
+    <title>Twilight ♥ عالم الحب الأسطوري</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&family=Scheherazade+New:wght@400;700&family=Marck+Script&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -31,10 +31,10 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.12) 0%, transparent 25%),
-                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.12) 0%, transparent 25%),
-                radial-gradient(circle at 70% 20%, rgba(147, 112, 219, 0.1) 0%, transparent 25%);
+                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(147, 112, 219, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, rgba(255, 182, 193, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 70% 20%, rgba(221, 160, 221, 0.08) 0%, transparent 25%);
             z-index: -1;
         }
         
@@ -44,226 +44,239 @@
             padding: 0 20px;
         }
         
-        /* S Logo with Blinking Effect */
+        /* S Logo - تم تخفيف التأثير */
         .s-logo {
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(45deg, #ff69b4, #d870ff);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Alex Brush', cursive;
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: white;
             z-index: 1000;
-            box-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            animation: logoGlow 3s infinite alternate, blink 2.5s infinite;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: logoGlow 4s infinite alternate;
             cursor: pointer;
-            overflow: hidden;
+            transition: all 0.4s ease;
         }
         
-        .s-logo::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
-            z-index: -1;
-        }
-        
-        .s-logo::after {
-            content: '♥';
-            position: absolute;
-            font-size: 1.5rem;
-            color: white;
-            bottom: 5px;
-            left: 5px;
-            text-shadow: 0 0 8px rgba(255, 20, 147, 0.9);
+        .s-logo:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.9);
         }
         
         @keyframes logoGlow {
-            0% { box-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
-            100% { box-shadow: 0 0 30px rgba(255, 20, 147, 0.9), 0 0 50px rgba(255, 105, 180, 0.7); }
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+            0% { box-shadow: 0 0 15px rgba(255, 105, 180, 0.5); }
+            100% { box-shadow: 0 0 25px rgba(255, 105, 180, 0.8); }
         }
         
         /* Header Styles */
         header {
             text-align: center;
-            padding: 40px 0 30px;
+            padding: 50px 0 40px;
             position: relative;
             overflow: hidden;
             margin-top: 30px;
         }
         
         .header-frame {
-            border: 3px solid transparent;
+            border: 2px solid rgba(255, 182, 193, 0.5);
             border-radius: 25px;
-            padding: 35px;
-            background: rgba(20, 5, 40, 0.7);
+            padding: 40px 30px;
+            background: rgba(30, 10, 50, 0.6);
             box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.6), 
-                inset 0 0 30px rgba(255, 20, 147, 0.15),
-                0 0 0 1px rgba(255, 105, 180, 0.2);
+                0 15px 35px rgba(0, 0, 0, 0.5), 
+                inset 0 0 40px rgba(255, 105, 180, 0.1),
+                0 0 50px rgba(255, 182, 193, 0.2);
             position: relative;
-            margin-bottom: 40px;
-            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+            backdrop-filter: blur(10px);
         }
         
         .header-frame::before {
             content: '';
             position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
-            border-radius: 28px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ffb6c1, #ff69b4, #d870ff, #ffb6c1);
+            border-radius: 27px;
             z-index: -1;
-            opacity: 0.6;
-            animation: borderRotate 8s linear infinite;
-        }
-        
-        @keyframes borderRotate {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            opacity: 0.4;
         }
         
         .site-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 4rem;
-            color: #ff69b4;
+            font-family: 'Marck Script', cursive;
+            font-size: 3.8rem;
+            color: #ffb6c1;
             text-shadow: 
-                0 0 20px rgba(255, 20, 147, 0.8), 
-                0 0 40px rgba(255, 20, 147, 0.5),
-                0 0 60px rgba(255, 20, 147, 0.3);
-            margin-bottom: 15px;
+                0 0 20px rgba(255, 182, 193, 0.8),
+                0 0 40px rgba(255, 182, 193, 0.4);
+            margin-bottom: 20px;
             position: relative;
             display: inline-block;
-            animation: titlePulse 4s infinite alternate;
+            letter-spacing: 2px;
         }
         
-        @keyframes titlePulse {
-            0% { text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 20, 147, 0.5); }
-            100% { text-shadow: 0 0 25px rgba(255, 20, 147, 1), 0 0 50px rgba(255, 20, 147, 0.7), 0 0 70px rgba(255, 20, 147, 0.4); }
+        .site-title span {
+            color: #d870ff;
+            text-shadow: 0 0 15px rgba(216, 112, 255, 0.7);
         }
         
         .site-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 220px;
+            width: 250px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #ff69b4, #da70d6, #ff69b4, transparent);
+            background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
         }
         
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: #e6b0ff;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px rgba(230, 176, 255, 0.7);
-            font-weight: 700;
-            letter-spacing: 1px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(230, 176, 255, 0.6);
+            font-weight: 600;
+            font-family: 'Dancing Script', cursive;
         }
         
+        /* تأثير النص المتوهج */
         .tagline {
             font-style: italic;
-            color: #f0d9ff;
+            color: #fff0f5;
             font-size: 1.3rem;
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             line-height: 1.9;
-            padding: 20px;
-            border-top: 1px dashed rgba(255, 105, 180, 0.4);
-            border-bottom: 1px dashed rgba(255, 105, 180, 0.4);
-            background: rgba(255, 20, 147, 0.05);
-            border-radius: 10px;
+            padding: 25px;
+            border-top: 1px solid rgba(255, 182, 193, 0.3);
+            border-bottom: 1px solid rgba(255, 182, 193, 0.3);
+            background: rgba(255, 182, 193, 0.05);
+            border-radius: 15px;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            animation: textGlow 6s infinite alternate;
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Movie Poster Section */
+        @keyframes textGlow {
+            0%, 30% { 
+                color: #fff0f5;
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+                box-shadow: inset 0 0 20px rgba(255, 182, 193, 0.05);
+            }
+            70%, 100% { 
+                color: #ffebf3;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 182, 193, 0.3);
+                box-shadow: inset 0 0 30px rgba(255, 182, 193, 0.1);
+            }
+        }
+        
+        /* Movie Poster Section - إطار رومانسي جداً */
         .movie-poster-section {
-            padding: 20px 0 40px;
+            padding: 30px 0 50px;
             text-align: center;
         }
         
         .poster-title {
-            font-size: 2.2rem;
-            color: #e6b0ff;
-            margin-bottom: 25px;
-            text-shadow: 0 0 12px rgba(230, 176, 255, 0.7);
+            font-size: 2.5rem;
+            color: #ffb6c1;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
             position: relative;
             display: inline-block;
+            font-family: 'Marck Script', cursive;
+        }
+        
+        .poster-title::before, .poster-title::after {
+            content: '♥';
+            position: absolute;
+            font-size: 2rem;
+            color: #ff69b4;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: heartbeat 2s infinite;
+        }
+        
+        .poster-title::before {
+            right: -50px;
         }
         
         .poster-title::after {
-            content: '✨';
-            position: absolute;
-            top: -10px;
-            right: -35px;
-            font-size: 1.5rem;
-            animation: sparkle 2s infinite;
+            left: -50px;
         }
         
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.7; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
+        @keyframes heartbeat {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.3); }
         }
         
         .poster-frame {
-            border: 4px solid transparent;
-            border-radius: 20px;
+            border: none;
+            border-radius: 25px;
             overflow: hidden;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.8),
-                0 0 60px rgba(255, 20, 147, 0.2),
-                inset 0 0 30px rgba(255, 20, 147, 0.1);
             position: relative;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.7),
+                0 0 80px rgba(255, 182, 193, 0.3),
+                0 0 120px rgba(216, 112, 255, 0.2);
             transition: transform 0.6s ease;
-        }
-        
-        .poster-frame:hover {
-            transform: scale(1.03) rotateY(5deg);
         }
         
         .poster-frame::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(148, 0, 211, 0.15), rgba(255, 20, 147, 0.1));
-            z-index: 1;
-            pointer-events: none;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, 
+                #ffb6c1, #ff69b4, #d870ff, #9370db, 
+                #ffb6c1, #ff69b4, #d870ff);
+            border-radius: 30px;
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(10px);
+            animation: borderGlow 8s linear infinite;
+            background-size: 400% 400%;
+        }
+        
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         .poster-frame::after {
             content: '';
             position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
-            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
-            border-radius: 24px;
-            z-index: -1;
-            opacity: 0.7;
-            animation: borderRotate 10s linear infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(255, 182, 193, 0.15) 0%, 
+                rgba(255, 105, 180, 0.1) 50%, 
+                rgba(216, 112, 255, 0.05) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .poster-frame:hover {
+            transform: scale(1.02) translateY(-5px);
         }
         
         .movie-poster {
@@ -272,22 +285,23 @@
             display: block;
             position: relative;
             z-index: 0;
+            border-radius: 20px;
         }
         
-        /* Movie Cards */
+        /* Movie Cards - بدون صور */
         .movies-section {
-            padding: 40px 0 50px;
+            padding: 50px 0 70px;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
-            color: #d8bfd8;
-            margin-bottom: 45px;
-            text-shadow: 0 0 15px rgba(216, 191, 216, 0.7);
+            font-size: 3rem;
+            color: #ffb6c1;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
             position: relative;
             padding-bottom: 20px;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Marck Script', cursive;
         }
         
         .section-title::after {
@@ -296,48 +310,32 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px;
+            width: 250px;
             height: 4px;
-            background: linear-gradient(90deg, transparent, #da70d6, #ff69b4, #da70d6, transparent);
-        }
-        
-        .section-title::before {
-            content: '♥';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem;
-            color: #ff69b4;
-            animation: heartbeat 1.5s infinite;
-        }
-        
-        @keyframes heartbeat {
-            0%, 100% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.2); }
+            background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
         }
         
         .movie-card {
-            background: rgba(30, 10, 50, 0.8);
-            border-radius: 18px;
+            background: rgba(40, 15, 65, 0.7);
+            border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             box-shadow: 
-                0 12px 30px rgba(0, 0, 0, 0.6),
-                0 0 0 1px rgba(255, 105, 180, 0.3);
-            border: 1px solid rgba(255, 105, 180, 0.3);
+                0 15px 35px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 182, 193, 0.2);
+            border: 1px solid rgba(255, 182, 193, 0.2);
             transition: all 0.4s ease;
-            display: flex;
-            flex-wrap: wrap;
             position: relative;
             backdrop-filter: blur(5px);
+            padding: 30px;
         }
         
         .movie-card:hover {
-            transform: translateY(-12px) scale(1.01);
+            transform: translateY(-10px);
             box-shadow: 
-                0 20px 40px rgba(255, 20, 147, 0.3),
-                0 0 60px rgba(255, 20, 147, 0.15);
+                0 25px 50px rgba(255, 182, 193, 0.2),
+                0 0 60px rgba(216, 112, 255, 0.15);
+            background: rgba(50, 20, 75, 0.8);
         }
         
         .movie-card::before {
@@ -347,121 +345,105 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
+            background: linear-gradient(90deg, 
+                #ffb6c1, #ff69b4, #d870ff, #9370db, 
+                #ffb6c1);
         }
         
         .movie-number {
             position: absolute;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             z-index: 2;
-            box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
             border: 2px solid white;
             font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
         }
         
-        .movie-image {
-            flex: 1;
-            min-width: 300px;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .movie-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(30,10,50,0.9), rgba(30,10,50,0.6), transparent);
+        .movie-card:hover .movie-number {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 0 25px rgba(255, 182, 193, 0.9);
         }
         
         .movie-content {
-            flex: 2;
-            min-width: 300px;
-            padding: 30px;
             position: relative;
+            padding-right: 20px;
         }
         
         .movie-title {
-            font-size: 2.3rem;
-            color: #ff69b4;
-            margin-bottom: 10px;
-            text-shadow: 0 0 12px rgba(255, 105, 180, 0.7);
-            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffb6c1;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+            font-family: 'Marck Script', cursive;
             position: relative;
             display: inline-block;
-        }
-        
-        .movie-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #ff69b4, transparent);
+            padding-right: 70px;
         }
         
         .movie-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #e6b0ff;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            font-family: 'Dancing Script', cursive;
         }
         
         .romantic-name {
             display: inline-block;
-            background: rgba(255, 105, 180, 0.2);
-            padding: 8px 18px;
+            background: rgba(255, 182, 193, 0.2);
+            padding: 10px 25px;
             border-radius: 30px;
-            margin-bottom: 20px;
-            border-right: 4px solid #ff69b4;
+            margin-bottom: 25px;
+            border-right: 4px solid #ffb6c1;
             font-style: italic;
-            font-size: 1.1rem;
-            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.2);
+            font-size: 1.2rem;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
             border-left: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff0f5;
+            font-family: 'Dancing Script', cursive;
         }
         
         .movie-description {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #f5e6ff;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            line-height: 1.9;
+            font-size: 1.15rem;
             text-align: justify;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            padding-left: 15px;
+            border-left: 3px solid rgba(255, 182, 193, 0.3);
         }
         
         .download-btn {
             display: inline-block;
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 14px 35px;
+            border-radius: 35px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
             z-index: 1;
+            font-family: 'Cairo', sans-serif;
         }
         
         .download-btn::before {
@@ -471,7 +453,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff0066, #d870ff);
+            background: linear-gradient(45deg, #ff69b4, #9370db);
             z-index: -1;
             opacity: 0;
             transition: opacity 0.4s ease;
@@ -479,7 +461,7 @@
         
         .download-btn:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(255, 20, 147, 0.7);
+            box-shadow: 0 15px 30px rgba(255, 182, 193, 0.6);
         }
         
         .download-btn:hover::before {
@@ -487,22 +469,22 @@
         }
         
         .download-btn i {
-            margin-left: 8px;
+            margin-left: 10px;
             animation: bounce 2s infinite;
         }
         
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
+            50% { transform: translateY(-5px); }
         }
         
         /* Footer */
         footer {
-            background: rgba(15, 5, 30, 0.95);
-            padding: 35px 0;
+            background: rgba(20, 10, 40, 0.9);
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 105, 180, 0.3);
-            margin-top: 60px;
+            border-top: 1px solid rgba(255, 182, 193, 0.3);
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -514,24 +496,26 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
+            background: linear-gradient(90deg, #ffb6c1, #d870ff, #9370db);
         }
         
         .copyright {
-            font-size: 1.1rem;
-            color: #d8bfd8;
+            font-size: 1.2rem;
+            color: #e6b0ff;
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(216, 191, 216, 0.5);
+            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            font-family: 'Dancing Script', cursive;
         }
         
         .copyright span {
-            color: #ff69b4;
+            color: #ffb6c1;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
             position: relative;
+            padding: 0 5px;
         }
         
-        .copyright span::after {
+        .copyright span::before, .copyright span::after {
             content: '♥';
             font-size: 1.3rem;
             margin: 0 5px;
@@ -545,7 +529,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(5, 2, 15, 0.98);
+            background: rgba(10, 5, 25, 0.97);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -561,17 +545,17 @@
         }
         
         .celebration-content {
-            background: linear-gradient(135deg, rgba(70, 20, 100, 0.95), rgba(40, 10, 60, 0.95));
-            border-radius: 25px;
-            padding: 50px;
+            background: linear-gradient(135deg, rgba(70, 25, 100, 0.95), rgba(40, 15, 65, 0.95));
+            border-radius: 30px;
+            padding: 60px 40px;
             text-align: center;
-            max-width: 600px;
+            max-width: 650px;
             width: 90%;
             box-shadow: 
-                0 0 60px rgba(255, 20, 147, 0.6),
-                0 0 100px rgba(255, 20, 147, 0.3),
-                inset 0 0 30px rgba(255, 255, 255, 0.1);
-            border: 3px solid rgba(255, 105, 180, 0.6);
+                0 0 70px rgba(255, 182, 193, 0.5),
+                0 0 120px rgba(216, 112, 255, 0.3),
+                inset 0 0 40px rgba(255, 255, 255, 0.1);
+            border: 3px solid rgba(255, 182, 193, 0.5);
             position: relative;
             transform: scale(0.8) rotateY(90deg);
             transition: transform 0.8s ease;
@@ -583,14 +567,13 @@
         
         .celebration-s {
             font-family: 'Alex Brush', cursive;
-            font-size: 10rem;
-            color: #ff69b4;
+            font-size: 9rem;
+            color: #ffb6c1;
             text-shadow: 
-                0 0 40px rgba(255, 20, 147, 0.9),
-                0 0 80px rgba(255, 20, 147, 0.6),
-                0 0 120px rgba(255, 20, 147, 0.3);
-            margin-bottom: 25px;
-            animation: sPulse 2s infinite alternate;
+                0 0 40px rgba(255, 182, 193, 0.9),
+                0 0 80px rgba(255, 182, 193, 0.6);
+            margin-bottom: 30px;
+            animation: sPulse 3s infinite alternate;
             position: relative;
         }
         
@@ -598,52 +581,54 @@
             content: '♥';
             position: absolute;
             font-size: 3rem;
-            color: white;
+            color: #d870ff;
             top: 20px;
-            right: -30px;
-            animation: rotate 4s linear infinite;
+            right: -40px;
+            animation: rotate 5s linear infinite;
         }
         
         @keyframes sPulse {
-            0% { transform: scale(1); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
-            100% { transform: scale(1.1); text-shadow: 0 0 60px rgba(255, 20, 147, 1); }
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% { transform: scale(1); text-shadow: 0 0 40px rgba(255, 182, 193, 0.9); }
+            100% { transform: scale(1.08); text-shadow: 0 0 60px rgba(255, 182, 193, 1); }
         }
         
         .celebration-text {
-            font-size: 1.8rem;
-            color: #e6b0ff;
+            font-size: 2rem;
+            color: #fff0f5;
             margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(230, 176, 255, 0.8);
-            font-family: 'Dancing Script', cursive;
+            text-shadow: 0 0 15px rgba(255, 240, 245, 0.8);
+            font-family: 'Marck Script', cursive;
             line-height: 1.5;
+            animation: textFade 4s infinite alternate;
+        }
+        
+        @keyframes textFade {
+            0%, 40% { opacity: 0.9; text-shadow: 0 0 10px rgba(255, 240, 245, 0.8); }
+            70%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 240, 245, 1), 0 0 30px rgba(255, 182, 193, 0.5); }
         }
         
         .celebration-subtext {
             color: #f0d9ff;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 40px;
-            line-height: 1.7;
+            line-height: 1.8;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
         }
         
         .close-celebration {
-            background: linear-gradient(45deg, #ff1493, #da70d6);
+            background: linear-gradient(45deg, #ffb6c1, #d870ff);
             color: white;
             border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
+            padding: 16px 45px;
+            border-radius: 35px;
             font-size: 1.3rem;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
             position: relative;
             overflow: hidden;
             z-index: 1;
+            font-family: 'Cairo', sans-serif;
         }
         
         .close-celebration::before {
@@ -653,7 +638,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff0066, #d870ff);
+            background: linear-gradient(45deg, #ff69b4, #9370db);
             z-index: -1;
             opacity: 0;
             transition: opacity 0.4s ease;
@@ -661,14 +646,14 @@
         
         .close-celebration:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(255, 20, 147, 0.7);
+            box-shadow: 0 15px 30px rgba(255, 182, 193, 0.7);
         }
         
         .close-celebration:hover::before {
             opacity: 1;
         }
         
-        /* Floating Hearts */
+        /* Floating Hearts - مخففة */
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -681,22 +666,22 @@
         
         .heart {
             position: absolute;
-            color: rgba(255, 20, 147, 0.4);
-            font-size: 20px;
-            animation: float 18s infinite linear;
-            text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+            color: rgba(255, 182, 193, 0.3);
+            font-size: 18px;
+            animation: float 25s infinite linear;
+            opacity: 0.5;
         }
         
         @keyframes float {
             0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                transform: translateY(100vh) rotate(0deg) scale(0.7);
                 opacity: 0;
             }
             10% {
-                opacity: 0.8;
+                opacity: 0.5;
             }
             90% {
-                opacity: 0.8;
+                opacity: 0.5;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg) scale(1);
@@ -707,7 +692,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .site-title {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             
             .subtitle {
@@ -716,27 +701,18 @@
             
             .tagline {
                 font-size: 1.1rem;
-                padding: 15px;
-            }
-            
-            .movie-card {
-                flex-direction: column;
-            }
-            
-            .movie-image {
-                height: 250px;
+                padding: 20px;
             }
             
             .movie-title {
-                font-size: 1.9rem;
+                font-size: 2rem;
+                padding-right: 60px;
             }
             
             .s-logo {
-                width: 60px;
-                height: 60px;
-                font-size: 2.8rem;
-                top: 15px;
-                right: 15px;
+                width: 55px;
+                height: 55px;
+                font-size: 2.5rem;
             }
             
             .celebration-s {
@@ -744,37 +720,53 @@
             }
             
             .celebration-text {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
             
             .section-title {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
             }
             
             .poster-frame {
                 max-width: 90%;
             }
+            
+            .poster-title::before, .poster-title::after {
+                display: none;
+            }
         }
         
         @media (max-width: 480px) {
             .header-frame {
-                padding: 25px 20px;
+                padding: 30px 20px;
             }
             
             .site-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .movie-content {
-                padding: 20px;
+                padding-right: 0;
             }
             
             .movie-title {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
+                padding-right: 50px;
+            }
+            
+            .movie-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
             
             .celebration-content {
-                padding: 30px 20px;
+                padding: 40px 20px;
+            }
+            
+            .download-btn {
+                padding: 12px 25px;
+                font-size: 1.1rem;
             }
         }
         
@@ -784,21 +776,21 @@
         }
         
         ::-webkit-scrollbar-track {
-            background: rgba(20, 5, 35, 0.8);
+            background: rgba(25, 10, 45, 0.8);
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #ff1493, #da70d6);
+            background: linear-gradient(to bottom, #ffb6c1, #d870ff);
             border-radius: 5px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #ff0066, #d870ff);
+            background: linear-gradient(to bottom, #ff69b4, #9370db);
         }
         
         /* Selection Color */
         ::selection {
-            background-color: rgba(255, 20, 147, 0.5);
+            background-color: rgba(255, 182, 193, 0.5);
             color: white;
         }
         
@@ -807,8 +799,27 @@
             text-shadow: 0 0 15px currentColor;
         }
         
-        .glow-box {
-            box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+        /* Background Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.8; }
         }
     </style>
 </head>
@@ -820,24 +831,27 @@
     <div class="celebration-modal" id="celebrationModal">
         <div class="celebration-content">
             <div class="celebration-s">S</div>
-            <h2 class="celebration-text">مرحباً بك في عالم Twilight الساحر ♥</h2>
-            <p class="celebration-subtext">أين تلتقي قلوب المحبين تحت سماءٍ أبدية، حيث الحب يتحدى المصير والنور يزهر في ظلمة الليل. هنا، في مملكة الرومانسية الأسطورية، تبدأ رحلة مشاعر لا تُنسى بين مصاصي الدماء والبشر.</p>
-            <button class="close-celebration" id="closeCelebration">ابدأ الرحلة الرومانسية</button>
+            <h2 class="celebration-text">مرحباً بك في ملحمة Twilight الأسطورية ♥</h2>
+            <p class="celebration-subtext">أين يلتقي مصير الحبيبين تحت سماءٍ أبدية، وتنصهر القلوب في بوتقة من المشاعر الخالدة. هنا في عالم الرومانسية الساحر، تبدأ رحلة لا تُنسى بين الحب والمصير.</p>
+            <button class="close-celebration" id="closeCelebration">أبدأ رحلة المشاعر</button>
         </div>
     </div>
     
     <!-- Floating Hearts Background -->
     <div class="floating-hearts" id="heartsContainer"></div>
     
+    <!-- Background Stars -->
+    <div class="stars" id="starsContainer"></div>
+    
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-frame">
                 <h1 class="site-title">
-                    عالم Twilight الرومانسي الأسطوري (S♥M)
+                    عالم <span>Twilight</span> الرومانسي
                 </h1>
-                <p class="subtitle">حيث يلتقي الحب الأبدي مع مصير يتحدى قوانين الطبيعة</p>
-                <p class="tagline">في هذا الملاذ الرومانسي، نعبر معكم بوابة المشاعر إلى عالم Twilight الساحر، حيث كل نبضة قلب تكتب أسطورة، وكل نظرة تحمل ألف معنى. هنا، حيث يتشابك مصير إدوارد وبيلا في رقصة أبدية بين النور والظلام، نقدم لكم جوهرة المشاعر الخالدة عبر خمسة أجزاء أسطورية. استعدوا لرحلة عاطفية تغمر الروح وتلامس شغاف القلب.</p>
+                <p class="subtitle">حيث يعانق الحبُ الأبديُ أفقَ المستحيل</p>
+                <p class="tagline">في هذا الملاذ العاطفي، نعبر معكم بوابة المشاعر إلى عالم Twilight الساحر، حيث كل نبضة قلب تكتب أسطورة، وكل نظرة تحمل ألف معنى. هنا، حيث يتشابك مصير إدوارد وبيلا في رقصة أبدية بين النور والظلام، نقدم لكم جوهرة المشاعر الخالدة عبر خمسة أجزاء أسطورية. استعدوا لرحلة عاطفية تغمر الروح وتلامس شغاف القلب.</p>
             </div>
         </div>
     </header>
@@ -847,7 +861,7 @@
         <div class="container">
             <h3 class="poster-title">بوابة المشاعر الساحرة</h3>
             <div class="poster-frame">
-                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Twilight Movie" class="movie-poster">
+                <img src="https://www.mediafire.com/file/fft9gdpylv0mx7k/Twilight.Saga.the.2009.mp4/file" alt="Twilight Movie" class="movie-poster">
             </div>
         </div>
     </section>
@@ -858,9 +872,8 @@
             <h2 class="section-title">ملحمة الحب الخالدة</h2>
             
             <!-- Movie 1 -->
-            <div class="movie-card glow-box">
+            <div class="movie-card">
                 <div class="movie-number">1</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Twilight – 2008</h3>
                     <h4 class="movie-subtitle">لقاء الأقدار المتشابكة</h4>
@@ -873,24 +886,22 @@
             </div>
             
             <!-- Movie 2 -->
-            <div class="movie-card glow-box">
+            <div class="movie-card">
                 <div class="movie-number">2</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">New Moon – 2009</h3>
                     <h4 class="movie-subtitle">فراق يشقّ الروح</h4>
                     <div class="romantic-name">"ألمٌ يولد من رحم الغياب"</div>
                     <p class="movie-description">بعد حادثة عيد الميلاد المصيرية، يغادر إدوارد ظاناً أنه يحمي بيلا من مصيره المظلم. تهوي بيلا في هاوية من الحزن حيث تتحول أيامها إلى شهور من الفراغ العاطفي. في ظلام فراقها، يظهر جاكوب بلاك كشمس دافئة، ليكتشفا معاً أن الحب قد يتخذ أشكالاً متعددة. رحلة بحث عن الذات وعن الحبيب المفقود في متاهة المشاعر المتضاربة.</p>
-                    <a href="https://www.mediafire.com/file/c67e3s5uo3lni12/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
+                    <a href="https://www.mediafire.com/file/hmacx5vp9gi7cyx/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
                         <i class="fas fa-download"></i> حمل ملحمة الفراق
                     </a>
                 </div>
             </div>
             
             <!-- Movie 3 -->
-            <div class="movie-card glow-box">
+            <div class="movie-card">
                 <div class="movie-number">3</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Eclipse – 2010</h3>
                     <h4 class="movie-subtitle">صراع القلوب المتوهجة</h4>
@@ -903,9 +914,8 @@
             </div>
             
             <!-- Movie 4 -->
-            <div class="movie-card glow-box">
+            <div class="movie-card">
                 <div class="movie-number">4</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1533630757306-cbadb934bcb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 1 – 2011</h3>
                     <h4 class="movie-subtitle">اتحاد الأرواح الخالدة</h4>
@@ -918,9 +928,8 @@
             </div>
             
             <!-- Movie 5 -->
-            <div class="movie-card glow-box">
+            <div class="movie-card">
                 <div class="movie-number">5</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1493305594059-f8bb5b2b0e36?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 2 – 2012</h3>
                     <h4 class="movie-subtitle">خلود المشاعر المتألقة</h4>
@@ -937,7 +946,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>محمد أبو السعود & سما</span> - قصة حب تخلد في كل قلب</p>
+            <p class="copyright">قصة حب تخلد في كل قلب &copy; 2023 <span>محمد أبو السعود & سما</span></p>
         </div>
     </footer>
     
@@ -952,12 +961,7 @@
             setTimeout(() => {
                 celebrationModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                
-                // Play romantic sound (optional)
-                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-romantic-heartbeat-1154.mp3');
-                audio.volume = 0.3;
-                // audio.play(); // Uncomment if you want sound
-            }, 1200);
+            }, 1000);
         });
         
         // Close celebration modal
@@ -965,8 +969,8 @@
             celebrationModal.classList.remove('active');
             document.body.style.overflow = 'auto';
             
-            // Create celebration hearts
-            createCelebrationHearts();
+            // Create subtle celebration effect
+            createCelebrationEffect();
             
             // Scroll to content smoothly
             window.scrollTo({
@@ -977,41 +981,37 @@
         
         // S Logo click effect
         sLogo.addEventListener('click', function() {
-            // Add click animation
-            this.style.animation = 'none';
-            this.style.transform = 'scale(1.4) rotate(15deg)';
-            this.style.boxShadow = '0 0 40px rgba(255, 20, 147, 1), 0 0 80px rgba(255, 105, 180, 0.8)';
+            // Add subtle click animation
+            this.style.transform = 'scale(1.2) rotate(15deg)';
+            this.style.boxShadow = '0 0 30px rgba(255, 182, 193, 0.9)';
             
             setTimeout(() => {
-                this.style.animation = 'logoGlow 3s infinite alternate, blink 2.5s infinite';
                 this.style.transform = '';
                 this.style.boxShadow = '';
             }, 500);
-            
-            // Create burst effect
-            createBurstHearts(this.getBoundingClientRect().left + 35, this.getBoundingClientRect().top + 35);
             
             // Show celebration modal again
             celebrationModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
         
-        // Create floating hearts
+        // Create floating hearts - مخففة
         const heartsContainer = document.getElementById('heartsContainer');
-        const heartIcons = ['♥', '❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
+        const heartIcons = ['♥', '❤', '💖'];
         
         function createFloatingHearts() {
-            for (let i = 0; i < 25; i++) {
+            // عدد أقل من القلوب
+            for (let i = 0; i < 15; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
                 heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
                 
-                // Random position and size
+                // إعدادات مخففة
                 const left = Math.random() * 100;
-                const size = Math.random() * 20 + 15;
-                const delay = Math.random() * 20;
-                const duration = Math.random() * 10 + 15;
-                const color = `rgba(255, ${Math.floor(Math.random() * 60 + 20)}, ${Math.floor(Math.random() * 100 + 155)}, ${Math.random() * 0.4 + 0.3})`;
+                const size = Math.random() * 15 + 12;
+                const delay = Math.random() * 30;
+                const duration = Math.random() * 15 + 20;
+                const color = `rgba(255, ${Math.floor(Math.random() * 80 + 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.4)`;
                 
                 heart.style.left = `${left}%`;
                 heart.style.fontSize = `${size}px`;
@@ -1026,63 +1026,45 @@
         // Create initial hearts
         createFloatingHearts();
         
-        // Create celebration hearts
-        function createCelebrationHearts() {
+        // Create stars background
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
             for (let i = 0; i < 50; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
-                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 20)}, ${Math.floor(Math.random() * 100 + 155)}, 0.8)`;
-                heart.style.zIndex = '1999';
-                heart.style.fontSize = `${Math.random() * 25 + 20}px`;
-                heart.style.left = `${Math.random() * 100}%`;
-                heart.style.animationDelay = `${Math.random() * 2}s`;
-                heart.style.animationDuration = `${Math.random() * 4 + 3}s`;
+                const star = document.createElement('div');
+                star.className = 'star';
                 
-                document.body.appendChild(heart);
+                const size = Math.random() * 3 + 1;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const opacity = Math.random() * 0.5 + 0.3;
+                const delay = Math.random() * 5;
                 
-                // Remove heart after animation
-                setTimeout(() => {
-                    if (heart.parentNode) {
-                        heart.parentNode.removeChild(heart);
-                    }
-                }, 7000);
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${left}%`;
+                star.style.top = `${top}%`;
+                star.style.opacity = opacity;
+                star.style.animationDelay = `${delay}s`;
+                
+                starsContainer.appendChild(star);
             }
         }
         
-        // Create burst hearts effect
-        function createBurstHearts(x, y) {
-            for (let i = 0; i < 15; i++) {
+        // Initialize stars
+        createStars();
+        
+        // Create subtle celebration effect
+        function createCelebrationEffect() {
+            for (let i = 0; i < 20; i++) {
                 const heart = document.createElement('div');
                 heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
                 heart.style.position = 'fixed';
-                heart.style.color = '#ff1493';
-                heart.style.fontSize = '24px';
-                heart.style.zIndex = '9999';
-                heart.style.pointerEvents = 'none';
-                heart.style.left = `${x}px`;
-                heart.style.top = `${y}px`;
-                heart.style.animation = `burstHeart 1.5s forwards`;
-                
-                // Random direction
-                const angle = Math.random() * Math.PI * 2;
-                const distance = Math.random() * 100 + 50;
-                
-                // Add animation
-                const style = document.createElement('style');
-                style.innerHTML = `
-                    @keyframes burstHeart {
-                        0% { 
-                            transform: translate(0, 0) rotate(0deg) scale(1); 
-                            opacity: 1; 
-                        }
-                        100% { 
-                            transform: translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) rotate(360deg) scale(0); 
-                            opacity: 0; 
-                        }
-                    }
-                `;
-                document.head.appendChild(style);
+                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.7)`;
+                heart.style.zIndex = '1999';
+                heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                heart.style.animation = `floatUp 2s forwards`;
                 
                 document.body.appendChild(heart);
                 
@@ -1091,10 +1073,7 @@
                     if (heart.parentNode) {
                         heart.parentNode.removeChild(heart);
                     }
-                    if (style.parentNode) {
-                        style.parentNode.removeChild(style);
-                    }
-                }, 1500);
+                }, 2000);
             }
         }
         
@@ -1102,25 +1081,13 @@
         const movieCards = document.querySelectorAll('.movie-card');
         movieCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-12px) scale(1.01)';
-                this.style.boxShadow = '0 20px 40px rgba(255, 20, 147, 0.3), 0 0 60px rgba(255, 20, 147, 0.15)';
-                
-                // Add subtle glow to number
-                const number = this.querySelector('.movie-number');
-                if (number) {
-                    number.style.boxShadow = '0 0 20px rgba(255, 20, 147, 1)';
-                }
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 25px 50px rgba(255, 182, 193, 0.2), 0 0 60px rgba(216, 112, 255, 0.15)';
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 105, 180, 0.3)';
-                
-                // Reset number glow
-                const number = this.querySelector('.movie-number');
-                if (number) {
-                    number.style.boxShadow = '0 0 15px rgba(255, 20, 147, 0.8)';
-                }
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 182, 193, 0.2)';
             });
         });
         
@@ -1131,22 +1098,21 @@
                 e.preventDefault();
                 const url = this.getAttribute('href');
                 
-                // Create a visual effect
+                // Create subtle visual effect
                 this.style.transform = 'scale(0.95)';
-                this.style.boxShadow = '0 4px 15px rgba(255, 20, 147, 0.7)';
                 
                 // Create heart animation at click position
                 const rect = this.getBoundingClientRect();
                 const heart = document.createElement('div');
                 heart.innerHTML = '❤';
                 heart.style.position = 'fixed';
-                heart.style.color = '#ff1493';
-                heart.style.fontSize = '30px';
+                heart.style.color = '#ffb6c1';
+                heart.style.fontSize = '25px';
                 heart.style.zIndex = '9999';
                 heart.style.pointerEvents = 'none';
                 heart.style.left = `${rect.left + rect.width/2}px`;
                 heart.style.top = `${rect.top + rect.height/2}px`;
-                heart.style.animation = 'floatUp 1.2s forwards';
+                heart.style.animation = 'floatUp 1.5s forwards';
                 
                 document.body.appendChild(heart);
                 
@@ -1159,7 +1125,7 @@
                             opacity: 1; 
                         }
                         100% { 
-                            transform: translate(-50%, -150px) scale(0.3) rotate(180deg); 
+                            transform: translate(-50%, -100px) scale(0.3) rotate(180deg); 
                             opacity: 0; 
                         }
                     }
@@ -1168,7 +1134,6 @@
                 
                 setTimeout(() => {
                     this.style.transform = '';
-                    this.style.boxShadow = '';
                     window.open(url, '_blank');
                     
                     // Remove heart after animation
@@ -1178,46 +1143,29 @@
                     if (style.parentNode) {
                         style.parentNode.removeChild(style);
                     }
-                }, 400);
+                }, 300);
             });
         });
         
-        // Add parallax effect to background
+        // Add scroll effect to header
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
+            const headerFrame = document.querySelector('.header-frame');
             
-            document.querySelector('body::before').style.transform = `translate3d(0, ${rate}px, 0)`;
+            if (scrolled > 100) {
+                headerFrame.style.transform = `translateY(${scrolled * 0.05}px)`;
+                headerFrame.style.opacity = 1 - (scrolled * 0.001);
+            }
         });
         
-        // Add stars to background
-        function addStars() {
-            const starsContainer = document.querySelector('.floating-hearts');
-            for (let i = 0; i < 30; i++) {
-                const star = document.createElement('div');
-                star.innerHTML = '✦';
-                star.style.position = 'absolute';
-                star.style.color = 'rgba(255, 255, 255, 0.3)';
-                star.style.fontSize = `${Math.random() * 10 + 8}px`;
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite alternate`;
-                
-                const style = document.createElement('style');
-                style.innerHTML = `
-                    @keyframes twinkle {
-                        0% { opacity: 0.2; }
-                        100% { opacity: 0.8; }
-                    }
-                `;
-                document.head.appendChild(style);
-                
-                starsContainer.appendChild(star);
-            }
-        }
-        
-        // Initialize stars
-        addStars();
+        // Add glow effect to tagline text periodically
+        setInterval(() => {
+            const tagline = document.querySelector('.tagline');
+            tagline.style.animation = 'none';
+            setTimeout(() => {
+                tagline.style.animation = 'textGlow 6s infinite alternate';
+            }, 10);
+        }, 6000);
     </script>
 </body>
-    </html>
+        </html>
