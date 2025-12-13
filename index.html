@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع عن حب أسطوري - سلسلة Twilight الخالدة</title>
+    <title>موقع Twilight الرومانسي الساحر ♥ (S♥M)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700;800&family=Alex+Brush&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,9 +15,9 @@
         
         body {
             font-family: 'Scheherazade New', serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #150528 50%, #28083a 100%);
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #2d0b3e 100%);
             color: #f8f0fc;
-            line-height: 1.7;
+            line-height: 1.6;
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
@@ -31,188 +31,213 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.2) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 60% 20%, rgba(199, 21, 133, 0.1) 0%, transparent 20%);
+                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, rgba(255, 105, 180, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 70% 20%, rgba(147, 112, 219, 0.1) 0%, transparent 25%);
             z-index: -1;
         }
         
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
-        /* S Logo */
+        /* S Logo with Blinking Effect */
         .s-logo {
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 65px;
-            height: 65px;
-            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #ff1493, #da70d6);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Alex Brush', cursive;
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             color: white;
             z-index: 1000;
             box-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            animation: logoGlow 3s infinite alternate;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            animation: logoGlow 3s infinite alternate, blink 2.5s infinite;
             cursor: pointer;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            overflow: hidden;
+        }
+        
+        .s-logo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
+            z-index: -1;
+        }
+        
+        .s-logo::after {
+            content: '♥';
+            position: absolute;
+            font-size: 1.5rem;
+            color: white;
+            bottom: 5px;
+            left: 5px;
+            text-shadow: 0 0 8px rgba(255, 20, 147, 0.9);
         }
         
         @keyframes logoGlow {
-            0% { 
-                box-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 105, 180, 0.5);
-                transform: scale(1);
-            }
-            100% { 
-                box-shadow: 0 0 30px rgba(255, 20, 147, 1), 0 0 60px rgba(255, 105, 180, 0.8);
-                transform: scale(1.05);
-            }
+            0% { box-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
+            100% { box-shadow: 0 0 30px rgba(255, 20, 147, 0.9), 0 0 50px rgba(255, 105, 180, 0.7); }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
         }
         
         /* Header Styles */
         header {
             text-align: center;
-            padding: 30px 0 15px;
+            padding: 40px 0 30px;
             position: relative;
             overflow: hidden;
-            margin-top: 25px;
+            margin-top: 30px;
         }
         
         .header-frame {
             border: 3px solid transparent;
             border-radius: 25px;
-            padding: 25px 30px;
-            background: linear-gradient(rgba(40, 5, 70, 0.85), rgba(25, 5, 45, 0.9)) padding-box,
-                        linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493) border-box;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 
-                        inset 0 0 30px rgba(255, 20, 147, 0.15),
-                        0 0 50px rgba(255, 20, 147, 0.1);
+            padding: 35px;
+            background: rgba(20, 5, 40, 0.7);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.6), 
+                inset 0 0 30px rgba(255, 20, 147, 0.15),
+                0 0 0 1px rgba(255, 105, 180, 0.2);
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             backdrop-filter: blur(5px);
         }
         
         .header-frame::before {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
             background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
-            border-radius: 35px;
+            border-radius: 28px;
             z-index: -1;
-            opacity: 0.3;
-            filter: blur(15px);
+            opacity: 0.6;
+            animation: borderRotate 8s linear infinite;
+        }
+        
+        @keyframes borderRotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         .site-title {
-            font-family: 'Lateef', serif;
-            font-size: 3.5rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
             color: #ff69b4;
-            text-shadow: 0 0 20px rgba(255, 20, 147, 0.9), 
-                         0 0 40px rgba(255, 20, 147, 0.5),
-                         0 0 60px rgba(255, 105, 180, 0.3);
-            margin-bottom: 10px;
+            text-shadow: 
+                0 0 20px rgba(255, 20, 147, 0.8), 
+                0 0 40px rgba(255, 20, 147, 0.5),
+                0 0 60px rgba(255, 20, 147, 0.3);
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
-            font-weight: 800;
-            letter-spacing: 1px;
+            animation: titlePulse 4s infinite alternate;
         }
         
-        .title-heart {
-            color: #ff1493;
-            animation: heartbeat 1.5s infinite;
-            margin: 0 10px;
+        @keyframes titlePulse {
+            0% { text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 20, 147, 0.5); }
+            100% { text-shadow: 0 0 25px rgba(255, 20, 147, 1), 0 0 50px rgba(255, 20, 147, 0.7), 0 0 70px rgba(255, 20, 147, 0.4); }
         }
         
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        .site-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff69b4, #da70d6, #ff69b4, transparent);
         }
         
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #e6b0ff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-shadow: 0 0 15px rgba(230, 176, 255, 0.7);
             font-weight: 700;
+            letter-spacing: 1px;
         }
         
         .tagline {
             font-style: italic;
             color: #f0d9ff;
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 15px auto;
+            font-size: 1.3rem;
+            max-width: 850px;
+            margin: 0 auto;
             line-height: 1.9;
-            padding: 15px;
+            padding: 20px;
             border-top: 1px dashed rgba(255, 105, 180, 0.4);
             border-bottom: 1px dashed rgba(255, 105, 180, 0.4);
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 20, 147, 0.05);
             border-radius: 10px;
-            text-shadow: 0 0 10px rgba(240, 217, 255, 0.3);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
         }
         
         /* Movie Poster Section */
         .movie-poster-section {
-            padding: 15px 0 35px;
+            padding: 20px 0 40px;
             text-align: center;
-            position: relative;
         }
         
         .poster-title {
-            font-family: 'Lateef', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #e6b0ff;
             margin-bottom: 25px;
-            text-shadow: 0 0 15px rgba(230, 176, 255, 0.7);
+            text-shadow: 0 0 12px rgba(230, 176, 255, 0.7);
             position: relative;
             display: inline-block;
         }
         
         .poster-title::after {
-            content: '';
+            content: '✨';
             position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #da70d6, transparent);
+            top: -10px;
+            right: -35px;
+            font-size: 1.5rem;
+            animation: sparkle 2s infinite;
         }
         
-        .poster-container {
-            position: relative;
-            max-width: 650px;
-            margin: 0 auto;
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
         
         .poster-frame {
             border: 4px solid transparent;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
-                        inset 0 0 40px rgba(255, 20, 147, 0.2);
-            background: linear-gradient(rgba(50, 10, 80, 0.9), rgba(30, 5, 55, 0.9)) padding-box,
-                        linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493) border-box;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.8),
+                0 0 60px rgba(255, 20, 147, 0.2),
+                inset 0 0 30px rgba(255, 20, 147, 0.1);
             position: relative;
             transition: transform 0.6s ease;
-            padding: 10px;
         }
         
         .poster-frame:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: scale(1.03) rotateY(5deg);
         }
         
         .poster-frame::before {
@@ -222,93 +247,47 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, 
-                        rgba(255, 20, 147, 0.1) 0%, 
-                        transparent 30%,
-                        transparent 70%,
-                        rgba(138, 43, 226, 0.1) 100%);
-            z-index: 2;
+            background: linear-gradient(45deg, rgba(148, 0, 211, 0.15), rgba(255, 20, 147, 0.1));
+            z-index: 1;
             pointer-events: none;
         }
         
-        .frame-decoration {
+        .poster-frame::after {
+            content: '';
             position: absolute;
-            z-index: 3;
-            color: rgba(255, 105, 180, 0.7);
-            font-size: 1.5rem;
-        }
-        
-        .decoration-1 { top: 15px; left: 15px; }
-        .decoration-2 { top: 15px; right: 15px; }
-        .decoration-3 { bottom: 15px; left: 15px; }
-        .decoration-4 { bottom: 15px; right: 15px; }
-        
-        .sm-heart {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Alex Brush', cursive;
-            font-size: 2.5rem;
-            color: rgba(255, 20, 147, 0.8);
-            z-index: 3;
-            text-shadow: 0 0 20px rgba(255, 20, 147, 0.9);
-            animation: smGlow 3s infinite alternate;
-        }
-        
-        @keyframes smGlow {
-            0% { opacity: 0.5; text-shadow: 0 0 15px rgba(255, 20, 147, 0.7); }
-            100% { opacity: 1; text-shadow: 0 0 25px rgba(255, 20, 147, 1), 0 0 40px rgba(255, 105, 180, 0.7); }
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db, #ff1493);
+            border-radius: 24px;
+            z-index: -1;
+            opacity: 0.7;
+            animation: borderRotate 10s linear infinite;
         }
         
         .movie-poster {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 15px;
             position: relative;
-            z-index: 1;
-        }
-        
-        .flickering-light {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: radial-gradient(circle at 30% 40%, 
-                      rgba(255, 255, 255, 0.15) 0%, 
-                      transparent 50%);
-            z-index: 2;
-            pointer-events: none;
-            animation: flicker 4s infinite alternate;
-            opacity: 0;
-            border-radius: 15px;
-        }
-        
-        @keyframes flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-                opacity: 0.3;
-            }
-            20%, 24%, 55% {
-                opacity: 0.8;
-            }
+            z-index: 0;
         }
         
         /* Movie Cards */
         .movies-section {
-            padding: 35px 0 50px;
+            padding: 40px 0 50px;
         }
         
         .section-title {
             text-align: center;
-            font-family: 'Lateef', serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #d8bfd8;
-            margin-bottom: 40px;
-            text-shadow: 0 0 20px rgba(216, 191, 216, 0.7);
+            margin-bottom: 45px;
+            text-shadow: 0 0 15px rgba(216, 191, 216, 0.7);
             position: relative;
             padding-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
         }
         
         .section-title::after {
@@ -318,19 +297,36 @@
             left: 50%;
             transform: translateX(-50%);
             width: 200px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #da70d6, #9370db, transparent);
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #da70d6, #ff69b4, #da70d6, transparent);
+        }
+        
+        .section-title::before {
+            content: '♥';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #ff69b4;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
         }
         
         .movie-card {
-            background: linear-gradient(145deg, rgba(50, 15, 80, 0.85), rgba(35, 10, 60, 0.9));
-            border-radius: 15px;
+            background: rgba(30, 10, 50, 0.8);
+            border-radius: 18px;
             overflow: hidden;
-            margin-bottom: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
-                        inset 0 0 25px rgba(255, 20, 147, 0.1);
-            border: 2px solid rgba(255, 105, 180, 0.3);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 45px;
+            box-shadow: 
+                0 12px 30px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 105, 180, 0.3);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            transition: all 0.4s ease;
             display: flex;
             flex-wrap: wrap;
             position: relative;
@@ -339,9 +335,9 @@
         
         .movie-card:hover {
             transform: translateY(-12px) scale(1.01);
-            box-shadow: 0 25px 50px rgba(255, 20, 147, 0.3),
-                        inset 0 0 30px rgba(255, 20, 147, 0.2);
-            border-color: rgba(255, 105, 180, 0.6);
+            box-shadow: 
+                0 20px 40px rgba(255, 20, 147, 0.3),
+                0 0 60px rgba(255, 20, 147, 0.15);
         }
         
         .movie-card::before {
@@ -351,8 +347,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db, #ff1493);
-            z-index: 2;
+            background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
         }
         
         .movie-number {
@@ -361,24 +356,24 @@
             left: 15px;
             background: linear-gradient(45deg, #ff1493, #da70d6);
             color: white;
-            width: 42px;
-            height: 42px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.3rem;
-            z-index: 3;
-            box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            font-family: 'Lateef', serif;
+            font-size: 1.4rem;
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+            border: 2px solid white;
+            font-family: 'Cairo', sans-serif;
         }
         
         .movie-image {
             flex: 1;
-            min-width: 280px;
-            height: 280px;
+            min-width: 300px;
+            height: 300px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -391,23 +386,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgba(50, 15, 80, 0.8), transparent 50%);
+            background: linear-gradient(to right, rgba(30,10,50,0.9), rgba(30,10,50,0.6), transparent);
         }
         
         .movie-content {
             flex: 2;
-            min-width: 280px;
+            min-width: 300px;
             padding: 30px;
             position: relative;
         }
         
         .movie-title {
-            font-family: 'Lateef', serif;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: #ff69b4;
             margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-            font-weight: 800;
+            text-shadow: 0 0 12px rgba(255, 105, 180, 0.7);
+            font-family: 'Dancing Script', cursive;
             position: relative;
             display: inline-block;
         }
@@ -416,45 +410,45 @@
             content: '';
             position: absolute;
             bottom: -5px;
-            left: 0;
-            width: 100px;
+            right: 0;
+            width: 100%;
             height: 2px;
             background: linear-gradient(90deg, #ff69b4, transparent);
         }
         
         .movie-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #e6b0ff;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 700;
-            text-shadow: 0 0 10px rgba(230, 176, 255, 0.5);
+            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
         }
         
         .romantic-name {
             display: inline-block;
-            background: linear-gradient(45deg, rgba(255, 105, 180, 0.2), rgba(138, 43, 226, 0.2));
+            background: rgba(255, 105, 180, 0.2);
             padding: 8px 18px;
-            border-radius: 25px;
+            border-radius: 30px;
             margin-bottom: 20px;
-            border-left: 4px solid #ff69b4;
-            border-right: 4px solid #9370db;
+            border-right: 4px solid #ff69b4;
             font-style: italic;
             font-size: 1.1rem;
-            color: #f8f0fc;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .movie-description {
             margin-bottom: 25px;
-            color: #f0d9ff;
-            line-height: 1.9;
-            font-size: 1.05rem;
-            text-shadow: 0 0 10px rgba(240, 217, 255, 0.2);
+            color: #f5e6ff;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
         
         .download-btn {
             display: inline-block;
-            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
+            background: linear-gradient(45deg, #ff1493, #da70d6);
             color: white;
             padding: 12px 30px;
             border-radius: 30px;
@@ -462,47 +456,55 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            font-family: 'Scheherazade New', serif;
+            z-index: 1;
         }
         
         .download-btn::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.7s;
+            background: linear-gradient(45deg, #ff0066, #d870ff);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .download-btn:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.7);
-            background: linear-gradient(45deg, #ff0066, #d870ff, #8a63d2);
+            box-shadow: 0 12px 25px rgba(255, 20, 147, 0.7);
         }
         
         .download-btn:hover::before {
-            left: 100%;
+            opacity: 1;
         }
         
         .download-btn i {
             margin-left: 8px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
         }
         
         /* Footer */
         footer {
-            background: linear-gradient(to top, rgba(20, 5, 35, 0.95), rgba(30, 10, 50, 0.9));
-            padding: 30px 0;
+            background: rgba(15, 5, 30, 0.95);
+            padding: 35px 0;
             text-align: center;
-            border-top: 2px solid rgba(255, 105, 180, 0.3);
-            margin-top: 50px;
+            border-top: 1px solid rgba(255, 105, 180, 0.3);
+            margin-top: 60px;
             position: relative;
+            overflow: hidden;
         }
         
         footer::before {
@@ -511,12 +513,12 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 3px;
             background: linear-gradient(90deg, #ff1493, #da70d6, #9370db);
         }
         
         .copyright {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #d8bfd8;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(216, 191, 216, 0.5);
@@ -525,7 +527,15 @@
         .copyright span {
             color: #ff69b4;
             font-weight: bold;
-            text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+            position: relative;
+        }
+        
+        .copyright span::after {
+            content: '♥';
+            font-size: 1.3rem;
+            margin: 0 5px;
+            animation: heartbeat 1.5s infinite;
         }
         
         /* S Celebration Modal */
@@ -535,14 +545,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at center, rgba(10, 5, 20, 0.98), rgba(5, 2, 15, 0.97));
+            background: rgba(5, 2, 15, 0.98);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.7s ease, visibility 0.7s ease;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
         }
         
         .celebration-modal.active {
@@ -551,79 +561,111 @@
         }
         
         .celebration-content {
-            background: linear-gradient(135deg, rgba(70, 20, 100, 0.95), rgba(40, 10, 70, 0.95));
-            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(70, 20, 100, 0.95), rgba(40, 10, 60, 0.95));
+            border-radius: 25px;
             padding: 50px;
             text-align: center;
-            max-width: 550px;
+            max-width: 600px;
             width: 90%;
-            box-shadow: 0 0 80px rgba(255, 20, 147, 0.7),
-                        inset 0 0 40px rgba(255, 20, 147, 0.3);
+            box-shadow: 
+                0 0 60px rgba(255, 20, 147, 0.6),
+                0 0 100px rgba(255, 20, 147, 0.3),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
             border: 3px solid rgba(255, 105, 180, 0.6);
             position: relative;
-            transform: scale(0.8) rotate(-5deg);
-            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(10px);
+            transform: scale(0.8) rotateY(90deg);
+            transition: transform 0.8s ease;
         }
         
         .celebration-modal.active .celebration-content {
-            transform: scale(1) rotate(0deg);
+            transform: scale(1) rotateY(0);
         }
         
         .celebration-s {
             font-family: 'Alex Brush', cursive;
             font-size: 10rem;
             color: #ff69b4;
-            text-shadow: 0 0 50px rgba(255, 20, 147, 1),
-                         0 0 100px rgba(255, 105, 180, 0.8);
+            text-shadow: 
+                0 0 40px rgba(255, 20, 147, 0.9),
+                0 0 80px rgba(255, 20, 147, 0.6),
+                0 0 120px rgba(255, 20, 147, 0.3);
             margin-bottom: 25px;
-            animation: sCelebration 3s infinite alternate;
+            animation: sPulse 2s infinite alternate;
             position: relative;
         }
         
-        @keyframes sCelebration {
-            0% { transform: scale(1) rotate(0deg); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
-            50% { transform: scale(1.1) rotate(5deg); text-shadow: 0 0 60px rgba(255, 20, 147, 1), 0 0 100px rgba(255, 105, 180, 0.9); }
-            100% { transform: scale(1) rotate(0deg); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
+        .celebration-s::after {
+            content: '♥';
+            position: absolute;
+            font-size: 3rem;
+            color: white;
+            top: 20px;
+            right: -30px;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes sPulse {
+            0% { transform: scale(1); text-shadow: 0 0 40px rgba(255, 20, 147, 0.9); }
+            100% { transform: scale(1.1); text-shadow: 0 0 60px rgba(255, 20, 147, 1); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .celebration-text {
-            font-family: 'Lateef', serif;
             font-size: 1.8rem;
             color: #e6b0ff;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(230, 176, 255, 0.8);
-            line-height: 1.6;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px rgba(230, 176, 255, 0.8);
+            font-family: 'Dancing Script', cursive;
+            line-height: 1.5;
         }
         
         .celebration-subtext {
             color: #f0d9ff;
-            font-size: 1.2rem;
-            margin-bottom: 35px;
-            line-height: 1.8;
-            text-shadow: 0 0 15px rgba(240, 217, 255, 0.5);
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
         }
         
         .close-celebration {
-            background: linear-gradient(45deg, #ff1493, #da70d6, #9370db);
+            background: linear-gradient(45deg, #ff1493, #da70d6);
             color: white;
             border: none;
             padding: 15px 40px;
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
-            font-family: 'Scheherazade New', serif;
-            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
             position: relative;
             overflow: hidden;
+            z-index: 1;
+        }
+        
+        .close-celebration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff0066, #d870ff);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .close-celebration:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.7);
-            background: linear-gradient(45deg, #ff0066, #d870ff, #8a63d2);
+            box-shadow: 0 12px 25px rgba(255, 20, 147, 0.7);
+        }
+        
+        .close-celebration:hover::before {
+            opacity: 1;
         }
         
         /* Floating Hearts */
@@ -641,13 +683,13 @@
             position: absolute;
             color: rgba(255, 20, 147, 0.4);
             font-size: 20px;
-            animation: float 20s infinite linear;
+            animation: float 18s infinite linear;
             text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
         }
         
         @keyframes float {
             0% {
-                transform: translateY(100vh) rotate(0deg);
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
                 opacity: 0;
             }
             10% {
@@ -657,7 +699,7 @@
                 opacity: 0.8;
             }
             100% {
-                transform: translateY(-100px) rotate(360deg);
+                transform: translateY(-100px) rotate(360deg) scale(1);
                 opacity: 0;
             }
         }
@@ -665,11 +707,16 @@
         /* Responsive */
         @media (max-width: 768px) {
             .site-title {
-                font-size: 2.7rem;
+                font-size: 3rem;
             }
             
             .subtitle {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+                padding: 15px;
             }
             
             .movie-card {
@@ -677,7 +724,7 @@
             }
             
             .movie-image {
-                height: 240px;
+                height: 250px;
             }
             
             .movie-title {
@@ -685,9 +732,9 @@
             }
             
             .s-logo {
-                width: 55px;
-                height: 55px;
-                font-size: 2.7rem;
+                width: 60px;
+                height: 60px;
+                font-size: 2.8rem;
                 top: 15px;
                 right: 15px;
             }
@@ -700,9 +747,59 @@
                 font-size: 1.5rem;
             }
             
-            .poster-frame {
-                padding: 8px;
+            .section-title {
+                font-size: 2.3rem;
             }
+            
+            .poster-frame {
+                max-width: 90%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-frame {
+                padding: 25px 20px;
+            }
+            
+            .site-title {
+                font-size: 2.5rem;
+            }
+            
+            .movie-content {
+                padding: 20px;
+            }
+            
+            .movie-title {
+                font-size: 1.7rem;
+            }
+            
+            .celebration-content {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(20, 5, 35, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #ff1493, #da70d6);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #ff0066, #d870ff);
+        }
+        
+        /* Selection Color */
+        ::selection {
+            background-color: rgba(255, 20, 147, 0.5);
+            color: white;
         }
         
         /* Glow Effects */
@@ -711,7 +808,7 @@
         }
         
         .glow-box {
-            box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
         }
     </style>
 </head>
@@ -722,9 +819,9 @@
     <!-- S Celebration Modal -->
     <div class="celebration-modal" id="celebrationModal">
         <div class="celebration-content">
-            <div class="celebration-s">S ♥ M</div>
-            <h2 class="celebration-text">مرحباً بك في عالم Twilight الأسطوري</h2>
-            <p class="celebration-subtext">في هذا الفضاء الرومانسي، حيث تتلاقى الأنفس لتشكيل قصة حب تتحدى الزمن والمصير. هنا، في عالم Twilight الساحر، تبدأ رحلة عاطفية لا مثيل لها، حيث يتجسد الحب بأجمل صوره وأكثرها سحراً وإثارة.</p>
+            <div class="celebration-s">S</div>
+            <h2 class="celebration-text">مرحباً بك في عالم Twilight الساحر ♥</h2>
+            <p class="celebration-subtext">أين تلتقي قلوب المحبين تحت سماءٍ أبدية، حيث الحب يتحدى المصير والنور يزهر في ظلمة الليل. هنا، في مملكة الرومانسية الأسطورية، تبدأ رحلة مشاعر لا تُنسى بين مصاصي الدماء والبشر.</p>
             <button class="close-celebration" id="closeCelebration">ابدأ الرحلة الرومانسية</button>
         </div>
     </div>
@@ -737,10 +834,10 @@
         <div class="container">
             <div class="header-frame">
                 <h1 class="site-title">
-                    موقع عن <span class="title-heart">♥</span> حب أسطوري <span class="title-heart">♥</span>
+                    عالم Twilight الرومانسي الأسطوري (S♥M)
                 </h1>
-                <p class="subtitle">لتنزيل فلم Twilight (S ♥ M) - قصة حب تتحدى المصير والزمن</p>
-                <p class="tagline">في هذا الملاذ الرومانسي، حيث تتشابك الأقدار وتتلاقى القلوب، نقدم لكم ملحمة حب خالدة عبر أجزاء Twilight الخمسة. كل جزء يحمل في طياته أسراراً عاطفية، معاناة الفراق، فرحة اللقاء، وتحديات مصيرية تختبر قوة الحب الحقيقي. هنا، حيث يلتقي النور بالظل، والإنسان بالأسطورة، لتولد قصة حب أسطورية لا تنسى.</p>
+                <p class="subtitle">حيث يلتقي الحب الأبدي مع مصير يتحدى قوانين الطبيعة</p>
+                <p class="tagline">في هذا الملاذ الرومانسي، نعبر معكم بوابة المشاعر إلى عالم Twilight الساحر، حيث كل نبضة قلب تكتب أسطورة، وكل نظرة تحمل ألف معنى. هنا، حيث يتشابك مصير إدوارد وبيلا في رقصة أبدية بين النور والظلام، نقدم لكم جوهرة المشاعر الخالدة عبر خمسة أجزاء أسطورية. استعدوا لرحلة عاطفية تغمر الروح وتلامس شغاف القلب.</p>
             </div>
         </div>
     </header>
@@ -748,17 +845,9 @@
     <!-- Movie Poster Section -->
     <section class="movie-poster-section">
         <div class="container">
-            <h3 class="poster-title">استكشف عالم Twilight الساحر</h3>
-            <div class="poster-container">
-                <div class="poster-frame">
-                    <div class="frame-decoration decoration-1">❦</div>
-                    <div class="frame-decoration decoration-2">✢</div>
-                    <div class="frame-decoration decoration-3">♡</div>
-                    <div class="frame-decoration decoration-4">✦</div>
-                    <div class="sm-heart">S ♥ M</div>
-                    <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
-                    <div class="flickering-light"></div>
-                </div>
+            <h3 class="poster-title">بوابة المشاعر الساحرة</h3>
+            <div class="poster-frame">
+                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Twilight Movie" class="movie-poster">
             </div>
         </div>
     </section>
@@ -766,21 +855,19 @@
     <!-- Movies Section -->
     <section class="movies-section">
         <div class="container">
-            <h2 class="section-title">ملحمة الحب الأسطورية عبر الأجزاء</h2>
+            <h2 class="section-title">ملحمة الحب الخالدة</h2>
             
             <!-- Movie 1 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">1</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
-                </div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Twilight – 2008</h3>
-                    <h4 class="movie-subtitle">الجزء الأول: لقاء القدر الأسطوري</h4>
-                    <div class="romantic-name">"بداية أسطورة حب تتحدى الطبيعة"</div>
-                    <p class="movie-description">في بلدة فوركس الممطرة، حيث يلتقي النور بالظلال، تبدأ أسطورة حب خارقة للطبيعة بين بيلا سوان، الفتاة البشرية ذات الروح التواقة، وإدوارد كولين، المصّاص الدماء الذي يحمل قروناً من الوحدة والألم. لقاء القدر هذا يفتح بوابة لعالم من المشاعر الجياشة، التحديات المصيرية، وحماية تحيط بها المخاطر من كل جانب.</p>
+                    <h4 class="movie-subtitle">لقاء الأقدار المتشابكة</h4>
+                    <div class="romantic-name">"اللحظة التي غيرت الكون"</div>
+                    <p class="movie-description">في بلدة فوركس الماطرة، حيث الضباب يلف الأحلام والغيوم تحمل أسراراً خفية، تلتقي بيلا سوان بإدوارد كولين في لقاءٍ قدرّي يعيد تعريف الحب. قلب بشري نقي يخفق لمصاص دماء خالد، في رقصة مصيرية حيث كل نظرة تحمل وعداً بأبدية تتجاوز حدود الزمن والطبيعة. هنا تبدأ الملحمة حيث يقرر إدوارد حماية نور حياته من عالمه المظلم.</p>
                     <a href="https://www.mediafire.com/file/i53gy1x7nbh58nj/Twilight.2008.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل أسطورة البداية
+                        <i class="fas fa-download"></i> حمل ملحمة البداية
                     </a>
                 </div>
             </div>
@@ -788,14 +875,12 @@
             <!-- Movie 2 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">2</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
-                </div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">New Moon – 2009</h3>
-                    <h4 class="movie-subtitle">الجزء الثاني: فراق يهز الأعماق</h4>
-                    <div class="romantic-name">"ألم الفراق الذي يولد القوة الحقيقية"</div>
-                    <p class="movie-description">بعد حادثة عيد الميلاد المؤلمة، يغادر إدوارد ظنًا منه أنه يحمي حبيبته من عالمه المظلم، تاركًا بيلا في دوامة من الألم واليأس. في ظل هذا الفراق المدمر، تكتشف بيلا قوة جديدة في صداقتها مع جاكوب بلاك، لتتعرف على عالم المستذئبين الأسطوري. رحلة بحث عن الحب المفقود ومواجهة مصيرية مع قوى الظلام التي تهدد وجودها.</p>
+                    <h4 class="movie-subtitle">فراق يشقّ الروح</h4>
+                    <div class="romantic-name">"ألمٌ يولد من رحم الغياب"</div>
+                    <p class="movie-description">بعد حادثة عيد الميلاد المصيرية، يغادر إدوارد ظاناً أنه يحمي بيلا من مصيره المظلم. تهوي بيلا في هاوية من الحزن حيث تتحول أيامها إلى شهور من الفراغ العاطفي. في ظلام فراقها، يظهر جاكوب بلاك كشمس دافئة، ليكتشفا معاً أن الحب قد يتخذ أشكالاً متعددة. رحلة بحث عن الذات وعن الحبيب المفقود في متاهة المشاعر المتضاربة.</p>
                     <a href="https://www.mediafire.com/file/c67e3s5uo3lni12/Twilight.Saga.the.2009.480p.BrRip.AKWAM.mp4/file" class="download-btn" target="_blank">
                         <i class="fas fa-download"></i> حمل ملحمة الفراق
                     </a>
@@ -805,16 +890,14 @@
             <!-- Movie 3 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">3</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
-                </div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Eclipse – 2010</h3>
-                    <h4 class="movie-subtitle">الجزء الثالث: صراع المشاعر الجياشة</h4>
-                    <div class="romantic-name">"قلب يتأرجح بين نارين عاطفيتين"</div>
-                    <p class="movie-description">بيلا تقف على مفترق طرق مصيري، مضطرة للاختيار بين حبها الأبدي لإدوارد وصداقتها العميقة لجاكوب، بينما تهدد قوة شريرة غامضة مدينة سياتل. في هذا الجزء، يشهد العالم تحالفاً تاريخياً غير مسبوق بين عالمي مصاصي الدماء والمستذئبين لحماية بيلا، في وقت تتخذ فيه قراراً مصيرياً يغير مسار حياتها للأبد.</p>
+                    <h4 class="movie-subtitle">صراع القلوب المتوهجة</h4>
+                    <div class="romantic-name">"قلبٌ بين بركانين"</div>
+                    <p class="movie-description">تعود بيلا وإدوارد بعلاقة أقوى، لكن قلبها ما يزال يحمل مكاناً لجاكوب. في مواجهة الخطر الداهم، يتحد أعداء الأمس - مصاصو الدماء والمستذئبون - لحماية الفتاة التي تجمعهم. بيلا تقف على مفترق طرق مصيري: اختيار بين حب خالد في ظلام الليل، وصداقة مشتعلة في دفء النهار. قرار سيكتب فصلًا جديداً في تاريخ الحب الأسطوري.</p>
                     <a href="https://www.mediafire.com/file/uca74ca824fnv4k/The.Twilight.Saga.Eclipse.2010.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل معركة المشاعر
+                        <i class="fas fa-download"></i> حمل ملحمة الصراع
                     </a>
                 </div>
             </div>
@@ -822,16 +905,14 @@
             <!-- Movie 4 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">4</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1533630757306-cbadb934bcb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
-                </div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1533630757306-cbadb934bcb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 1 – 2011</h3>
-                    <h4 class="movie-subtitle">الجزء الرابع: زواج وحمل غامض</h4>
-                    <div class="romantic-name">"اتحاد أرواح في مواجهة قدر مجهول"</div>
-                    <p class="movie-description">أخيراً، يتحقق الحلم ويتزوج إدوارد وبيلا في حفل أسطوري، ليقضيا شهر عسل في جزيرة نائية تحيط بها الأسرار. لكن الفرحة تتحول إلى كابوس عندما تصبح بيلا حاملاً بطفل نصف مصّاص دماء، مما يهدد حياتها ويغضب عشيرة المستذئبين. هنا تبدأ معركة جديدة لحماية هذا الحب الاستثنائي من أخطار لم تكن في الحسبان.</p>
+                    <h4 class="movie-subtitle">اتحاد الأرواح الخالدة</h4>
+                    <div class="romantic-name">"زواج القلوب قبل الأجساد"</div>
+                    <p class="movie-description">يتوج الحب بزواج أسطوري تحت سماء مرصعة بالنجوم، ثم شهر عسل في جزيرة استوائية حيث يصبح الحلم حقيقة. لكن الفرح يتحول إلى اختبارٍ وجودي عندما تكتشف بيلا حملها الغامض. طفل نصف مصاص دماء يهدد حياتها ويشعل حرباً بين عالمين. إدوارد يقف عاجزاً بين إنقاذ حبيبته وقبول المصير الجديد، في أصعب قرار في حياته الخالدة.</p>
                     <a href="https://www.mediafire.com/file/re2jmh2p0fpgmqb/The.Twilight.Saga.Breaking.Dawn.Part.1.2011.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل قصة الاتحاد
+                        <i class="fas fa-download"></i> حمل ملحمة الاتحاد
                     </a>
                 </div>
             </div>
@@ -839,16 +920,14 @@
             <!-- Movie 5 -->
             <div class="movie-card glow-box">
                 <div class="movie-number">5</div>
-                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1493305594059-f8bb5b2b0e36?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(50,15,80,0.85), transparent 60%);"></div>
-                </div>
+                <div class="movie-image" style="background-image: url('https://images.unsplash.com/photo-1493305594059-f8bb5b2b0e36?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 2 – 2012</h3>
-                    <h4 class="movie-subtitle">الجزء الخامس: الخلود والنهاية الأسطورية</h4>
-                    <div class="romantic-name">"نهاية البداية، بداية الخلود الأبدي"</div>
-                    <p class="movie-description">بعد تحول بيلا إلى مصّاصة دماء لحماية طفلتها رينيسمي، يجب على آل كولين وحلفائهم الدفاع عن الطفلة ضد الفولتوري، أقدم وأقوى عشائر المصّاصين. معركة مصيرية أسطورية تقرر مصير عائلة كولين والحب الذي تحدى كل الصعاب، لتختتم بهذه الملحمة الخالدة التي تثبت أن الحب الحقيقي أقوى من أي قوة في الكون.</p>
+                    <h4 class="movie-subtitle">خلود المشاعر المتألقة</h4>
+                    <div class="romantic-name">"النهاية التي هي بداية الخلود"</div>
+                    <p class="movie-description">بعد تحول بيلا إلى مصاصة دماء لحماية طفلتها رينيسمي، يكتمل اتحاد الروحين في شكلٍ جديد. لكن العائلة الجديدة تواجه تهديداً وجودياً من الفولتوري، أقدم وأقوى عشائر المصاصين. في معركة مصيرية تجمع كل الحلفاء، يثبت الحب أنه أقوى سلاح في مواجهة القوة والظلام. الخاتمة الأسطورية لملحمة حب ستخلد في ذاكرة الكون.</p>
                     <a href="https://www.mediafire.com/file/qlybiy84x55t3yb/The.Twilight.Saga.Breaking.Dawn.Part.2.2012.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل الخاتمة الأسطورية
+                        <i class="fas fa-download"></i> حمل ملحمة الخلود
                     </a>
                 </div>
             </div>
@@ -858,7 +937,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>Mohammed Abu Al-Saud & Sama</span> - قصة حب خالدة في ذاكرة الزمن</p>
+            <p class="copyright">جميع الحقوق محفوظة &copy; 2023 <span>محمد أبو السعود & سما</span> - قصة حب تخلد في كل قلب</p>
         </div>
     </footer>
     
@@ -873,10 +952,12 @@
             setTimeout(() => {
                 celebrationModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                // Play romantic sound if needed
-                // const audio = new Audio('romantic-sound.mp3');
-                // audio.play();
-            }, 800);
+                
+                // Play romantic sound (optional)
+                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-romantic-heartbeat-1154.mp3');
+                audio.volume = 0.3;
+                // audio.play(); // Uncomment if you want sound
+            }, 1200);
         });
         
         // Close celebration modal
@@ -887,69 +968,76 @@
             // Create celebration hearts
             createCelebrationHearts();
             
-            // Add romantic effect to title
-            const title = document.querySelector('.site-title');
-            title.style.animation = 'pulse 1s 3';
-            
-            setTimeout(() => {
-                title.style.animation = '';
-            }, 3000);
+            // Scroll to content smoothly
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
         
         // S Logo click effect
         sLogo.addEventListener('click', function() {
-            // Add pulse effect
-            this.style.animation = 'logoGlow 0.5s 3';
+            // Add click animation
+            this.style.animation = 'none';
+            this.style.transform = 'scale(1.4) rotate(15deg)';
+            this.style.boxShadow = '0 0 40px rgba(255, 20, 147, 1), 0 0 80px rgba(255, 105, 180, 0.8)';
+            
+            setTimeout(() => {
+                this.style.animation = 'logoGlow 3s infinite alternate, blink 2.5s infinite';
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            }, 500);
+            
+            // Create burst effect
+            createBurstHearts(this.getBoundingClientRect().left + 35, this.getBoundingClientRect().top + 35);
             
             // Show celebration modal again
-            setTimeout(() => {
-                celebrationModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                this.style.animation = '';
-            }, 300);
+            celebrationModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
         
         // Create floating hearts
         const heartsContainer = document.getElementById('heartsContainer');
         const heartIcons = ['♥', '❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
         
-        for (let i = 0; i < 25; i++) {
-            createHeart(i);
-        }
-        
-        function createHeart(index) {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
-            
-            // Random position and size
-            const left = Math.random() * 100;
-            const size = Math.random() * 20 + 15;
-            const delay = Math.random() * 20;
-            const duration = Math.random() * 15 + 15;
-            const color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, ${Math.random() * 0.5 + 0.3})`;
-            
-            heart.style.left = `${left}%`;
-            heart.style.fontSize = `${size}px`;
-            heart.style.animationDelay = `${delay}s`;
-            heart.style.animationDuration = `${duration}s`;
-            heart.style.color = color;
-            
-            heartsContainer.appendChild(heart);
-        }
-        
-        // Create celebration hearts
-        function createCelebrationHearts() {
-            for (let i = 0; i < 40; i++) {
+        function createFloatingHearts() {
+            for (let i = 0; i < 25; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
                 heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
-                heart.style.color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.8)`;
+                
+                // Random position and size
+                const left = Math.random() * 100;
+                const size = Math.random() * 20 + 15;
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 10 + 15;
+                const color = `rgba(255, ${Math.floor(Math.random() * 60 + 20)}, ${Math.floor(Math.random() * 100 + 155)}, ${Math.random() * 0.4 + 0.3})`;
+                
+                heart.style.left = `${left}%`;
+                heart.style.fontSize = `${size}px`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.color = color;
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        // Create initial hearts
+        createFloatingHearts();
+        
+        // Create celebration hearts
+        function createCelebrationHearts() {
+            for (let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 20)}, ${Math.floor(Math.random() * 100 + 155)}, 0.8)`;
                 heart.style.zIndex = '1999';
                 heart.style.fontSize = `${Math.random() * 25 + 20}px`;
                 heart.style.left = `${Math.random() * 100}%`;
-                heart.style.animationDelay = `${Math.random() * 3}s`;
-                heart.style.animationDuration = `${Math.random() * 6 + 4}s`;
+                heart.style.animationDelay = `${Math.random() * 2}s`;
+                heart.style.animationDuration = `${Math.random() * 4 + 3}s`;
                 
                 document.body.appendChild(heart);
                 
@@ -958,7 +1046,55 @@
                     if (heart.parentNode) {
                         heart.parentNode.removeChild(heart);
                     }
-                }, 10000);
+                }, 7000);
+            }
+        }
+        
+        // Create burst hearts effect
+        function createBurstHearts(x, y) {
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.position = 'fixed';
+                heart.style.color = '#ff1493';
+                heart.style.fontSize = '24px';
+                heart.style.zIndex = '9999';
+                heart.style.pointerEvents = 'none';
+                heart.style.left = `${x}px`;
+                heart.style.top = `${y}px`;
+                heart.style.animation = `burstHeart 1.5s forwards`;
+                
+                // Random direction
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 100 + 50;
+                
+                // Add animation
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    @keyframes burstHeart {
+                        0% { 
+                            transform: translate(0, 0) rotate(0deg) scale(1); 
+                            opacity: 1; 
+                        }
+                        100% { 
+                            transform: translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) rotate(360deg) scale(0); 
+                            opacity: 0; 
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                document.body.appendChild(heart);
+                
+                // Remove heart after animation
+                setTimeout(() => {
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                    if (style.parentNode) {
+                        style.parentNode.removeChild(style);
+                    }
+                }, 1500);
             }
         }
         
@@ -967,23 +1103,23 @@
         movieCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-12px) scale(1.01)';
-                this.style.boxShadow = '0 25px 50px rgba(255, 20, 147, 0.3), inset 0 0 30px rgba(255, 20, 147, 0.2)';
+                this.style.boxShadow = '0 20px 40px rgba(255, 20, 147, 0.3), 0 0 60px rgba(255, 20, 147, 0.15)';
                 
                 // Add subtle glow to number
                 const number = this.querySelector('.movie-number');
                 if (number) {
-                    number.style.boxShadow = '0 0 30px rgba(255, 20, 147, 1)';
+                    number.style.boxShadow = '0 0 20px rgba(255, 20, 147, 1)';
                 }
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(255, 20, 147, 0.1)';
+                this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 105, 180, 0.3)';
                 
                 // Reset number glow
                 const number = this.querySelector('.movie-number');
                 if (number) {
-                    number.style.boxShadow = '0 0 20px rgba(255, 20, 147, 0.8)';
+                    number.style.boxShadow = '0 0 15px rgba(255, 20, 147, 0.8)';
                 }
             });
         });
@@ -997,64 +1133,91 @@
                 
                 // Create a visual effect
                 this.style.transform = 'scale(0.95)';
+                this.style.boxShadow = '0 4px 15px rgba(255, 20, 147, 0.7)';
                 
-                // Create multiple hearts animation
-                for (let i = 0; i < 8; i++) {
-                    createClickHeart(e.clientX, e.clientY);
-                }
+                // Create heart animation at click position
+                const rect = this.getBoundingClientRect();
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤';
+                heart.style.position = 'fixed';
+                heart.style.color = '#ff1493';
+                heart.style.fontSize = '30px';
+                heart.style.zIndex = '9999';
+                heart.style.pointerEvents = 'none';
+                heart.style.left = `${rect.left + rect.width/2}px`;
+                heart.style.top = `${rect.top + rect.height/2}px`;
+                heart.style.animation = 'floatUp 1.2s forwards';
+                
+                document.body.appendChild(heart);
+                
+                // Style for float up animation
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    @keyframes floatUp {
+                        0% { 
+                            transform: translate(-50%, -50%) scale(1) rotate(0deg); 
+                            opacity: 1; 
+                        }
+                        100% { 
+                            transform: translate(-50%, -150px) scale(0.3) rotate(180deg); 
+                            opacity: 0; 
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
                 
                 setTimeout(() => {
                     this.style.transform = '';
+                    this.style.boxShadow = '';
                     window.open(url, '_blank');
-                }, 300);
+                    
+                    // Remove heart after animation
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                    if (style.parentNode) {
+                        style.parentNode.removeChild(style);
+                    }
+                }, 400);
             });
         });
         
-        function createClickHeart(x, y) {
-            const heart = document.createElement('div');
-            heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
-            heart.style.position = 'fixed';
-            heart.style.color = `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100 + 155)}, 0.9)`;
-            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
-            heart.style.zIndex = '9999';
-            heart.style.pointerEvents = 'none';
-            heart.style.left = `${x}px`;
-            heart.style.top = `${y}px`;
-            heart.style.animation = `floatUp ${Math.random() * 1 + 1}s forwards`;
+        // Add parallax effect to background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
             
-            document.body.appendChild(heart);
-            
-            // Remove heart after animation
-            setTimeout(() => {
-                if (heart.parentNode) {
-                    heart.parentNode.removeChild(heart);
-                }
-            }, 1500);
-        }
+            document.querySelector('body::before').style.transform = `translate3d(0, ${rate}px, 0)`;
+        });
         
-        // Add style for float up animation
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes floatUp {
-                0% { 
-                    transform: translate(0, 0) rotate(0deg) scale(1); 
-                    opacity: 1; 
-                }
-                100% { 
-                    transform: translate(${Math.random() * 100 - 50}px, -150px) rotate(${Math.random() * 360}deg) scale(0); 
-                    opacity: 0; 
-                }
+        // Add stars to background
+        function addStars() {
+            const starsContainer = document.querySelector('.floating-hearts');
+            for (let i = 0; i < 30; i++) {
+                const star = document.createElement('div');
+                star.innerHTML = '✦';
+                star.style.position = 'absolute';
+                star.style.color = 'rgba(255, 255, 255, 0.3)';
+                star.style.fontSize = `${Math.random() * 10 + 8}px`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite alternate`;
+                
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    @keyframes twinkle {
+                        0% { opacity: 0.2; }
+                        100% { opacity: 0.8; }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                starsContainer.appendChild(star);
             }
-        `;
-        document.head.appendChild(style);
-        
-        // Add flickering effect to the "S ♥ M" in the poster
-        const smHeart = document.querySelector('.sm-heart');
-        if (smHeart) {
-            setInterval(() => {
-                smHeart.style.opacity = Math.random() > 0.5 ? '0.7' : '1';
-            }, 3000);
         }
+        
+        // Initialize stars
+        addStars();
     </script>
 </body>
     </html>
