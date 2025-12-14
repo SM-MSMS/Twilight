@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twilight ♥ عالم الحب الأسطوري</title>
+    <title>Twilight ♥ S♥M ♥ عالم الحب الأسطوري</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&family=Scheherazade+New:wght@400;700&family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&family=Alex+Brush&family=Scheherazade+New:wght@400;700&family=Marck+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-pink: #ff2d8e;
+            --secondary-pink: #ff5ca8;
+            --light-pink: #ffa8d9;
+            --purple: #b84dff;
+            --deep-purple: #8a2dff;
+            --dark-bg: #0a0619;
+            --card-bg: rgba(35, 15, 65, 0.9);
+            --glow-shadow: 0 0 30px rgba(255, 45, 142, 0.6);
+            --soft-glow: 0 0 60px rgba(255, 92, 168, 0.3);
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -15,12 +27,13 @@
         
         body {
             font-family: 'Scheherazade New', serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #2d0b3e 100%);
+            background: linear-gradient(135deg, #050510 0%, #120825 50%, #25083a 100%);
             color: #f8f0fc;
-            line-height: 1.6;
+            line-height: 1.8;
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
+            background-attachment: fixed;
         }
         
         body::before {
@@ -31,209 +44,302 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.06) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(147, 112, 219, 0.06) 0%, transparent 25%),
-                radial-gradient(circle at 40% 60%, rgba(255, 182, 193, 0.06) 0%, transparent 25%),
-                radial-gradient(circle at 70% 20%, rgba(221, 160, 221, 0.06) 0%, transparent 25%);
+                radial-gradient(circle at 15% 25%, rgba(255, 45, 142, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 85% 75%, rgba(184, 77, 255, 0.12) 0%, transparent 30%),
+                radial-gradient(circle at 45% 55%, rgba(255, 168, 217, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 45, 142, 0.03) 2px, rgba(255, 45, 142, 0.03) 4px);
             z-index: -1;
+            pointer-events: none;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 25px;
         }
         
-        /* S Logo - أصغر حجماً */
+        /* S Logo - تصميم متميز */
         .s-logo {
             position: fixed;
-            top: 15px;
-            right: 15px;
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(45deg, #ff69b4, #d870ff);
+            top: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-pink), var(--purple));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Alex Brush', cursive;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             color: white;
             z-index: 1000;
-            box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            animation: logoGlow 4s infinite alternate;
+            box-shadow: var(--glow-shadow);
+            border: 2px solid rgba(255, 255, 255, 0.4);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: logoFloat 4s ease-in-out infinite;
+            overflow: hidden;
         }
         
-        .s-logo:hover {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 0 18px rgba(255, 105, 180, 0.7);
+        .s-logo::after {
+            content: '♥';
+            position: absolute;
+            font-size: 1rem;
+            color: white;
+            bottom: 5px;
+            left: 5px;
+            text-shadow: 0 0 10px var(--primary-pink);
         }
         
-        @keyframes logoGlow {
-            0% { box-shadow: 0 0 8px rgba(255, 105, 180, 0.4); }
-            100% { box-shadow: 0 0 16px rgba(255, 105, 180, 0.6); }
+        @keyframes logoFloat {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg); 
+                box-shadow: 0 0 25px rgba(255, 45, 142, 0.6);
+            }
+            50% { 
+                transform: translateY(-10px) rotate(5deg); 
+                box-shadow: 0 0 40px rgba(255, 45, 142, 0.8), 0 0 60px rgba(184, 77, 255, 0.4);
+            }
         }
         
-        /* Header Styles - أحجام أصغر */
+        /* S♥M في العنوان الرئيسي */
+        .title-heart {
+            font-family: 'Great Vibes', cursive;
+            color: var(--light-pink);
+            display: inline-block;
+            margin: 0 15px;
+            animation: heartBeat 3s infinite;
+            text-shadow: 
+                0 0 20px var(--primary-pink),
+                0 0 40px rgba(255, 45, 142, 0.5);
+            position: relative;
+            font-size: 2.5rem;
+        }
+        
+        .title-heart::before {
+            content: 'S';
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.2rem;
+            color: var(--light-pink);
+            opacity: 0.8;
+        }
+        
+        .title-heart::after {
+            content: 'M';
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            transform: translateY(-50%);
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.2rem;
+            color: var(--light-pink);
+            opacity: 0.8;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg); 
+                opacity: 0.9; 
+            }
+            25% { 
+                transform: scale(1.1) rotate(2deg); 
+                opacity: 1; 
+            }
+            50% { 
+                transform: scale(1.05) rotate(-1deg); 
+                opacity: 0.95; 
+            }
+            75% { 
+                transform: scale(1.15) rotate(1deg); 
+                opacity: 1; 
+            }
+        }
+        
+        /* Header Styles - تصميم متطور */
         header {
             text-align: center;
-            padding: 30px 0 25px;
+            padding: 60px 0 40px;
             position: relative;
-            overflow: hidden;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         
         .header-frame {
-            border: 2px solid rgba(255, 182, 193, 0.4);
-            border-radius: 20px;
-            padding: 25px 20px;
-            background: rgba(30, 10, 50, 0.6);
+            border: 2px solid rgba(255, 92, 168, 0.4);
+            border-radius: 25px;
+            padding: 45px 35px;
+            background: rgba(25, 10, 45, 0.8);
+            backdrop-filter: blur(15px);
             box-shadow: 
-                0 10px 25px rgba(0, 0, 0, 0.4), 
-                inset 0 0 25px rgba(255, 105, 180, 0.08),
-                0 0 30px rgba(255, 182, 193, 0.15);
+                0 15px 40px rgba(0, 0, 0, 0.6), 
+                inset 0 0 40px rgba(255, 45, 142, 0.15),
+                0 0 80px rgba(184, 77, 255, 0.15),
+                var(--soft-glow);
             position: relative;
-            margin-bottom: 30px;
-            backdrop-filter: blur(8px);
+            margin-bottom: 50px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .header-frame:hover {
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.7), 
+                inset 0 0 50px rgba(255, 45, 142, 0.2),
+                0 0 100px rgba(184, 77, 255, 0.2),
+                0 0 80px rgba(255, 168, 217, 0.2);
         }
         
         .header-frame::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #ffb6c1, #ff69b4, #d870ff, #ffb6c1);
-            border-radius: 22px;
-            z-index: -1;
-            opacity: 0.4;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(255, 45, 142, 0.15) 0%, 
+                transparent 40%,
+                transparent 60%,
+                rgba(184, 77, 255, 0.15) 100%);
+            pointer-events: none;
         }
         
         .site-title {
             font-family: 'Marck Script', cursive;
-            font-size: 2.8rem;
-            color: #ffb6c1;
-            text-shadow: 
-                0 0 15px rgba(255, 182, 193, 0.7),
-                0 0 30px rgba(255, 182, 193, 0.3);
-            margin-bottom: 15px;
+            font-size: 3.5rem;
+            color: var(--light-pink);
+            margin-bottom: 20px;
             position: relative;
-            display: inline-block;
-            letter-spacing: 1px;
+            display: block;
+            text-shadow: 
+                0 5px 20px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(255, 45, 142, 0.4);
+            line-height: 1.3;
         }
         
         .site-title span {
-            color: #d870ff;
-            text-shadow: 0 0 10px rgba(216, 112, 255, 0.6);
+            color: var(--purple);
+            position: relative;
+            display: inline-block;
         }
         
-        .site-title::after {
+        .site-title span::after {
             content: '';
             position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--purple), transparent);
+            border-radius: 2px;
         }
         
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             color: #e6b0ff;
-            margin-bottom: 18px;
-            text-shadow: 0 0 8px rgba(230, 176, 255, 0.5);
+            margin-bottom: 30px;
             font-weight: 600;
             font-family: 'Dancing Script', cursive;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 15px rgba(230, 176, 255, 0.6);
         }
         
-        /* تأثير النص المتوهج - خفيف */
+        /* Tagline مع تأثيرات متطورة */
         .tagline {
             font-style: italic;
-            color: #fff0f5;
-            font-size: 1.1rem;
-            max-width: 800px;
+            color: #f5e6ff;
+            font-size: 1.3rem;
+            max-width: 900px;
             margin: 0 auto;
-            line-height: 1.7;
-            padding: 18px;
-            border-top: 1px solid rgba(255, 182, 193, 0.25);
-            border-bottom: 1px solid rgba(255, 182, 193, 0.25);
-            background: rgba(255, 182, 193, 0.04);
-            border-radius: 12px;
-            text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
-            animation: textGlow 8s infinite alternate;
+            line-height: 1.9;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255, 45, 142, 0.08);
+            border: 1px solid rgba(255, 92, 168, 0.25);
+            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                inset 0 0 30px rgba(255, 45, 142, 0.1),
+                0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
-        @keyframes textGlow {
-            0%, 40% { 
-                color: #fff0f5;
-                text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
-                box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.03);
-            }
-            70%, 100% { 
-                color: #ffebf3;
-                text-shadow: 0 0 6px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 182, 193, 0.2);
-                box-shadow: inset 0 0 20px rgba(255, 182, 193, 0.07);
-            }
+        .tagline::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotateGlow 25s linear infinite;
+            pointer-events: none;
         }
         
-        /* Movie Poster Section - أصغر حجماً */
+        .tagline::after {
+            content: 'S♥M';
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: rgba(255, 168, 217, 0.1);
+            opacity: 0.5;
+        }
+        
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Movie Poster Section */
         .movie-poster-section {
-            padding: 20px 0 30px;
+            padding: 40px 0 50px;
             text-align: center;
+            position: relative;
         }
         
         .poster-title {
-            font-size: 1.8rem;
-            color: #ffb6c1;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+            font-size: 2.3rem;
+            color: var(--light-pink);
+            margin-bottom: 30px;
             position: relative;
             display: inline-block;
             font-family: 'Marck Script', cursive;
-        }
-        
-        .poster-title::before, .poster-title::after {
-            content: '♥';
-            position: absolute;
-            font-size: 1.5rem;
-            color: #ff69b4;
-            top: 50%;
-            transform: translateY(-50%);
-            animation: heartbeat 2s infinite;
-        }
-        
-        .poster-title::before {
-            right: -40px;
+            padding-bottom: 15px;
         }
         
         .poster-title::after {
-            left: -40px;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-pink), var(--purple), transparent);
+            border-radius: 2px;
         }
         
-        @keyframes heartbeat {
-            0%, 100% { transform: translateY(-50%) scale(1); }
-            50% { transform: translateY(-50%) scale(1.2); }
-        }
-        
+        /* إطار الصورة المتطور */
         .poster-frame {
-            border: none;
-            border-radius: 18px;
+            border-radius: 20px;
             overflow: hidden;
-            max-width: 600px;
-            margin: 0 auto 20px;
+            max-width: 700px;
+            margin: 0 auto;
             position: relative;
             box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.6),
-                0 0 50px rgba(255, 182, 193, 0.2),
-                0 0 80px rgba(216, 112, 255, 0.15);
-            transition: transform 0.5s ease;
+                0 25px 60px rgba(0, 0, 0, 0.8),
+                0 0 100px rgba(255, 45, 142, 0.3),
+                0 0 150px rgba(184, 77, 255, 0.2),
+                var(--soft-glow);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, var(--primary-pink), var(--purple), var(--deep-purple)) border-box;
         }
         
         .poster-frame::before {
@@ -244,39 +350,60 @@
             right: -4px;
             bottom: -4px;
             background: linear-gradient(45deg, 
-                #ffb6c1, #ff69b4, #d870ff, #9370db, 
-                #ffb6c1, #ff69b4, #d870ff);
-            border-radius: 22px;
+                var(--primary-pink), 
+                var(--secondary-pink), 
+                var(--purple), 
+                var(--deep-purple),
+                var(--primary-pink));
+            border-radius: 24px;
             z-index: -1;
-            opacity: 0.5;
-            filter: blur(6px);
-            animation: borderGlow 10s linear infinite;
+            opacity: 0.7;
+            animation: borderFlow 10s linear infinite;
             background-size: 300% 300%;
+            filter: blur(8px);
         }
         
-        @keyframes borderGlow {
+        /* شعار S♥M شفاف على الصورة */
+        .poster-frame::after {
+            content: 'S♥M';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Great Vibes', cursive;
+            font-size: 12rem;
+            color: rgba(255, 168, 217, 0.15);
+            z-index: 1;
+            pointer-events: none;
+            text-shadow: 0 0 50px rgba(255, 45, 142, 0.3);
+            animation: watermarkPulse 8s infinite alternate;
+            letter-spacing: 10px;
+        }
+        
+        @keyframes watermarkPulse {
+            0% { 
+                opacity: 0.1; 
+                transform: translate(-50%, -50%) scale(1) rotate(-2deg);
+            }
+            100% { 
+                opacity: 0.2; 
+                transform: translate(-50%, -50%) scale(1.05) rotate(2deg);
+            }
+        }
+        
+        @keyframes borderFlow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
         
-        .poster-frame::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(255, 182, 193, 0.12) 0%, 
-                rgba(255, 105, 180, 0.08) 50%, 
-                rgba(216, 112, 255, 0.04) 100%);
-            pointer-events: none;
-            z-index: 1;
-        }
-        
         .poster-frame:hover {
-            transform: scale(1.015) translateY(-3px);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 
+                0 35px 80px rgba(0, 0, 0, 0.9),
+                0 0 130px rgba(255, 45, 142, 0.5),
+                0 0 180px rgba(184, 77, 255, 0.3),
+                0 0 100px rgba(255, 168, 217, 0.2);
         }
         
         .movie-poster {
@@ -285,64 +412,23 @@
             display: block;
             position: relative;
             z-index: 0;
-            border-radius: 15px;
-        }
-        
-        /* الصورة الثانية تحت البوابة */
-        .second-image-section {
-            padding: 10px 0 30px;
-            text-align: center;
-        }
-        
-        .second-image-frame {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-            box-shadow: 
-                0 10px 25px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(255, 182, 193, 0.15);
-            transition: transform 0.5s ease;
-        }
-        
-        .second-image-frame::before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(45deg, 
-                #ffb6c1, #ff69b4, #d870ff);
             border-radius: 18px;
-            z-index: -1;
-            opacity: 0.4;
-            filter: blur(4px);
         }
         
-        .second-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-        }
-        
-        /* Movie Cards - أحجام أصغر */
+        /* Movies Section */
         .movies-section {
-            padding: 30px 0 50px;
+            padding: 50px 0 80px;
+            position: relative;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
-            color: #ffb6c1;
-            margin-bottom: 35px;
-            text-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+            font-size: 2.8rem;
+            color: var(--light-pink);
+            margin-bottom: 50px;
             position: relative;
-            padding-bottom: 15px;
-            font-family: 'Marck Script', cursive;
+            padding-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
         }
         
         .section-title::after {
@@ -351,32 +437,63 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, #d870ff, transparent);
+            width: 250px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-pink), var(--purple), transparent);
+            border-radius: 2px;
         }
         
+        .section-title::before {
+            content: 'S♥M';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5rem;
+            color: rgba(255, 168, 217, 0.4);
+            letter-spacing: 3px;
+        }
+        
+        /* Movie Cards مع ختم S♥M */
         .movie-card {
-            background: rgba(40, 15, 65, 0.65);
-            border-radius: 16px;
+            background: var(--card-bg);
+            border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 45px;
             box-shadow: 
-                0 10px 25px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(255, 182, 193, 0.15);
-            border: 1px solid rgba(255, 182, 193, 0.15);
-            transition: all 0.3s ease;
+                0 20px 45px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 92, 168, 0.15),
+                inset 0 0 30px rgba(255, 45, 142, 0.1);
+            border: 1px solid rgba(255, 92, 168, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            backdrop-filter: blur(5px);
-            padding: 25px;
+            backdrop-filter: blur(12px);
+            padding: 35px;
+        }
+        
+        /* ختم S♥M في الزاوية */
+        .movie-card::after {
+            content: 'S♥M';
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2rem;
+            color: rgba(255, 168, 217, 0.2);
+            transform: rotate(-15deg);
+            pointer-events: none;
+            z-index: 0;
         }
         
         .movie-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-12px);
             box-shadow: 
-                0 18px 35px rgba(255, 182, 193, 0.15),
-                0 0 45px rgba(216, 112, 255, 0.1);
-            background: rgba(50, 20, 75, 0.75);
+                0 30px 70px rgba(255, 45, 142, 0.2),
+                0 0 80px rgba(184, 77, 255, 0.15),
+                inset 0 0 40px rgba(255, 45, 142, 0.15),
+                0 0 60px rgba(255, 168, 217, 0.1);
+            border-color: rgba(255, 92, 168, 0.4);
         }
         
         .movie-card::before {
@@ -385,98 +502,120 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, 
-                #ffb6c1, #ff69b4, #d870ff);
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--purple), var(--deep-purple));
+            border-radius: 20px 20px 0 0;
         }
         
         .movie-number {
             position: absolute;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(45deg, #ffb6c1, #d870ff);
+            top: 25px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--primary-pink), var(--purple));
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             z-index: 2;
-            box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
-            border: 2px solid white;
+            box-shadow: 0 0 25px rgba(255, 45, 142, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.9);
             font-family: 'Cairo', sans-serif;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
         
         .movie-card:hover .movie-number {
-            transform: scale(1.08) rotate(12deg);
-            box-shadow: 0 0 18px rgba(255, 182, 193, 0.8);
+            transform: scale(1.15) rotate(20deg);
+            box-shadow: 0 0 35px rgba(255, 45, 142, 0.9);
         }
         
         .movie-content {
             position: relative;
-            padding-right: 15px;
+            padding-right: 25px;
+            z-index: 1;
         }
         
         .movie-title {
-            font-size: 1.8rem;
-            color: #ffb6c1;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+            font-size: 2.2rem;
+            color: var(--light-pink);
+            margin-bottom: 15px;
             font-family: 'Marck Script', cursive;
             position: relative;
             display: inline-block;
-            padding-right: 55px;
+            padding-right: 70px;
         }
         
         .movie-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #e6b0ff;
-            margin-bottom: 15px;
+            margin-bottom: 22px;
             font-weight: 600;
-            text-shadow: 0 0 8px rgba(230, 176, 255, 0.4);
             font-family: 'Dancing Script', cursive;
         }
         
         .romantic-name {
             display: inline-block;
-            background: rgba(255, 182, 193, 0.15);
-            padding: 8px 18px;
-            border-radius: 25px;
-            margin-bottom: 18px;
-            border-right: 3px solid #ffb6c1;
+            background: rgba(255, 45, 142, 0.18);
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+            border-right: 4px solid var(--primary-pink);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             font-style: italic;
-            font-size: 1rem;
-            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.15);
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(255, 45, 142, 0.25);
             color: #fff0f5;
             font-family: 'Dancing Script', cursive;
+            position: relative;
+        }
+        
+        .romantic-name::before {
+            content: '♥';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--light-pink);
+            font-size: 1.1rem;
         }
         
         .movie-description {
-            margin-bottom: 22px;
+            margin-bottom: 30px;
             color: #f5e6ff;
-            line-height: 1.7;
-            font-size: 1rem;
+            line-height: 1.9;
+            font-size: 1.15rem;
             text-align: justify;
-            padding-left: 12px;
-            border-left: 2px solid rgba(255, 182, 193, 0.25);
+            padding-left: 20px;
+            border-left: 3px solid rgba(255, 92, 168, 0.4);
+            position: relative;
+        }
+        
+        .movie-description::before {
+            content: 'S♥M';
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            font-family: 'Pacifico', cursive;
+            font-size: 1rem;
+            color: rgba(255, 168, 217, 0.15);
         }
         
         .download-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #ffb6c1, #d870ff);
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-pink), var(--purple));
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 15px 35px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 18px rgba(255, 182, 193, 0.3);
+            font-size: 1.2rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(255, 45, 142, 0.5);
             border: none;
             cursor: pointer;
             position: relative;
@@ -492,15 +631,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff69b4, #9370db);
+            background: linear-gradient(135deg, var(--secondary-pink), var(--deep-purple));
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
         
         .download-btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 22px rgba(255, 182, 193, 0.5);
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 18px 40px rgba(255, 45, 142, 0.7), 0 0 60px rgba(184, 77, 255, 0.3);
         }
         
         .download-btn:hover::before {
@@ -508,22 +647,58 @@
         }
         
         .download-btn i {
-            margin-left: 8px;
-            animation: bounce 2s infinite;
+            margin-left: 12px;
+            animation: bounce 2.5s infinite;
         }
         
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        /* جملة حب تحت كل جزء */
+        .love-quote {
+            text-align: center;
+            font-size: 1.4rem;
+            color: var(--light-pink);
+            margin: 40px auto;
+            padding: 25px;
+            max-width: 800px;
+            font-family: 'Great Vibes', cursive;
+            border-top: 2px dashed rgba(255, 92, 168, 0.3);
+            border-bottom: 2px dashed rgba(255, 92, 168, 0.3);
+            text-shadow: 0 0 15px rgba(255, 168, 217, 0.5);
+            position: relative;
+            background: rgba(255, 45, 142, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .love-quote::before, .love-quote::after {
+            content: '♥';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--primary-pink);
+            animation: heartBeat 2s infinite;
+        }
+        
+        .love-quote::before {
+            left: 20px;
+        }
+        
+        .love-quote::after {
+            right: 20px;
         }
         
         /* Footer */
         footer {
-            background: rgba(20, 10, 40, 0.85);
-            padding: 25px 0;
+            background: rgba(12, 6, 25, 0.95);
+            padding: 50px 0 40px;
             text-align: center;
-            border-top: 1px solid rgba(255, 182, 193, 0.25);
-            margin-top: 50px;
+            border-top: 1px solid rgba(255, 92, 168, 0.3);
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -534,48 +709,71 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #ffb6c1, #d870ff, #9370db);
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--purple), var(--deep-purple));
+        }
+        
+        .footer-heart {
+            font-size: 3rem;
+            color: var(--light-pink);
+            margin-bottom: 25px;
+            animation: heartBeat 3s infinite;
+            text-shadow: 0 0 30px var(--primary-pink);
+        }
+        
+        .love-message {
+            font-size: 1.5rem;
+            color: var(--light-pink);
+            margin-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 0 0 20px rgba(255, 45, 142, 0.6);
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
         }
         
         .copyright {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: #e6b0ff;
-            letter-spacing: 0.5px;
-            text-shadow: 0 0 8px rgba(230, 176, 255, 0.4);
+            letter-spacing: 1px;
             font-family: 'Dancing Script', cursive;
+            margin-top: 30px;
         }
         
         .copyright span {
-            color: #ffb6c1;
+            color: var(--light-pink);
             font-weight: bold;
-            text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
             position: relative;
-            padding: 0 4px;
+            padding: 0 8px;
         }
         
-        .copyright span::before, .copyright span::after {
-            content: '♥';
-            font-size: 1.1rem;
-            margin: 0 4px;
-            animation: heartbeat 1.5s infinite;
+        .copyright span::before {
+            content: 'S♥M';
+            font-family: 'Pacifico', cursive;
+            font-size: 1.3rem;
+            margin-right: 10px;
+            color: var(--light-pink);
+            display: inline-block;
+            animation: heartBeat 2s infinite;
         }
         
-        /* S Celebration Modal - أصغر وأخف */
+        /* Celebration Modal - مع شعار S */
         .celebration-modal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 5, 25, 0.96);
+            background: rgba(8, 4, 18, 0.98);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            transition: opacity 0.7s ease, visibility 0.7s ease;
         }
         
         .celebration-modal.active {
@@ -584,120 +782,132 @@
         }
         
         .celebration-content {
-            background: linear-gradient(135deg, rgba(70, 25, 100, 0.92), rgba(40, 15, 65, 0.92));
-            border-radius: 22px;
-            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(40, 18, 70, 0.97), rgba(25, 10, 45, 0.97));
+            border-radius: 30px;
+            padding: 60px 50px;
             text-align: center;
-            max-width: 550px;
-            width: 85%;
+            max-width: 700px;
+            width: 90%;
             box-shadow: 
-                0 0 50px rgba(255, 182, 193, 0.4),
-                0 0 90px rgba(216, 112, 255, 0.25),
-                inset 0 0 25px rgba(255, 255, 255, 0.08);
-            border: 2px solid rgba(255, 182, 193, 0.4);
+                0 0 80px rgba(255, 45, 142, 0.6),
+                0 0 140px rgba(184, 77, 255, 0.4),
+                inset 0 0 40px rgba(255, 255, 255, 0.15);
+            border: 3px solid rgba(255, 92, 168, 0.5);
             position: relative;
-            transform: scale(0.8) rotateY(90deg);
-            transition: transform 0.6s ease;
+            transform: scale(0.85) translateY(60px);
+            opacity: 0;
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 1s ease;
+            overflow: hidden;
         }
         
         .celebration-modal.active .celebration-content {
-            transform: scale(1) rotateY(0);
+            transform: scale(1) translateY(0);
+            opacity: 1;
         }
         
+        /* شعار S كبير في رسالة الترحيب */
         .celebration-s {
             font-family: 'Alex Brush', cursive;
-            font-size: 7rem;
-            color: #ffb6c1;
+            font-size: 10rem;
+            color: var(--primary-pink);
+            margin-bottom: 30px;
             text-shadow: 
-                0 0 30px rgba(255, 182, 193, 0.8),
-                0 0 60px rgba(255, 182, 193, 0.5);
-            margin-bottom: 20px;
-            animation: sPulse 3s infinite alternate;
+                0 0 50px rgba(255, 45, 142, 0.9),
+                0 0 100px rgba(255, 45, 142, 0.6),
+                0 0 150px rgba(255, 45, 142, 0.3);
+            animation: celebrationPulse 3s infinite alternate;
             position: relative;
+            display: inline-block;
+            line-height: 1;
         }
         
         .celebration-s::after {
             content: '♥';
             position: absolute;
-            font-size: 2.2rem;
-            color: #d870ff;
-            top: 15px;
-            right: -30px;
-            animation: rotate 6s linear infinite;
+            font-size: 4rem;
+            color: var(--light-pink);
+            top: 20px;
+            right: -50px;
+            animation: rotate 8s linear infinite;
         }
         
-        @keyframes sPulse {
-            0% { transform: scale(1); text-shadow: 0 0 30px rgba(255, 182, 193, 0.8); }
-            100% { transform: scale(1.05); text-shadow: 0 0 45px rgba(255, 182, 193, 0.9); }
+        @keyframes celebrationPulse {
+            0% { 
+                transform: scale(1) rotate(-2deg); 
+                text-shadow: 0 0 50px rgba(255, 45, 142, 0.9);
+            }
+            100% { 
+                transform: scale(1.1) rotate(2deg); 
+                text-shadow: 0 0 70px rgba(255, 45, 142, 1), 0 0 120px rgba(255, 45, 142, 0.7);
+            }
         }
         
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .celebration-title {
+            font-size: 2.5rem;
+            color: var(--light-pink);
+            margin-bottom: 30px;
+            text-shadow: 0 0 30px rgba(255, 45, 142, 0.8);
+            font-family: 'Great Vibes', cursive;
+            position: relative;
+            display: inline-block;
+            line-height: 1.4;
+        }
+        
+        .celebration-title span {
+            color: var(--purple);
         }
         
         .celebration-text {
-            font-size: 1.6rem;
-            color: #fff0f5;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(255, 240, 245, 0.7);
-            font-family: 'Marck Script', cursive;
-            line-height: 1.4;
-            animation: textFade 5s infinite alternate;
-        }
-        
-        @keyframes textFade {
-            0%, 40% { opacity: 0.9; text-shadow: 0 0 8px rgba(255, 240, 245, 0.7); }
-            70%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(255, 240, 245, 0.9), 0 0 22px rgba(255, 182, 193, 0.4); }
-        }
-        
-        .celebration-subtext {
             color: #f0d9ff;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .close-celebration {
-            background: linear-gradient(45deg, #ffb6c1, #d870ff);
+        .start-journey-btn {
+            background: linear-gradient(135deg, var(--primary-pink), var(--purple));
             color: white;
             border: none;
-            padding: 12px 35px;
-            border-radius: 25px;
-            font-size: 1.2rem;
+            padding: 18px 50px;
+            border-radius: 30px;
+            font-size: 1.4rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 18px rgba(255, 182, 193, 0.4);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 12px 35px rgba(255, 45, 142, 0.6);
             position: relative;
             overflow: hidden;
             z-index: 1;
             font-family: 'Cairo', sans-serif;
         }
         
-        .close-celebration::before {
+        .start-journey-btn::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff69b4, #9370db);
+            background: linear-gradient(135deg, var(--secondary-pink), var(--deep-purple));
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
         
-        .close-celebration:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 22px rgba(255, 182, 193, 0.6);
+        .start-journey-btn:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 20px 50px rgba(255, 45, 142, 0.8), 0 0 80px rgba(184, 77, 255, 0.4);
         }
         
-        .close-celebration:hover::before {
+        .start-journey-btn:hover::before {
             opacity: 1;
         }
         
-        /* Floating Hearts - نظامي وخفيف */
-        .floating-hearts {
+        /* Floating Elements - أنيق ونظامي */
+        .floating-elements {
             position: fixed;
             top: 0;
             left: 0;
@@ -707,97 +917,129 @@
             z-index: -1;
         }
         
-        .heart {
+        .floating-heart {
             position: absolute;
-            color: rgba(255, 182, 193, 0.2);
-            font-size: 16px;
-            animation: float 30s infinite linear;
-            opacity: 0.4;
+            color: rgba(255, 45, 142, 0.25);
+            font-size: 20px;
+            animation: floatElement 25s infinite linear;
+            opacity: 0.7;
         }
         
-        @keyframes float {
+        .floating-star {
+            position: absolute;
+            color: rgba(184, 77, 255, 0.2);
+            font-size: 16px;
+            animation: floatElement 30s infinite linear reverse;
+            opacity: 0.5;
+        }
+        
+        @keyframes floatElement {
             0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.7);
+                transform: translateY(100vh) rotate(0deg) scale(0.8);
                 opacity: 0;
             }
             10% {
-                opacity: 0.4;
+                opacity: 0.7;
             }
             90% {
-                opacity: 0.4;
+                opacity: 0.7;
             }
             100% {
-                transform: translateY(-100px) rotate(360deg) scale(1);
+                transform: translateY(-100px) rotate(360deg) scale(1.2);
                 opacity: 0;
             }
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                max-width: 95%;
+                padding: 0 20px;
+            }
+            
             .site-title {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .tagline {
-                font-size: 1rem;
-                padding: 15px;
-            }
-            
-            .movie-title {
-                font-size: 1.5rem;
-                padding-right: 45px;
-            }
-            
-            .s-logo {
-                width: 40px;
-                height: 40px;
-                font-size: 1.8rem;
-                top: 10px;
-                right: 10px;
+                font-size: 2.8rem;
             }
             
             .celebration-s {
-                font-size: 5.5rem;
+                font-size: 8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 2.3rem;
             }
             
-            .celebration-text {
+            .subtitle {
                 font-size: 1.4rem;
             }
             
-            .section-title {
+            .tagline {
+                font-size: 1.2rem;
+                padding: 25px;
+            }
+            
+            .movie-title {
                 font-size: 1.8rem;
+                padding-right: 60px;
             }
             
-            .poster-frame, .second-image-frame {
-                max-width: 90%;
+            .s-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 2.4rem;
+                top: 15px;
+                right: 15px;
             }
             
-            .poster-title::before, .poster-title::after {
-                display: none;
+            .section-title {
+                font-size: 2.2rem;
             }
             
-            .movie-number {
-                width: 35px;
-                height: 35px;
-                font-size: 1.1rem;
+            .poster-frame {
+                max-width: 95%;
+            }
+            
+            .poster-frame::after {
+                font-size: 8rem;
             }
             
             .movie-card {
+                padding: 30px 25px;
+            }
+            
+            .movie-number {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+            
+            .celebration-content {
+                padding: 50px 30px;
+            }
+            
+            .celebration-title {
+                font-size: 2rem;
+            }
+            
+            .love-quote {
+                font-size: 1.2rem;
                 padding: 20px;
             }
         }
         
         @media (max-width: 480px) {
             .header-frame {
-                padding: 20px 15px;
+                padding: 35px 25px;
             }
             
             .site-title {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
+            }
+            
+            .title-heart {
+                font-size: 2rem;
             }
             
             .movie-content {
@@ -805,75 +1047,76 @@
             }
             
             .movie-title {
-                font-size: 1.4rem;
-                padding-right: 40px;
+                font-size: 1.6rem;
+                padding-right: 50px;
             }
             
             .movie-number {
-                width: 32px;
-                height: 32px;
-                font-size: 1rem;
-            }
-            
-            .celebration-content {
-                padding: 30px 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                top: 20px;
+                left: 20px;
             }
             
             .download-btn {
-                padding: 9px 20px;
-                font-size: 0.95rem;
+                padding: 12px 28px;
+                font-size: 1.1rem;
             }
             
             .container {
-                padding: 0 10px;
+                padding: 0 15px;
+            }
+            
+            .celebration-s {
+                font-size: 6rem;
+            }
+            
+            .celebration-title {
+                font-size: 1.7rem;
+            }
+            
+            .poster-frame::after {
+                font-size: 6rem;
             }
         }
         
         /* Scrollbar Styling */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-            background: rgba(25, 10, 45, 0.8);
+            background: rgba(25, 12, 45, 0.9);
+            border-radius: 10px;
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #ffb6c1, #d870ff);
-            border-radius: 4px;
+            background: linear-gradient(to bottom, var(--primary-pink), var(--purple));
+            border-radius: 10px;
+            border: 2px solid rgba(25, 12, 45, 0.9);
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #ff69b4, #9370db);
+            background: linear-gradient(to bottom, var(--secondary-pink), var(--deep-purple));
         }
         
         /* Selection Color */
         ::selection {
-            background-color: rgba(255, 182, 193, 0.4);
+            background-color: rgba(255, 45, 142, 0.6);
             color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         
-        /* Background Stars - نظامي */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .star {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            animation: twinkle 4s infinite alternate;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.2; }
-            100% { opacity: 0.6; }
+        /* Print styles */
+        @media print {
+            .celebration-modal,
+            .s-logo,
+            .floating-elements,
+            .download-btn,
+            .start-journey-btn {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -881,31 +1124,28 @@
     <!-- S Logo -->
     <div class="s-logo" id="sLogo">S</div>
     
-    <!-- S Celebration Modal -->
+    <!-- Celebration Modal مع شعار S -->
     <div class="celebration-modal" id="celebrationModal">
         <div class="celebration-content">
             <div class="celebration-s">S</div>
-            <h2 class="celebration-text">أهلاً بك في ملحمة Twilight ♥</h2>
-            <p class="celebration-subtext">حيث يلتقي الحب الأبدي مع مصير يتحدى قوانين الطبيعة، وتبدأ رحلة لا تُنسى بين المشاعر الخالدة والأقدار المتشابكة.</p>
-            <button class="close-celebration" id="closeCelebration">دخول إلى عالم المشاعر</button>
+            <h2 class="celebration-title">مرحباً بك في عالم <span>Twilight</span> الساحر</h2>
+            <p class="celebration-text">نرحب بك في تجربتنا  ، حيث يلتقي الحب الأبدي مع الإبداع التقني. هنا في عالم Twilight الساحر، تبدأ رحلة عاطفية مصممة بدقة  تناسب أكثر القلوب رومانسية.</p>
+            <button class="start-journey-btn" id="startJourneyBtn">ابدأ الرحلة الرومانسية</button>
         </div>
     </div>
     
-    <!-- Floating Hearts Background -->
-    <div class="floating-hearts" id="heartsContainer"></div>
-    
-    <!-- Background Stars -->
-    <div class="stars" id="starsContainer"></div>
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
     
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-frame">
                 <h1 class="site-title">
-                    عالم <span>Twilight</span> الرومانسي
+                    <span class="title-heart">♥</span>عالم <span>Twilight</span> الرومانسي<span class="title-heart">♥</span>
                 </h1>
-                <p class="subtitle">حيث يعانق الحبُ أفقَ المستحيل</p>
-                <p class="tagline">في هذا الملاذ العاطفي، نعبر معكم بوابة المشاعر إلى عالم Twilight الساحر، حيث كل نبضة قلب تكتب أسطورة، وكل نظرة تحمل ألف معنى. هنا، حيث يتشابك مصير إدوارد وبيلا في رقصة أبدية بين النور والظلام، نقدم لكم جوهرة المشاعر الخالدة عبر خمسة أجزاء أسطورية. استعدوا لرحلة عاطفية تغمر الروح وتلامس شغاف القلب.</p>
+                <p class="subtitle">حيث تلتقي المشاعر الخالدة </p>
+                <p class="tagline">في بوابتنا  ، نقدم لكم قصة الحب الأسطورية بتصميم   يجمع بين أحدث تقنيات الويب والمشاعر الرومانسية الخالدة. كل تفصيل مصمم بعناية عن حب وذكره (𝑆) ليكون تجربة فريدة لعشاق Twilight.</p>
             </div>
         </div>
     </header>
@@ -913,110 +1153,123 @@
     <!-- Movie Poster Section -->
     <section class="movie-poster-section">
         <div class="container">
-            <h3 class="poster-title">بوابة المشاعر الساحرة</h3>
+            <h3 class="poster-title">بوابة المشاعر الرقمية</h3>
             <div class="poster-frame">
-                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie" class="movie-poster">
+                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Movie Poster" class="movie-poster">
             </div>
         </div>
     </section>
     
-    <!-- Second Image Section -->
-    <section class="second-image-section">
-        <div class="container">
-            <div class="second-image-frame">
-                <img src="https://dev-mohameddf.pantheonsite.io/wp-content/uploads/2025/12/Screenshot_20251213_171851_One-UI-Home.jpg" alt="Twilight Scene" class="second-image">
-            </div>
-        </div>
-    </section>
+    <!-- جملة حب 1 -->
+    <div class="container">
+        <div class="love-quote">"الحب ليس مجرد كلمة، بل هو عالم كامل من المشاعر التي تخلد في قلوب المحبين"</div>
+    </div>
     
     <!-- Movies Section -->
     <section class="movies-section">
         <div class="container">
-            <h2 class="section-title">ملحمة الحب الخالدة</h2>
+            <h2 class="section-title">الملحمة الرومانسية الخالدة</h2>
             
             <!-- Movie 1 -->
             <div class="movie-card">
                 <div class="movie-number">1</div>
                 <div class="movie-content">
                     <h3 class="movie-title">Twilight – 2008</h3>
-                    <h4 class="movie-subtitle">لقاء الأقدار المتشابكة</h4>
-                    <div class="romantic-name">"اللحظة التي غيرت الكون"</div>
-                    <p class="movie-description">في بلدة فوركس الماطرة، حيث الضباب يلف الأحلام والغيوم تحمل أسراراً خفية، تلتقي بيلا سوان بإدوارد كولين في لقاءٍ قدرّي يعيد تعريف الحب. قلب بشري نقي يخفق لمصاص دماء خالد، في رقصة مصيرية حيث كل نظرة تحمل وعداً بأبدية تتجاوز حدود الزمن والطبيعة. هنا تبدأ الملحمة حيث يقرر إدوارد حماية نور حياته من عالمه المظلم.</p>
+                    <h4 class="movie-subtitle">بداية الحب الأبدي</h4>
+                    <div class="romantic-name">"اللقاء الذي غير كل شيء"</div>
+                    <p class="movie-description">في هذا الجزء المؤسس، نعيش مع بيلا وإدوارد لحظات اللقاء الأولى في بلدة فوركس الممطرة. تصميمنا الرقمي المتطور يبرز سحر اللحظات الأولى بين البشر ومصاص الدماء، مع تأثيرات بصرية تعكس عمق المشاعر المتولدة في قلبي الحبيبين.</p>
                     <a href="https://www.mediafire.com/file/i53gy1x7nbh58nj/Twilight.2008.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل ملحمة البداية
+                        <i class="fas fa-download"></i> حمل قصة البداية
                     </a>
                 </div>
             </div>
+            
+            <!-- جملة حب 2 -->
+            <div class="love-quote">"في عينيك وجدت وطني، وفي قلبك عشت أبدي"</div>
             
             <!-- Movie 2 -->
             <div class="movie-card">
                 <div class="movie-number">2</div>
                 <div class="movie-content">
                     <h3 class="movie-title">New Moon – 2009</h3>
-                    <h4 class="movie-subtitle">فراق يشقّ الروح</h4>
-                    <div class="romantic-name">"ألمٌ يولد من رحم الغياب"</div>
-                    <p class="movie-description">بعد حادثة عيد الميلاد المصيرية، يغادر إدوارد ظاناً أنه يحمي بيلا من مصيره المظلم. تهوي بيلا في هاوية من الحزن حيث تتحول أيامها إلى شهور من الفراغ العاطفي. في ظلام فراقها، يظهر جاكوب بلاك كشمس دافئة، ليكتشفا معاً أن الحب قد يتخذ أشكالاً متعددة. رحلة بحث عن الذات وعن الحبيب المفقود في متاهة المشاعر المتضاربة.</p>
+                    <h4 class="movie-subtitle">فراق يولد قوة جديدة</h4>
+                    <div class="romantic-name">"الغياب الذي علمني معنى الحب"</div>
+                    <p class="movie-description">رحلة بيلا في عالم الفراق والألم، حيث يغادر إدوارد لتظن بيلا أنها فقدت كل شيء. التصميم الرقمي المتطور يعكس ظلام الفراق ونور الأمل الجديد مع جاكوب. تأثيرات بصرية مبتكرة تظهر تحول المشاعر من الحزن إلى القوة.</p>
                     <a href="https://www.mediafire.com/file/fft9gdpylv0mx7k/Twilight.Saga.the.2009.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل ملحمة الفراق
+                        <i class="fas fa-download"></i> حمل قصة الفراق
                     </a>
                 </div>
             </div>
+            
+            <!-- جملة حب 3 -->
+            <div class="love-quote">"حبنا ليس مجرد شعور، بل هو قدر كتب في النجوم"</div>
             
             <!-- Movie 3 -->
             <div class="movie-card">
                 <div class="movie-number">3</div>
                 <div class="movie-content">
                     <h3 class="movie-title">Eclipse – 2010</h3>
-                    <h4 class="movie-subtitle">صراع القلوب المتوهجة</h4>
-                    <div class="romantic-name">"قلبٌ بين بركانين"</div>
-                    <p class="movie-description">تعود بيلا وإدوارد بعلاقة أقوى، لكن قلبها ما يزال يحمل مكاناً لجاكوب. في مواجهة الخطر الداهم، يتحد أعداء الأمس - مصاصو الدماء والمستذئبون - لحماية الفتاة التي تجمعهم. بيلا تقف على مفترق طرق مصيري: اختيار بين حب خالد في ظلام الليل، وصداقة مشتعلة في دفء النهار. قرار سيكتب فصلًا جديداً في تاريخ الحب الأسطوري.</p>
+                    <h4 class="movie-subtitle">قلب بين نارين</h4>
+                    <div class="romantic-name">"اختيار بين حبين"</div>
+                    <p class="movie-description">صراع المشاعر الذي تعيشه بيلا بين حبها الأبدي لإدوارد وصداقتها القوية مع جاكوب. تصميمنا الرقمي يعكس هذا الصراع الداخلي بتقنيات بصرية مبتكرة تظهر توهج المشاعر المتضاربة في قلب بيلا.</p>
                     <a href="https://www.mediafire.com/file/uca74ca824fnv4k/The.Twilight.Saga.Eclipse.2010.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل ملحمة الصراع
+                        <i class="fas fa-download"></i> حمل قصة الصراع
                     </a>
                 </div>
             </div>
+            
+            <!-- جملة حب 4 -->
+            <div class="love-quote">"أنت القصيدة التي لم أكتبها بعد، والحلم الذي لا أريد أن أصحو منه"</div>
             
             <!-- Movie 4 -->
             <div class="movie-card">
                 <div class="movie-number">4</div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 1 – 2011</h3>
-                    <h4 class="movie-subtitle">اتحاد الأرواح الخالدة</h4>
-                    <div class="romantic-name">"زواج القلوب قبل الأجساد"</div>
-                    <p class="movie-description">يتوج الحب بزواج أسطوري تحت سماء مرصعة بالنجوم، ثم شهر عسل في جزيرة استوائية حيث يصبح الحلم حقيقة. لكن الفرح يتحول إلى اختبارٍ وجودي عندما تكتشف بيلا حملها الغامض. طفل نصف مصاص دماء يهدد حياتها ويشعل حرباً بين عالمين. إدوارد يقف عاجزاً بين إنقاذ حبيبته وقبول المصير الجديد، في أصعب قرار في حياته الخالدة.</p>
+                    <h4 class="movie-subtitle">اتحاد الأبدية</h4>
+                    <div class="romantic-name">"الزواج والحلم الذي تحقق"</div>
+                    <p class="movie-description">ذروة الحب مع زواج بيلا وإدوارد، يليهما شهر عسل يحمل في طياته مفاجآت غير متوقعة. التصميم الرقمي المتطور يبرز جمال الاتحاد وتعقيدات الحمل الغامض بتقنيات بصرية تعكس روعة هذه المرحلة.</p>
                     <a href="https://www.mediafire.com/file/re2jmh2p0fpgmqb/The.Twilight.Saga.Breaking.Dawn.Part.1.2011.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل ملحمة الاتحاد
+                        <i class="fas fa-download"></i> حمل قصة الاتحاد
                     </a>
                 </div>
             </div>
+            
+            <!-- جملة حب 5 -->
+            <div class="love-quote">"سأحبك حتى بعد أن تتوقف النجوم عن السطوع، وحتى بعد أن تختفي الشمس"</div>
             
             <!-- Movie 5 -->
             <div class="movie-card">
                 <div class="movie-number">5</div>
                 <div class="movie-content">
                     <h3 class="movie-title">Breaking Dawn – Part 2 – 2012</h3>
-                    <h4 class="movie-subtitle">خلود المشاعر المتألقة</h4>
-                    <div class="romantic-name">"النهاية التي هي بداية الخلود"</div>
-                    <p class="movie-description">بعد تحول بيلا إلى مصاصة دماء لحماية طفلتها رينيسمي، يكتمل اتحاد الروحين في شكلٍ جديد. لكن العائلة الجديدة تواجه تهديداً وجودياً من الفولتوري، أقدم وأقوى عشائر المصاصين. في معركة مصيرية تجمع كل الحلفاء، يثبت الحب أنه أقوى سلاح في مواجهة القوة والظلام. الخاتمة الأسطورية لملحمة حب ستخلد في ذاكرة الكون.</p>
+                    <h4 class="movie-subtitle">الخلود المشع</h4>
+                    <div class="romantic-name">"النهاية وبداية الخلود"</div>
+                    <p class="movie-description">الختام الأسطوري للملحمة، حيث تتحول بيلا إلى مصاصة دماء وتواجه العائلة تهديداً وجودياً. تصميمنا الرقمي المتطور يعكس عظمة المعركة الختامية وروعة الخلود بتقنيات بصرية تليق بنهاية هذه القصة الخالدة.</p>
                     <a href="https://www.mediafire.com/file/qlybiy84x55t3yb/The.Twilight.Saga.Breaking.Dawn.Part.2.2012.480p.BluRay.AKWAM.mp4/file" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i> حمل ملحمة الخلود
+                        <i class="fas fa-download"></i> حمل قصة الخلود
                     </a>
                 </div>
             </div>
+            
+            <!-- جملة حب 6 -->
+            <div class="love-quote">"أنت نبضي الذي لا يتوقف، وأنفاسي التي لا تنتهي، وحلمي الذي لا يموت"</div>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="copyright">قصة حب تخلد في كل قلب &copy; 2025 <span>محمد أبو السعود & سما</span></p>
+            <div class="footer-heart">♥</div>
+            <p class="love-message">"في كل نبضة قلب، في كل نظرة عين، في كل همسة حب، تخلد قصة (𝑺♡𝑴) في أرواحنا. حب يتجاوز الزمن، ومشاعر تتحدى المستحيل"</p>
+            <p class="copyright"><span>S♥M</span>جميع الحقوق محفوظة &copy; 2025 <span>محمد أبو السعود & سمــا</span> | قصة حب تخلد في كل قلب</p>
         </div>
     </footer>
     
     <script>
-        // S Celebration Modal
+        // Celebration Modal
         const celebrationModal = document.getElementById('celebrationModal');
-        const closeCelebrationBtn = document.getElementById('closeCelebration');
+        const startJourneyBtn = document.getElementById('startJourneyBtn');
         const sLogo = document.getElementById('sLogo');
         
         // Show celebration modal on page load
@@ -1027,15 +1280,15 @@
             }, 800);
         });
         
-        // Close celebration modal
-        closeCelebrationBtn.addEventListener('click', function() {
+        // Start journey button
+        startJourneyBtn.addEventListener('click', function() {
             celebrationModal.classList.remove('active');
             document.body.style.overflow = 'auto';
             
-            // Create subtle celebration effect - قلوب نظامية
+            // Create celebration effect
             createCelebrationEffect();
             
-            // Scroll to content smoothly
+            // Smooth scroll to top
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -1044,120 +1297,89 @@
         
         // S Logo click effect
         sLogo.addEventListener('click', function() {
-            // Add subtle click animation
-            this.style.transform = 'scale(1.15) rotate(12deg)';
-            this.style.boxShadow = '0 0 20px rgba(255, 182, 193, 0.8)';
+            // Animation effect
+            this.style.transform = 'scale(1.3) rotate(20deg)';
+            this.style.boxShadow = '0 0 50px rgba(255, 45, 142, 1), 0 0 80px rgba(184, 77, 255, 0.6)';
             
             setTimeout(() => {
                 this.style.transform = '';
                 this.style.boxShadow = '';
-            }, 400);
+            }, 500);
             
-            // Show celebration modal again
+            // Show modal again
             celebrationModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
         
-        // Create floating hearts - نظامية وخفيفة
-        const heartsContainer = document.getElementById('heartsContainer');
-        const heartIcons = ['♥', '❤', '💖'];
+        // Create floating elements
+        const floatingElements = document.getElementById('floatingElements');
+        const elements = ['𝑺', '❤', '𝑺', '𝑺', '𝑺', '♡', '💕', '💗'];
         
-        function createFloatingHearts() {
-            // عدد قليل من القلوب نظامي
-            const heartCount = 10;
-            const positions = [
-                {left: 10, delay: 0},
-                {left: 25, delay: 5},
-                {left: 40, delay: 10},
-                {left: 60, delay: 15},
-                {left: 75, delay: 20},
-                {left: 90, delay: 25},
-                {left: 15, delay: 3},
-                {left: 50, delay: 8},
-                {left: 85, delay: 13},
-                {left: 30, delay: 18}
-            ];
-            
-            for (let i = 0; i < heartCount; i++) {
+        function createFloatingElements() {
+            // Create hearts
+            for (let i = 0; i < 20; i++) {
                 const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.innerHTML = heartIcons[i % 3];
+                heart.className = 'floating-heart';
+                heart.innerHTML = elements[i % 8];
                 
-                const pos = positions[i];
-                const size = 14 + Math.random() * 6;
-                const duration = 25 + Math.random() * 10;
-                const color = `rgba(255, ${Math.floor(Math.random() * 60 + 140)}, ${Math.floor(Math.random() * 80 + 175)}, 0.3)`;
+                const left = Math.random() * 100;
+                const size = 18 + Math.random() * 10;
+                const delay = Math.random() * 40;
+                const duration = 25 + Math.random() * 20;
+                const color = `rgba(255, ${Math.floor(Math.random() * 100 + 45)}, ${Math.floor(Math.random() * 120 + 142)}, 0.3)`;
                 
-                heart.style.left = `${pos.left}%`;
+                heart.style.left = `${left}%`;
                 heart.style.fontSize = `${size}px`;
-                heart.style.animationDelay = `${pos.delay}s`;
+                heart.style.animationDelay = `${delay}s`;
                 heart.style.animationDuration = `${duration}s`;
                 heart.style.color = color;
                 
-                heartsContainer.appendChild(heart);
+                floatingElements.appendChild(heart);
             }
-        }
-        
-        // Create initial hearts
-        createFloatingHearts();
-        
-        // Create stars background
-        function createStars() {
-            const starsContainer = document.getElementById('starsContainer');
-            // عدد معتدل من النجوم
-            for (let i = 0; i < 40; i++) {
+            
+            // Create stars
+            for (let i = 0; i < 15; i++) {
                 const star = document.createElement('div');
-                star.className = 'star';
+                star.className = 'floating-star';
+                star.innerHTML = elements[3 + (i % 5)];
                 
-                const size = Math.random() * 2 + 1;
                 const left = Math.random() * 100;
-                const top = Math.random() * 100;
-                const opacity = Math.random() * 0.4 + 0.2;
-                const delay = Math.random() * 4;
-                const duration = 3 + Math.random() * 3;
+                const size = 14 + Math.random() * 8;
+                const delay = Math.random() * 50;
+                const duration = 30 + Math.random() * 25;
+                const color = `rgba(${Math.floor(Math.random() * 80 + 104)}, ${Math.floor(Math.random() * 80 + 77)}, 255, 0.25)`;
                 
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
                 star.style.left = `${left}%`;
-                star.style.top = `${top}%`;
-                star.style.opacity = opacity;
+                star.style.fontSize = `${size}px`;
                 star.style.animationDelay = `${delay}s`;
                 star.style.animationDuration = `${duration}s`;
+                star.style.color = color;
                 
-                starsContainer.appendChild(star);
+                floatingElements.appendChild(star);
             }
         }
         
-        // Initialize stars
-        createStars();
+        // Initialize floating elements
+        createFloatingElements();
         
-        // Create subtle celebration effect - قلوب نظامية عند إغلاق الترحيب
+        // Create celebration effect
         function createCelebrationEffect() {
-            const celebrationHeartsCount = 15;
-            const positions = [];
+            const hearts = ['♥', '𝑺', '𝑺', '💕'];
             
-            // إنشاء مواقع نظامية للقلوب
-            for (let i = 0; i < celebrationHeartsCount; i++) {
-                positions.push({
-                    left: Math.random() * 90 + 5,
-                    top: Math.random() * 80 + 10
-                });
-            }
-            
-            for (let i = 0; i < celebrationHeartsCount; i++) {
+            for (let i = 0; i < 30; i++) {
                 const heart = document.createElement('div');
-                heart.innerHTML = heartIcons[i % 3];
+                heart.innerHTML = hearts[i % 4];
                 heart.style.position = 'fixed';
-                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 80 + 120)}, ${Math.floor(Math.random() * 80 + 175)}, 0.7)`;
+                heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 45)}, ${Math.floor(Math.random() * 100 + 142)}, 0.9)`;
                 heart.style.zIndex = '1999';
-                heart.style.fontSize = `${Math.random() * 16 + 12}px`;
-                heart.style.left = `${positions[i].left}%`;
-                heart.style.top = `${positions[i].top}%`;
+                heart.style.fontSize = `${Math.random() * 25 + 20}px`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
                 heart.style.animation = `floatUp 2.5s forwards`;
                 
                 document.body.appendChild(heart);
                 
-                // Remove heart after animation
+                // Remove after animation
                 setTimeout(() => {
                     if (heart.parentNode) {
                         heart.parentNode.removeChild(heart);
@@ -1170,13 +1392,11 @@
         const movieCards = document.querySelectorAll('.movie-card');
         movieCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-                this.style.boxShadow = '0 18px 35px rgba(255, 182, 193, 0.15), 0 0 45px rgba(216, 112, 255, 0.1)';
+                this.style.transform = 'translateY(-12px)';
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 182, 193, 0.15)';
             });
         });
         
@@ -1187,25 +1407,25 @@
                 e.preventDefault();
                 const url = this.getAttribute('href');
                 
-                // Create subtle visual effect
+                // Visual effect
                 this.style.transform = 'scale(0.95)';
                 
-                // Create heart animation at click position
+                // Create heart animation
                 const rect = this.getBoundingClientRect();
                 const heart = document.createElement('div');
                 heart.innerHTML = '❤';
                 heart.style.position = 'fixed';
-                heart.style.color = '#ffb6c1';
-                heart.style.fontSize = '20px';
+                heart.style.color = '#ff2d8e';
+                heart.style.fontSize = '25px';
                 heart.style.zIndex = '9999';
                 heart.style.pointerEvents = 'none';
                 heart.style.left = `${rect.left + rect.width/2}px`;
                 heart.style.top = `${rect.top + rect.height/2}px`;
-                heart.style.animation = 'floatUp 1.2s forwards';
+                heart.style.animation = 'floatUp 1.8s forwards';
                 
                 document.body.appendChild(heart);
                 
-                // Style for float up animation
+                // Animation style
                 const style = document.createElement('style');
                 style.innerHTML = `
                     @keyframes floatUp {
@@ -1214,7 +1434,7 @@
                             opacity: 1; 
                         }
                         100% { 
-                            transform: translate(-50%, -80px) scale(0.3) rotate(180deg); 
+                            transform: translate(-50%, -120px) scale(0.3) rotate(180deg); 
                             opacity: 0; 
                         }
                     }
@@ -1225,57 +1445,96 @@
                     this.style.transform = '';
                     window.open(url, '_blank');
                     
-                    // Remove heart after animation
-                    if (heart.parentNode) {
-                        heart.parentNode.removeChild(heart);
-                    }
-                    if (style.parentNode) {
-                        style.parentNode.removeChild(style);
-                    }
-                }, 250);
+                    // Cleanup
+                    if (heart.parentNode) heart.parentNode.removeChild(heart);
+                    if (style.parentNode) style.parentNode.removeChild(style);
+                }, 350);
             });
         });
         
-        // Add scroll effect to header
-        let lastScroll = 0;
+        // Parallax effect on scroll
         window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-            const headerFrame = document.querySelector('.header-frame');
+            const scrolled = window.pageYOffset;
+            const floatingEls = document.querySelector('.floating-elements');
             
-            if (currentScroll > 100) {
-                const move = (currentScroll - 100) * 0.03;
-                headerFrame.style.transform = `translateY(${move}px)`;
-                headerFrame.style.opacity = 1 - (currentScroll * 0.0008);
+            if (floatingEls) {
+                floatingEls.style.transform = `translateY(${scrolled * 0.08}px)`;
+            }
+            
+            // Header effect
+            const headerFrame = document.querySelector('.header-frame');
+            if (scrolled > 100) {
+                const opacity = 1 - (scrolled * 0.0015);
+                headerFrame.style.opacity = opacity > 0.6 ? opacity : 0.6;
             } else {
-                headerFrame.style.transform = 'translateY(0)';
                 headerFrame.style.opacity = 1;
             }
             
-            lastScroll = currentScroll;
+            // Poster frame effect
+            const posterFrame = document.querySelector('.poster-frame');
+            if (posterFrame) {
+                const posterOffset = posterFrame.getBoundingClientRect().top;
+                if (posterOffset < window.innerHeight * 0.8) {
+                    const scale = 1 + (scrolled * 0.0001);
+                    posterFrame.style.transform = `translateY(${Math.min(scrolled * 0.05, 30)}px) scale(${Math.min(scale, 1.05)})`;
+                }
+            }
         });
         
-        // Add glow effect to tagline text periodically
-        setInterval(() => {
-            const tagline = document.querySelector('.tagline');
-            tagline.style.animation = 'none';
-            setTimeout(() => {
-                tagline.style.animation = 'textGlow 8s infinite alternate';
-            }, 10);
-        }, 8000);
+        // Update year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('.copyright');
+            if (yearElement) {
+                yearElement.innerHTML = yearElement.innerHTML.replace('2025', new Date().getFullYear());
+            }
+        });
         
-        // Initialize floating hearts every minute (لتجديد القلوب)
+        // Auto refresh floating elements every 90 seconds
         setInterval(() => {
-            // إزالة القلوب القديمة
-            const hearts = document.querySelectorAll('.floating-hearts .heart');
-            hearts.forEach(heart => {
-                if (heart.parentNode) {
-                    heart.parentNode.removeChild(heart);
-                }
+            const floatingEls = document.querySelectorAll('.floating-heart, .floating-star');
+            floatingEls.forEach(el => {
+                if (el.parentNode) el.parentNode.removeChild(el);
             });
             
-            // إنشاء قلوب جديدة
-            createFloatingHearts();
-        }, 60000);
+            createFloatingElements();
+        }, 90000);
+        
+        // Add S♥M watermark to all images on page
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const wrapper = document.createElement('div');
+                wrapper.style.position = 'relative';
+                wrapper.style.display = 'inline-block';
+                
+                const watermark = document.createElement('div');
+                watermark.innerHTML = 'S♥M';
+                watermark.style.position = 'absolute';
+                watermark.style.top = '50%';
+                watermark.style.left = '50%';
+                watermark.style.transform = 'translate(-50%, -50%)';
+                watermark.style.fontFamily = "'Great Vibes', cursive";
+                watermark.style.fontSize = '3rem';
+                watermark.style.color = 'rgba(255, 255, 255, 0.05)';
+                watermark.style.zIndex = '1';
+                watermark.style.pointerEvents = 'none';
+                
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+                wrapper.appendChild(watermark);
+            });
+        });
+        
+        // Add heartbeat animation to S♥M in title periodically
+        setInterval(() => {
+            const titleHearts = document.querySelectorAll('.title-heart');
+            titleHearts.forEach(heart => {
+                heart.style.animation = 'none';
+                setTimeout(() => {
+                    heart.style.animation = 'heartBeat 3s infinite';
+                }, 10);
+            });
+        }, 5000);
     </script>
 </body>
     </html>
